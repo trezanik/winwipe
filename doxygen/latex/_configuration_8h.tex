@@ -1,0 +1,188 @@
+\section{Configuration.\-h File Reference}
+\label{_configuration_8h}\index{Configuration.\-h@{Configuration.\-h}}
+
+
+The application configuration.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_configuration}{Configuration}
+\item 
+class \hyperlink{class_configuration_1_1proxy}{Configuration\-::proxy$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_configuration_8h_aec3fd4383432d7b9010a0c2fc356cba7}{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I}~true
+\item 
+\#define \hyperlink{_configuration_8h_a91794511cfd885599fe552eeb78c2e98}{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}~true
+\item 
+\#define \hyperlink{_configuration_8h_a4122d5f7777bb8da80d8d8e7bebde257}{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}~false
+\item 
+\#define \hyperlink{_configuration_8h_ab22eac373b8d19b283a5c5242d078142}{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}~false
+\item 
+\#define \hyperlink{_configuration_8h_a984c45d9995767dc935c08b43e19ab3c}{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}~false
+\item 
+\#define \hyperlink{_configuration_8h_a0af70e855b4cf41b15d7f5c57e9bc38f}{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}~false
+\item 
+\#define \hyperlink{_configuration_8h_ad93d93d1904def3de9244aa36e25d038}{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D}~false
+\item 
+\#define \hyperlink{_configuration_8h_a4d68235dfa433dea9c42f14784f80f6a}{D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E}~true
+\item 
+\#define \hyperlink{_configuration_8h_a75971c1090578b7d2475b912551d6839}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P}~'h'
+\item 
+\#define \hyperlink{_configuration_8h_a420a71a4de8846f375fb10f17fc33059}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I}~'g'
+\item 
+\#define \hyperlink{_configuration_8h_a870d7fda819f9e1545c65887c221f9e8}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E}~'c'
+\item 
+\#define \hyperlink{_configuration_8h_a3af2b716f43db237ddb6d840092d1f1d}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S}~'p'
+\item 
+\#define \hyperlink{_configuration_8h_a61fd4289d52a48709340e13b5a138f5a}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S}~'f'
+\item 
+\#define \hyperlink{_configuration_8h_ad5764bedb21444348a3e9cc8c4b28a24}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y}~'r'
+\item 
+\#define \hyperlink{_configuration_8h_adb044b8b0ed2b933082a1775e9ba05f0}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S}~'s'
+\item 
+\#define \hyperlink{_configuration_8h_afb643fad4eb807bb20f82df8318d7676}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S}~'e'
+\item 
+\#define \hyperlink{_configuration_8h_afbceb811cad6ce805ae2364d6300297c}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S}~'u'
+\item 
+\#define \hyperlink{_configuration_8h_a8b8959f4a8adf23ed2102d579c77cfca}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S}~'k'
+\item 
+\#define \hyperlink{_configuration_8h_af29560ffc1e11e021cf895abc4d1c286}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}~'o'
+\item 
+\#define \hyperlink{_configuration_8h_a3a7eb5d7c2dcba8dc5d2aaeb9035d301}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E}~'l'
+\item 
+\#define \hyperlink{_configuration_8h_a1cf301de91e49b1beb44f071dc2813c7}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D}~'m'
+\item 
+\#define \hyperlink{_configuration_8h_a7f175c3002a8dbde3e0d100c5ff22253}{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}~'x'
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_configuration_8h_a60ca01793aec53a00452adb2caf780dc}{display\-\_\-usage} (char $\ast$app\-\_\-name, \hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} opt)
+\item 
+bool \hyperlink{_configuration_8h_a77d8ecb3e2084eecf8db1cf62276bcf0}{parse\-\_\-commandline} (\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The application configuration. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-L\-I~'g'}\label{_configuration_8h_a420a71a4de8846f375fb10f17fc33059}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-F\-I\-L\-E~'c'}\label{_configuration_8h_a870d7fda819f9e1545c65887c221f9e8}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-H\-E\-L\-P~'h'}\label{_configuration_8h_a75971c1090578b7d2475b912551d6839}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-L\-O\-G\-F\-I\-L\-E~'l'}\label{_configuration_8h_a3a7eb5d7c2dcba8dc5d2aaeb9035d301}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-M\-U\-L\-T\-I\-M\-E\-T\-H\-O\-D~'m'}\label{_configuration_8h_a1cf301de91e49b1beb44f071dc2813c7}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-R\-E\-P\-L\-A\-C\-E\-\_\-\-P\-E\-R\-M\-S~'k'}\label{_configuration_8h_a8b8959f4a8adf23ed2102d579c77cfca}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-C\-O\-M\-M\-A\-N\-D\-S~'e'}\label{_configuration_8h_afb643fad4eb807bb20f82df8318d7676}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-F\-I\-L\-E\-S~'f'}\label{_configuration_8h_a61fd4289d52a48709340e13b5a138f5a}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-P\-R\-O\-C\-E\-S\-S\-E\-S~'p'}\label{_configuration_8h_a3af2b716f43db237ddb6d840092d1f1d}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-R\-E\-G\-I\-S\-T\-R\-Y~'r'}\label{_configuration_8h_ad5764bedb21444348a3e9cc8c4b28a24}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-S\-E\-R\-V\-I\-C\-E\-S~'s'}\label{_configuration_8h_adb044b8b0ed2b933082a1775e9ba05f0}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-S\-K\-I\-P\-\_\-\-U\-N\-I\-N\-S\-T\-A\-L\-L\-E\-R\-S~'u'}\label{_configuration_8h_afbceb811cad6ce805ae2364d6300297c}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P~'o'}\label{_configuration_8h_af29560ffc1e11e021cf895abc4d1c286}
+\index{Configuration.\-h@{Configuration.\-h}!C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}}
+\index{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D@{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R\-\_\-\-C\-M\-D\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D~'x'}\label{_configuration_8h_a7f175c3002a8dbde3e0d100c5ff22253}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S~false}\label{_configuration_8h_a4122d5f7777bb8da80d8d8e7bebde257}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P@{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-F\-I\-L\-E\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P~false}\label{_configuration_8h_ab22eac373b8d19b283a5c5242d078142}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I@{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I@{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-A\-P\-H\-I\-C\-A\-L\-\_\-\-U\-I~true}\label{_configuration_8h_aec3fd4383432d7b9010a0c2fc356cba7}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E@{D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-L\-O\-G\-F\-I\-L\-E~true}\label{_configuration_8h_a4d68235dfa433dea9c42f14784f80f6a}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D@{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D@{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-R\-O\-C\-P\-U\-R\-G\-E\-\_\-\-A\-D\-V\-A\-N\-C\-E\-D~false}\label{_configuration_8h_ad93d93d1904def3de9244aa36e25d038}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D@{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D@{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-P\-U\-R\-G\-E\-\_\-\-U\-S\-E\-\_\-\-U\-N\-D\-O\-C\-U\-M\-E\-N\-T\-E\-D~true}\label{_configuration_8h_a91794511cfd885599fe552eeb78c2e98}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-P\-E\-R\-M\-I\-S\-S\-I\-O\-N\-S~false}\label{_configuration_8h_a984c45d9995767dc935c08b43e19ab3c}
+\index{Configuration.\-h@{Configuration.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P@{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P@{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-E\-G\-P\-U\-R\-G\-E\-\_\-\-T\-A\-K\-E\-\_\-\-O\-W\-N\-E\-R\-S\-H\-I\-P~false}\label{_configuration_8h_a0af70e855b4cf41b15d7f5c57e9bc38f}
+
+
+\subsection{Function Documentation}
+\index{Configuration.\-h@{Configuration.\-h}!display\-\_\-usage@{display\-\_\-usage}}
+\index{display\-\_\-usage@{display\-\_\-usage}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{display\-\_\-usage}]{\setlength{\rightskip}{0pt plus 5cm}void display\-\_\-usage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{app\-\_\-name, }
+\item[{{\bf int32\-\_\-t}}]{opt}
+\end{DoxyParamCaption}
+)}\label{_configuration_8h_a60ca01793aec53a00452adb2caf780dc}
+Displays the command line usage. Triggered only when an invalid option, or '-\/h', is passed in via the command line.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em app\-\_\-name} & The binary name executed \\
+\hline
+\mbox{\tt in}  & {\em opt} & The option character that was invalid \\
+\hline
+\end{DoxyParams}
+\index{Configuration.\-h@{Configuration.\-h}!parse\-\_\-commandline@{parse\-\_\-commandline}}
+\index{parse\-\_\-commandline@{parse\-\_\-commandline}!Configuration.h@{Configuration.\-h}}
+\subsubsection[{parse\-\_\-commandline}]{\setlength{\rightskip}{0pt plus 5cm}bool parse\-\_\-commandline (
+\begin{DoxyParamCaption}
+\item[{{\bf int32\-\_\-t}}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{_configuration_8h_a77d8ecb3e2084eecf8db1cf62276bcf0}
+Parses the application command line, setting runtime configuration options. Separate function from the \hyperlink{class_configuration}{Configuration} as it should only be executed once, and within \hyperlink{app_8cc_a7ab0624f9c8aeab843f91432c75638ee}{app\-\_\-init()}, where the parameters are available.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of arguments passed in \\
+\hline
+{\em argv} & An array of pointers to the arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is returned if any and all command line options are processed successfully 
+
+false is only returned if an unknown parameter is provided, or an invalid option is passed to a parameter 
+\end{DoxyReturn}

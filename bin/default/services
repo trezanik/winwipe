@@ -1,0 +1,3 @@
+# When marked for deletion, but not deleted, the service has 'DeleteFlag' (DWORD=1) present
+# Deleting this value still does not enable the ability to delete again; MUST reboot!
+

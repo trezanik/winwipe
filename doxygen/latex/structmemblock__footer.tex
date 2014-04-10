@@ -1,0 +1,23 @@
+\section{memblock\-\_\-footer Struct Reference}
+\label{structmemblock__footer}\index{memblock\-\_\-footer@{memblock\-\_\-footer}}
+
+
+{\ttfamily \#include $<$Allocator.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{structmemblock__footer_adbe248bf9ad8f03cdc7c202140989da9}{magic}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure is added to the end of an allocated block of memory, when U\-S\-I\-N\-G\-\_\-\-M\-E\-M\-O\-R\-Y\-\_\-\-D\-E\-B\-U\-G\-G\-I\-N\-G is defined in \hyperlink{build_8h}{build.\-h}.
+
+This ensures no data has been written beyond the boundary of an allocated bit of memory, resulting in heap/stack corruption. 
+
+\subsection{Member Data Documentation}
+\index{memblock\-\_\-footer@{memblock\-\_\-footer}!magic@{magic}}
+\index{magic@{magic}!memblock_footer@{memblock\-\_\-footer}}
+\subsubsection[{magic}]{\setlength{\rightskip}{0pt plus 5cm}unsigned memblock\-\_\-footer\-::magic}\label{structmemblock__footer_adbe248bf9ad8f03cdc7c202140989da9}
+footer magic number 

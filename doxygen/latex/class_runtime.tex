@@ -1,0 +1,152 @@
+\section{Runtime Class Reference}
+\label{class_runtime}\index{Runtime@{Runtime}}
+
+
+{\ttfamily \#include $<$Runtime.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_configuration}{Configuration} $\ast$ \hyperlink{class_runtime_a42500720bee2cf4002c945b494a44ced}{Config} () const 
+\item 
+\hyperlink{class_log}{Log} $\ast$ \hyperlink{class_runtime_aa257050eab90cb6493b1cadcd003b67f}{Logger} () const 
+\item 
+\hyperlink{class_file_parser}{File\-Parser} $\ast$ \hyperlink{class_runtime_ae976465b16782d87ad46b836b63dfb00}{Parser} () const 
+\item 
+\hyperlink{class_user_interface}{User\-Interface} $\ast$ \hyperlink{class_runtime_ada47d441b13bc24accea9dca292eeced}{U\-I} () const 
+\item 
+\hyperlink{class_wiper}{Wiper} $\ast$ \hyperlink{class_runtime_a67e200aad11db275aba4230282ce6eae}{Wiper} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_runtime}{Runtime} \& \hyperlink{class_runtime_a1146c295df34dff8c1935ec0436edd7d}{Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_runtime_a6a3920f0c4052fa28177f539b402d2e4}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_runtime}{Runtime})
+\item 
+\hyperlink{class_runtime_a9b37cdb81eff355717a177408b5c180c}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_runtime}{Runtime})
+\item 
+\hyperlink{class_runtime_a522dc4b36f2a770bbe3e62c451f38841}{Runtime} ()
+\item 
+\hyperlink{class_runtime_a69418e2a8c03d0e24cdc63eb88b52d28}{$\sim$\-Runtime} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dedicated class for storing all 'global' variables. This itself is accessed through an extern by the runtime code, so is in itself actually a global.
+
+While this is a technical misuse of a Singleton, since there can only ever be one runtime (which we can then use to interface with the host O\-S and also maintains if the app is quitting, for example), it seems appropriate and can easily be replaced with the way it has been designed.
+
+The classes accessed are not constructed until their first call, which keeps the application startup brief. You can therefore make assumptions in the child classes about the lifetimes of other objects, and safely know each will have their destructor called before the runtime is destroyed.
+
+Yes, this can be implemented in other ways -\/ but this is clear and concise, without {\itshape too} many of the issues commonly associated with bad singleton use.
+
+On Windows, this constructor is executed before \hyperlink{main_8cc_af19ddca125f05a2090dd132045573ee4}{main()} is entered; the actual call stack is (assuming Windows subsystem)\-: \begin{DoxyVerb}- Runtime()
+- _initterm
+- __tmainCRTStartup (also calls main)
+- WinMainCRTStartup
+\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Runtime@{Runtime}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!Runtime@{Runtime}}
+\subsubsection[{Runtime}]{\setlength{\rightskip}{0pt plus 5cm}Runtime\-::\-Runtime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_runtime_a522dc4b36f2a770bbe3e62c451f38841}
+\index{Runtime@{Runtime}!$\sim$\-Runtime@{$\sim$\-Runtime}}
+\index{$\sim$\-Runtime@{$\sim$\-Runtime}!Runtime@{Runtime}}
+\subsubsection[{$\sim$\-Runtime}]{\setlength{\rightskip}{0pt plus 5cm}Runtime\-::$\sim$\-Runtime (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_runtime_a69418e2a8c03d0e24cdc63eb88b52d28}
+
+
+\subsection{Member Function Documentation}
+\index{Runtime@{Runtime}!Config@{Config}}
+\index{Config@{Config}!Runtime@{Runtime}}
+\subsubsection[{Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Configuration} $\ast$ Runtime\-::\-Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_runtime_a42500720bee2cf4002c945b494a44ced}
+Retrieves a pointer to the static \hyperlink{class_configuration}{Configuration} variable.
+
+\begin{DoxyReturn}{Returns}
+Always returns a pointer to a \hyperlink{class_configuration}{Configuration} instance; never fails 
+\end{DoxyReturn}
+\index{Runtime@{Runtime}!Instance@{Instance}}
+\index{Instance@{Instance}!Runtime@{Runtime}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Runtime}\& Runtime\-::\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_runtime_a1146c295df34dff8c1935ec0436edd7d}
+Acquires the singleton reference to the class. Only used within \hyperlink{app_8cc}{app.\-cc} in order to make the runtime accessible globally (accessed by 'runtime') -\/ shouldn't be used outside of this. \index{Runtime@{Runtime}!Logger@{Logger}}
+\index{Logger@{Logger}!Runtime@{Runtime}}
+\subsubsection[{Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log} $\ast$ Runtime\-::\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_runtime_aa257050eab90cb6493b1cadcd003b67f}
+Retrieves a pointer to the static \hyperlink{class_log}{Log} variable.
+
+\begin{DoxyReturn}{Returns}
+Always returns a pointer to a \hyperlink{class_log}{Log} instance; never fails 
+\end{DoxyReturn}
+\index{Runtime@{Runtime}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Runtime@{Runtime}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Runtime\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Runtime}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_runtime_a6a3920f0c4052fa28177f539b402d2e4}
+\index{Runtime@{Runtime}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Runtime@{Runtime}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Runtime\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Runtime}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_runtime_a9b37cdb81eff355717a177408b5c180c}
+\index{Runtime@{Runtime}!Parser@{Parser}}
+\index{Parser@{Parser}!Runtime@{Runtime}}
+\subsubsection[{Parser}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\-Parser} $\ast$ Runtime\-::\-Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_runtime_ae976465b16782d87ad46b836b63dfb00}
+Retrieves a pointer to the static Parser variable.
+
+\begin{DoxyReturn}{Returns}
+Always returns a pointer to a Parser instance; never fails 
+\end{DoxyReturn}
+\index{Runtime@{Runtime}!U\-I@{U\-I}}
+\index{U\-I@{U\-I}!Runtime@{Runtime}}
+\subsubsection[{U\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf User\-Interface} $\ast$ Runtime\-::\-U\-I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_runtime_ada47d441b13bc24accea9dca292eeced}
+Retrieves a pointer to the static \hyperlink{class_user_interface}{User\-Interface} variable.
+
+\begin{DoxyReturn}{Returns}
+Always returns a pointer to a \hyperlink{class_user_interface}{User\-Interface} instance; never fails 
+\end{DoxyReturn}
+\index{Runtime@{Runtime}!Wiper@{Wiper}}
+\index{Wiper@{Wiper}!Runtime@{Runtime}}
+\subsubsection[{Wiper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Wiper} $\ast$ Runtime\-::\-Wiper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_runtime_a67e200aad11db275aba4230282ce6eae}
+Retrieves a pointer to the static \hyperlink{class_wiper}{Wiper} variable.
+
+\begin{DoxyReturn}{Returns}
+Always returns a pointer to a \hyperlink{class_wiper}{Wiper} instance; never fails 
+\end{DoxyReturn}

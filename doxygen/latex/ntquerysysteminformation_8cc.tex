@@ -1,0 +1,52 @@
+\section{ntquerysysteminformation.\-cc File Reference}
+\label{ntquerysysteminformation_8cc}\index{ntquerysysteminformation.\-cc@{ntquerysysteminformation.\-cc}}
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$Windows.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}ntquerysysteminformation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ntdll_8h_a77a2f6628aaa056315f8c8ad2c466fdc}{N\-T\-S\-T\-A\-T\-U\-S} \hyperlink{ntquerysysteminformation_8cc_ad89a2f8757b635e9e1799187d81c1b36}{Nt\-Query\-System\-Information} (\hyperlink{ntquerysysteminformation_8h_a6f4391292f166b482e5b633f423436d7}{S\-Y\-S\-T\-E\-M\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N\-\_\-\-C\-L\-A\-S\-S} System\-Information\-Class, P\-V\-O\-I\-D System\-Information, U\-L\-O\-N\-G System\-Information\-Length, P\-U\-L\-O\-N\-G Return\-Length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+James Warren, 2013-\/2014 
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License\-:}
+Zlib (see license.\-txt or \href{http://opensource.org/licenses/Zlib}{\tt http\-://opensource.\-org/licenses/\-Zlib}) 
+\end{DoxyParagraph}
+
+
+\subsection{Function Documentation}
+\index{ntquerysysteminformation.\-cc@{ntquerysysteminformation.\-cc}!Nt\-Query\-System\-Information@{Nt\-Query\-System\-Information}}
+\index{Nt\-Query\-System\-Information@{Nt\-Query\-System\-Information}!ntquerysysteminformation.cc@{ntquerysysteminformation.\-cc}}
+\subsubsection[{Nt\-Query\-System\-Information}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\-T\-S\-T\-A\-T\-U\-S} Nt\-Query\-System\-Information (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-Y\-S\-T\-E\-M\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N\-\_\-\-C\-L\-A\-S\-S}}]{System\-Information\-Class, }
+\item[{P\-V\-O\-I\-D}]{System\-Information, }
+\item[{U\-L\-O\-N\-G}]{System\-Information\-Length, }
+\item[{P\-U\-L\-O\-N\-G}]{Return\-Length}
+\end{DoxyParamCaption}
+)}\label{ntquerysysteminformation_8cc_ad89a2f8757b635e9e1799187d81c1b36}
+Loads and calls the 'Nt\-Query\-System\-Information' function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em System\-Information\-Class} & One of the values enumerated in S\-Y\-S\-T\-E\-M\-\_\-\-I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N\-\_\-\-C\-L\-A\-S\-S \\
+\hline
+{\em System\-Information} & A pointer to a buffer that receives the requested information. \\
+\hline
+{\em System\-Information\-Length} & The size of the buffer pointed to by the System\-Information parameter, in bytes. \\
+\hline
+{\em Return\-Length} & An optional pointer to a location where the function writes the actual size of the information requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an N\-T\-S\-T\-A\-T\-U\-S success or error code. 
+\end{DoxyReturn}

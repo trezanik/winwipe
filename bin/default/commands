@@ -1,0 +1,12 @@
+### If in doubt, quote the application name. Otherwise, consult this list for supported formats:
+## GOOD::	notepad.exe
+## GOOD::	notepad.exe C:\Users\myname\Documents\perlscript.pl
+## BAD::	notepad.exe "C:\Users\myname\Documents\perlscript.pl"
+## BAD::	notepad.exe "C:\Users\myname\Documents\Folder Name\perlscript.pl"
+## GOOD::	"notepad.exe" "C:\Users\myname\Documents\Folder Name\perlscript.pl"
+## BAD::	C:\Path With Space\file.exe
+## BAD::	C:\Path With Space\file.exe C:\somefile_for_arg
+## GOOD::	"C:\Path With Space\file.exe"
+## GOOD::	"C:\Path With Space\file.exe" C:\somefile_for_arg
+## GOOD::	"C:\Path With Space\file.exe" "C:\somefile_for_arg"
+

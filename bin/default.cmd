@@ -1,0 +1,1 @@
+"%~dp0winwipe.exe" -c default\config.ini

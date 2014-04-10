@@ -1,0 +1,115 @@
+\section{Subject Class Reference}
+\label{class_subject}\index{Subject@{Subject}}
+
+
+{\ttfamily \#include $<$Subject.\-h$>$}
+
+Inheritance diagram for Subject\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_subject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_subject_ae5980067d5ec5522db5a0d78100a34be}{$\sim$\-Subject} ()
+\item 
+void \hyperlink{class_subject_a7ddceeeccd20d79afb444b9c13296d94}{Attach} (\hyperlink{class_observer}{Observer} \&observer)
+\item 
+void \hyperlink{class_subject_a1040ad480940387831ed9b5b7113fcc2}{Detach} (\hyperlink{class_observer}{Observer} \&observer)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{Subject} ()
+\item 
+void \hyperlink{class_subject_ad5031f0b80193e419a3bddcdf05496f7}{Notify} (\hyperlink{class_operation}{Operation} $\ast$operation) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_subject_a2e839762e26672628bb3d6b96a5cc71c}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_subject}{Subject})
+\item 
+\hyperlink{class_subject_a5a8ec250e4eee85f1911fa751305083d}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_subject}{Subject})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::set$<$ \hyperlink{class_observer}{Observer} $\ast$ $>$ \hyperlink{class_subject_aa8ec70aef81be61ebfd03d4f0bc9c012}{\-\_\-observers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Subject@{Subject}!Subject@{Subject}}
+\index{Subject@{Subject}!Subject@{Subject}}
+\subsubsection[{Subject}]{\setlength{\rightskip}{0pt plus 5cm}Subject\-::\-Subject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_subject_ab468044832c824c6d6c2f46272655207}
+\index{Subject@{Subject}!$\sim$\-Subject@{$\sim$\-Subject}}
+\index{$\sim$\-Subject@{$\sim$\-Subject}!Subject@{Subject}}
+\subsubsection[{$\sim$\-Subject}]{\setlength{\rightskip}{0pt plus 5cm}virtual Subject\-::$\sim$\-Subject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_subject_ae5980067d5ec5522db5a0d78100a34be}
+
+
+\subsection{Member Function Documentation}
+\index{Subject@{Subject}!Attach@{Attach}}
+\index{Attach@{Attach}!Subject@{Subject}}
+\subsubsection[{Attach}]{\setlength{\rightskip}{0pt plus 5cm}void Subject\-::\-Attach (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer} \&}]{observer}
+\end{DoxyParamCaption}
+)}\label{class_subject_a7ddceeeccd20d79afb444b9c13296d94}
+Adds the observer to the list of classes that receive notifications from this \hyperlink{class_subject}{Subject}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & A class inheriting \hyperlink{class_observer}{Observer} \\
+\hline
+\end{DoxyParams}
+\index{Subject@{Subject}!Detach@{Detach}}
+\index{Detach@{Detach}!Subject@{Subject}}
+\subsubsection[{Detach}]{\setlength{\rightskip}{0pt plus 5cm}void Subject\-::\-Detach (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer} \&}]{observer}
+\end{DoxyParamCaption}
+)}\label{class_subject_a1040ad480940387831ed9b5b7113fcc2}
+Removes the observer from the list of notified classes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & A class inheriting \hyperlink{class_observer}{Observer} \\
+\hline
+\end{DoxyParams}
+\index{Subject@{Subject}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Subject@{Subject}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Subject\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Subject}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_subject_a2e839762e26672628bb3d6b96a5cc71c}
+\index{Subject@{Subject}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Subject@{Subject}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Subject\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Subject}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_subject_a5a8ec250e4eee85f1911fa751305083d}
+\index{Subject@{Subject}!Notify@{Notify}}
+\index{Notify@{Notify}!Subject@{Subject}}
+\subsubsection[{Notify}]{\setlength{\rightskip}{0pt plus 5cm}void Subject\-::\-Notify (
+\begin{DoxyParamCaption}
+\item[{{\bf Operation} $\ast$}]{operation}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_subject_ad5031f0b80193e419a3bddcdf05496f7}
+
+
+\subsection{Member Data Documentation}
+\index{Subject@{Subject}!\-\_\-observers@{\-\_\-observers}}
+\index{\-\_\-observers@{\-\_\-observers}!Subject@{Subject}}
+\subsubsection[{\-\_\-observers}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf Observer}$\ast$$>$ Subject\-::\-\_\-observers\hspace{0.3cm}{\ttfamily [private]}}\label{class_subject_aa8ec70aef81be61ebfd03d4f0bc9c012}

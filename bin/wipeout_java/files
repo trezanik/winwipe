@@ -1,0 +1,14 @@
+%SYSTEMROOT%\system32\deployJava1.dll
+%SYSTEMROOT%\system32\deploytk.dll
+%SYSTEMROOT%\system32\jpicpl32.cpl
+%SYSTEMROOT%\system32\java.exe
+%SYSTEMROOT%\system32\javaw.exe
+%SYSTEMROOT%\system32\javaws.exe
+%SYSTEMROOT%\system32\javacpl.cpl
+%SYSTEMROOT%\system32\plugincpl*.cpl
+# Still need this to support each users app data, not just the current...
+%ALLUSERS%\%USERAPPDATA%\Sun\Java
+# Installation folders
+%PROGRAMFILES%\Java
+%PROGRAMFILES%\Javasoft
+%PROGRAMFILES%\Java Web Start

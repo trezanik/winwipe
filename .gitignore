@@ -1,0 +1,19 @@
+### ignore our temporary directory
+notes_screenshots_temp/
+
+### ignore visual studio 'dynamic' files
+*.filters
+*.ilk
+*.ncb
+*.pdb
+*.sdf
+*.suo
+*.user
+Debug/
+Release/
+
+### ignore our dependencies folder
+deps/
+
+### and ignore any test runs we've performed
+*.log

@@ -1,0 +1,72 @@
+\section{Configuration.\-cc File Reference}
+\label{_configuration_8cc}\index{Configuration.\-cc@{Configuration.\-cc}}
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$Windows.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}getopt.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Configuration.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}File\-Parser.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Runtime.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Log.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_configuration_8cc_a60ca01793aec53a00452adb2caf780dc}{display\-\_\-usage} (char $\ast$app\-\_\-name, \hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} opt)
+\item 
+bool \hyperlink{_configuration_8cc_a77d8ecb3e2084eecf8db1cf62276bcf0}{parse\-\_\-commandline} (\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+James Warren, 2013-\/2014 
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License\-:}
+Zlib (see license.\-txt or \href{http://opensource.org/licenses/Zlib}{\tt http\-://opensource.\-org/licenses/\-Zlib}) 
+\end{DoxyParagraph}
+
+
+\subsection{Function Documentation}
+\index{Configuration.\-cc@{Configuration.\-cc}!display\-\_\-usage@{display\-\_\-usage}}
+\index{display\-\_\-usage@{display\-\_\-usage}!Configuration.cc@{Configuration.\-cc}}
+\subsubsection[{display\-\_\-usage}]{\setlength{\rightskip}{0pt plus 5cm}void display\-\_\-usage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{app\-\_\-name, }
+\item[{{\bf int32\-\_\-t}}]{opt}
+\end{DoxyParamCaption}
+)}\label{_configuration_8cc_a60ca01793aec53a00452adb2caf780dc}
+Displays the command line usage. Triggered only when an invalid option, or '-\/h', is passed in via the command line.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em app\-\_\-name} & The binary name executed \\
+\hline
+\mbox{\tt in}  & {\em opt} & The option character that was invalid \\
+\hline
+\end{DoxyParams}
+\index{Configuration.\-cc@{Configuration.\-cc}!parse\-\_\-commandline@{parse\-\_\-commandline}}
+\index{parse\-\_\-commandline@{parse\-\_\-commandline}!Configuration.cc@{Configuration.\-cc}}
+\subsubsection[{parse\-\_\-commandline}]{\setlength{\rightskip}{0pt plus 5cm}bool parse\-\_\-commandline (
+\begin{DoxyParamCaption}
+\item[{{\bf int32\-\_\-t}}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{_configuration_8cc_a77d8ecb3e2084eecf8db1cf62276bcf0}
+Parses the application command line, setting runtime configuration options. Separate function from the \hyperlink{class_configuration}{Configuration} as it should only be executed once, and within \hyperlink{app_8cc_a7ab0624f9c8aeab843f91432c75638ee}{app\-\_\-init()}, where the parameters are available.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of arguments passed in \\
+\hline
+{\em argv} & An array of pointers to the arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is returned if any and all command line options are processed successfully 
+
+false is only returned if an unknown parameter is provided, or an invalid option is passed to a parameter 
+\end{DoxyReturn}

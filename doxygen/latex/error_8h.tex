@@ -1,0 +1,189 @@
+\section{error.\-h File Reference}
+\label{error_8h}\index{error.\-h@{error.\-h}}
+
+
+Error handling codes and functionality.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structerr__table}{err\-\_\-table}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{error_8h_ad96d3a6cf3e98ce15febe3d27bda47bc}{D\-E\-B\-U\-G}(fmt,...)~\hyperlink{error_8h_a9a006343667fc7ba3700717a088db087}{gen\-\_\-debug}(\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{error_8h_ab56f6599fb46785e4265a3033ba91aa6}{I\-N\-F\-O}(fmt,...)~\hyperlink{error_8h_a8766f7f2f28c3dcb552239443cbb1df6}{gen\-\_\-informational}(\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{error_8h_a3d983c23dcde2214196de705199df014}{W\-A\-R\-N\-I\-N\-G}(code,...)~\hyperlink{error_8h_a41deb0a263cb65f98cded303082fc4e0}{gen\-\_\-warning}(code, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{error_8h_aa8550f01fb0541ab39136f9e8a9d57fb}{C\-R\-I\-T\-I\-C\-A\-L}(code,...)~\hyperlink{error_8h_ad7abb0eedaaa25e5cce2141a13bd4af5}{gen\-\_\-critical}(code, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{error_8h_a41e09f159e79a4614feeb1ad7880b261}{C\-R\-A\-S\-H}(code,...)~gen\-\_\-crash(code, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} \{ \\*
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4cae3fd7c71a859f14c3da684b0b2754df3}{E\-C\-\_\-\-Success} = 0, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4cafc19db14890d1b2af4e8682c3826e717}{E\-C\-\_\-\-Invalid\-Parameter}, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4cab0b8170670e576438f2a3c78b7ac32fe}{E\-C\-\_\-\-Null\-Pointer}, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4caf5537af420d2be46d8b76cab88a24e60}{E\-C\-\_\-\-Api\-Function\-Failed}, 
+\\*
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca104e2593915e95480378bb43560c79c8}{E\-C\-\_\-\-Invalid\-Data}, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4caa99911d6d7e4d461b53c39cabcedddd3}{E\-C\-\_\-\-Custom}, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca07d5c3220d0869de67a4b81f7fe9a16a}{E\-C\-\_\-\-Arpa}, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca31f45ff4e2d6227a2ba09d4b5fc657fd}{E\-C\-\_\-\-Get\-Addr\-Info}, 
+\\*
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca70b38af66208fe56a262e3605be31b8a}{E\-C\-\_\-\-Max}, 
+\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca5a08129864d3dbd04905b783a56b2fe6}{E\-C\-\_\-\-Abnormal} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\-\_\-t \hyperlink{error_8h_ad7abb0eedaaa25e5cce2141a13bd4af5}{gen\-\_\-critical} (const \hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name,...)
+\item 
+int32\-\_\-t \hyperlink{error_8h_a9a006343667fc7ba3700717a088db087}{gen\-\_\-debug} (const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name, const char $\ast$format,...)
+\item 
+int32\-\_\-t \hyperlink{error_8h_a8766f7f2f28c3dcb552239443cbb1df6}{gen\-\_\-informational} (const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name, const char $\ast$format,...)
+\item 
+int32\-\_\-t \hyperlink{error_8h_a41deb0a263cb65f98cded303082fc4e0}{gen\-\_\-warning} (const \hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name,...)
+\item 
+char $\ast$ \hyperlink{error_8h_a4ed4fe5c95f9d6be65ce03abf24b88b9}{lookup\-\_\-error} (\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, char $\ast$buffer=nullptr, uint32\-\_\-t buffer\-\_\-size=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Error handling codes and functionality. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{error.\-h@{error.\-h}!C\-R\-A\-S\-H@{C\-R\-A\-S\-H}}
+\index{C\-R\-A\-S\-H@{C\-R\-A\-S\-H}!error.h@{error.\-h}}
+\subsubsection[{C\-R\-A\-S\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-A\-S\-H(
+\begin{DoxyParamCaption}
+\item[{}]{code, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~gen\-\_\-crash(code, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)}\label{error_8h_a41e09f159e79a4614feeb1ad7880b261}
+\index{error.\-h@{error.\-h}!C\-R\-I\-T\-I\-C\-A\-L@{C\-R\-I\-T\-I\-C\-A\-L}}
+\index{C\-R\-I\-T\-I\-C\-A\-L@{C\-R\-I\-T\-I\-C\-A\-L}!error.h@{error.\-h}}
+\subsubsection[{C\-R\-I\-T\-I\-C\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-I\-T\-I\-C\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{code, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf gen\-\_\-critical}(code, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)}\label{error_8h_aa8550f01fb0541ab39136f9e8a9d57fb}
+\index{error.\-h@{error.\-h}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}
+\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!error.h@{error.\-h}}
+\subsubsection[{D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf gen\-\_\-debug}(\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)}\label{error_8h_ad96d3a6cf3e98ce15febe3d27bda47bc}
+\index{error.\-h@{error.\-h}!I\-N\-F\-O@{I\-N\-F\-O}}
+\index{I\-N\-F\-O@{I\-N\-F\-O}!error.h@{error.\-h}}
+\subsubsection[{I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf gen\-\_\-informational}(\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, fmt, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)}\label{error_8h_ab56f6599fb46785e4265a3033ba91aa6}
+\index{error.\-h@{error.\-h}!W\-A\-R\-N\-I\-N\-G@{W\-A\-R\-N\-I\-N\-G}}
+\index{W\-A\-R\-N\-I\-N\-G@{W\-A\-R\-N\-I\-N\-G}!error.h@{error.\-h}}
+\subsubsection[{W\-A\-R\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-A\-R\-N\-I\-N\-G(
+\begin{DoxyParamCaption}
+\item[{}]{code, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf gen\-\_\-warning}(code, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-V\-A\-\_\-\-A\-R\-G\-S\-\_\-\-\_\-)}\label{error_8h_a3d983c23dcde2214196de705199df014}
+
+
+\subsection{Enumeration Type Documentation}
+\index{error.\-h@{error.\-h}!E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E@{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}
+\index{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E@{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}!error.h@{error.\-h}}
+\subsubsection[{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-C\-\_\-\-Success@{E\-C\-\_\-\-Success}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Success@{E\-C\-\_\-\-Success}}\item[{\em 
+E\-C\-\_\-\-Success\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4cae3fd7c71a859f14c3da684b0b2754df3}
+}]\index{E\-C\-\_\-\-Invalid\-Parameter@{E\-C\-\_\-\-Invalid\-Parameter}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Invalid\-Parameter@{E\-C\-\_\-\-Invalid\-Parameter}}\item[{\em 
+E\-C\-\_\-\-Invalid\-Parameter\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4cafc19db14890d1b2af4e8682c3826e717}
+}]\index{E\-C\-\_\-\-Null\-Pointer@{E\-C\-\_\-\-Null\-Pointer}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Null\-Pointer@{E\-C\-\_\-\-Null\-Pointer}}\item[{\em 
+E\-C\-\_\-\-Null\-Pointer\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4cab0b8170670e576438f2a3c78b7ac32fe}
+}]\index{E\-C\-\_\-\-Api\-Function\-Failed@{E\-C\-\_\-\-Api\-Function\-Failed}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Api\-Function\-Failed@{E\-C\-\_\-\-Api\-Function\-Failed}}\item[{\em 
+E\-C\-\_\-\-Api\-Function\-Failed\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4caf5537af420d2be46d8b76cab88a24e60}
+}]\index{E\-C\-\_\-\-Invalid\-Data@{E\-C\-\_\-\-Invalid\-Data}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Invalid\-Data@{E\-C\-\_\-\-Invalid\-Data}}\item[{\em 
+E\-C\-\_\-\-Invalid\-Data\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca104e2593915e95480378bb43560c79c8}
+}]\index{E\-C\-\_\-\-Custom@{E\-C\-\_\-\-Custom}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Custom@{E\-C\-\_\-\-Custom}}\item[{\em 
+E\-C\-\_\-\-Custom\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4caa99911d6d7e4d461b53c39cabcedddd3}
+}]\index{E\-C\-\_\-\-Arpa@{E\-C\-\_\-\-Arpa}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Arpa@{E\-C\-\_\-\-Arpa}}\item[{\em 
+E\-C\-\_\-\-Arpa\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca07d5c3220d0869de67a4b81f7fe9a16a}
+}]\index{E\-C\-\_\-\-Get\-Addr\-Info@{E\-C\-\_\-\-Get\-Addr\-Info}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Get\-Addr\-Info@{E\-C\-\_\-\-Get\-Addr\-Info}}\item[{\em 
+E\-C\-\_\-\-Get\-Addr\-Info\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca31f45ff4e2d6227a2ba09d4b5fc657fd}
+}]\index{E\-C\-\_\-\-Max@{E\-C\-\_\-\-Max}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Max@{E\-C\-\_\-\-Max}}\item[{\em 
+E\-C\-\_\-\-Max\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca70b38af66208fe56a262e3605be31b8a}
+}]\index{E\-C\-\_\-\-Abnormal@{E\-C\-\_\-\-Abnormal}!error.\-h@{error.\-h}}\index{error.\-h@{error.\-h}!E\-C\-\_\-\-Abnormal@{E\-C\-\_\-\-Abnormal}}\item[{\em 
+E\-C\-\_\-\-Abnormal\label{error_8h_a02135c3838fd11f1cf862ae2daf29e4ca5a08129864d3dbd04905b783a56b2fe6}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{error.\-h@{error.\-h}!gen\-\_\-critical@{gen\-\_\-critical}}
+\index{gen\-\_\-critical@{gen\-\_\-critical}!error.h@{error.\-h}}
+\subsubsection[{gen\-\_\-critical}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-critical (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8h_ad7abb0eedaaa25e5cce2141a13bd4af5}
+\index{error.\-h@{error.\-h}!gen\-\_\-debug@{gen\-\_\-debug}}
+\index{gen\-\_\-debug@{gen\-\_\-debug}!error.h@{error.\-h}}
+\subsubsection[{gen\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-debug (
+\begin{DoxyParamCaption}
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8h_a9a006343667fc7ba3700717a088db087}
+\index{error.\-h@{error.\-h}!gen\-\_\-informational@{gen\-\_\-informational}}
+\index{gen\-\_\-informational@{gen\-\_\-informational}!error.h@{error.\-h}}
+\subsubsection[{gen\-\_\-informational}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-informational (
+\begin{DoxyParamCaption}
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8h_a8766f7f2f28c3dcb552239443cbb1df6}
+\index{error.\-h@{error.\-h}!gen\-\_\-warning@{gen\-\_\-warning}}
+\index{gen\-\_\-warning@{gen\-\_\-warning}!error.h@{error.\-h}}
+\subsubsection[{gen\-\_\-warning}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-warning (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8h_a41deb0a263cb65f98cded303082fc4e0}
+\index{error.\-h@{error.\-h}!lookup\-\_\-error@{lookup\-\_\-error}}
+\index{lookup\-\_\-error@{lookup\-\_\-error}!error.h@{error.\-h}}
+\subsubsection[{lookup\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ lookup\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{char $\ast$}]{buffer = {\ttfamily nullptr}, }
+\item[{uint32\-\_\-t}]{buffer\-\_\-size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{error_8h_a4ed4fe5c95f9d6be65ce03abf24b88b9}

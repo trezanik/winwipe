@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['op_5fchangeownerfile',['OP_ChangeOwnerFile',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589ad967c5198b34c14331e15b48e27681aa',1,'Operation.h']]],
+  ['op_5fchangeownerkey',['OP_ChangeOwnerKey',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589aefcdd292b9f392b0b3d235ae2a49ca9d',1,'Operation.h']]],
+  ['op_5fchangepermissionsfile',['OP_ChangePermissionsFile',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a9ad1299f690445c6902fb140d1ffd85b',1,'Operation.h']]],
+  ['op_5fchangepermissionskey',['OP_ChangePermissionsKey',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a5dcb3c264e8e0030292b5852d1f68802',1,'Operation.h']]],
+  ['op_5fchangerights',['OP_ChangeRights',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589aef114e4a91f2916dd1a88b847c8cd2fa',1,'Operation.h']]],
+  ['op_5fdeletedirectory',['OP_DeleteDirectory',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a246d215083e05ffc245fae8a36da0d16',1,'Operation.h']]],
+  ['op_5fdeletefile',['OP_DeleteFile',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a1b47b197db983b13fc107ff46375a825',1,'Operation.h']]],
+  ['op_5fdeleteregkey',['OP_DeleteRegKey',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a1581382d330c9f986d243225db0c0291',1,'Operation.h']]],
+  ['op_5fdeleteregvalue',['OP_DeleteRegValue',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a68ccc1e6b72c4ab78596b87142ae6ccd',1,'Operation.h']]],
+  ['op_5fdeleteservice',['OP_DeleteService',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a0c3fd6655dc397ab153fb10506c3cf5d',1,'Operation.h']]],
+  ['op_5fdummy',['OP_Dummy',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a2b1d3365980bfcb95e564304dc0e431b',1,'Operation.h']]],
+  ['op_5fexecute',['OP_Execute',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a88386499a6ffb813d3d2c9ccbd49e3f6',1,'Operation.h']]],
+  ['op_5fkillprocess',['OP_KillProcess',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589ae16f19086ae6baceb18397bddf9c9214',1,'Operation.h']]],
+  ['op_5fkillthread',['OP_KillThread',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a65ef6ab955a80a08adb00eb9c20d6026',1,'Operation.h']]],
+  ['op_5fmax',['OP_MAX',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a5c270cf3e25cfa83f27b787be93b99f9',1,'Operation.h']]],
+  ['op_5fopenfile',['OP_OpenFile',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589aeca131c0c7fcbf186379c2148bc51d06',1,'Operation.h']]],
+  ['op_5fopenregkey',['OP_OpenRegKey',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a66465fe731fc8f2ba92ea8daec272a21',1,'Operation.h']]],
+  ['op_5fstopservice',['OP_StopService',['../_operation_8h.html#a29c331c24eda38b81f1e27a40391a589a434d740e98eba2e054b9f9cc62bb6892',1,'Operation.h']]],
+  ['os_5ffailed',['OS_Failed',['../_operation_8h.html#ac3f77f49db5f357de93e5a22bc2f601fa76b112a68b6c56383c6f04327844ed1f',1,'Operation.h']]],
+  ['os_5fnotneeded',['OS_NotNeeded',['../_operation_8h.html#ac3f77f49db5f357de93e5a22bc2f601fa8746c61c4f80d56290eb03087db8d512',1,'Operation.h']]],
+  ['os_5fpaused',['OS_Paused',['../_operation_8h.html#ac3f77f49db5f357de93e5a22bc2f601fadaa7a63a2815034acf71b0eec28d8d8f',1,'Operation.h']]],
+  ['os_5fprepared',['OS_Prepared',['../_operation_8h.html#ac3f77f49db5f357de93e5a22bc2f601fa3235cb67cc5fcb5cd4c1896c0cbb0ed5',1,'Operation.h']]],
+  ['os_5fsucceeded',['OS_Succeeded',['../_operation_8h.html#ac3f77f49db5f357de93e5a22bc2f601fabddec909ae1b6efec396721fbb374ae6',1,'Operation.h']]],
+  ['os_5funprepared',['OS_Unprepared',['../_operation_8h.html#ac3f77f49db5f357de93e5a22bc2f601fa3cc3ca28d6dcb189d3e8ca980b98bba8',1,'Operation.h']]]
+];

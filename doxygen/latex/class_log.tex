@@ -1,0 +1,230 @@
+\section{Log Class Reference}
+\label{class_log}\index{Log@{Log}}
+
+
+{\ttfamily \#include $<$Log.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_log_a7322cffafaf49b852e50f49e5d5fd56d}{Append} (const std\-::string \&append\-\_\-string)
+\item 
+void \hyperlink{class_log_ad836545209976c5bf2e028f7036c68a6}{Close} ()
+\item 
+void \hyperlink{class_log_afb04394b40af57b572c2f2a0eb3aa47b}{Flush} ()
+\item 
+std\-::stringstream \& \hyperlink{class_log_a2d39e1371315e0db314073c61a6d5194}{Log\-With\-Level} (\hyperlink{stdint_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} log\-\_\-level, const char $\ast$file=nullptr, const char $\ast$function=nullptr, const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} line=0)
+\item 
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25d}{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L} \hyperlink{class_log_ac208727583b061465ada85f2eae3b975}{Log\-Level} ()
+\item 
+bool \hyperlink{class_log_a4b1b095c3ca027c4e6f28226b5347399}{Open} (char $\ast$filename)
+\item 
+void \hyperlink{class_log_a746b725c837b9061aa17b2aeebeace20}{Set\-Log\-Level} (\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25d}{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L} loglevel)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_log_a7bb0133b6592fd0a5ce501b78ccaa6f8}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_log}{Log})
+\item 
+\hyperlink{class_log_a84cd9f10ec90924af12968fb433856f3}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_log}{Log})
+\item 
+\hyperlink{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}{Log} ()
+\item 
+\hyperlink{class_log_a0fbfda88fbee5027c89f6eb121059360}{$\sim$\-Log} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::stringstream \hyperlink{class_log_abdde24b4792aed62365ff7c2ef079085}{\-\_\-next\-\_\-log}
+\item 
+std\-::stringstream \hyperlink{class_log_ab6a39fa59661a3d6bcd2fdaf69f6b74d}{\-\_\-null\-\_\-log}
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{class_log_ab8a09fa20d7911772a2f3c1af1da2fef}{\-\_\-file}
+\item 
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25d}{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L} \hyperlink{class_log_a65f1cae0e84627fe046ff4cb5671f53c}{\-\_\-log\-\_\-level}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_log_af3d14e26ba8af9e6cc5a32aad8446de7}{Runtime}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]consider using a Chain\-Of\-Responsibility style for this; will enable us to have a single \hyperlink{_log_8h_a0b7fe247d21ea2cda560075ca24c2ba0}{L\-O\-G()} line of code, with all errors always being output to cerr, but only certain things going to a physical file. The complications will be multi-\/line and immediate or delayed flush...\end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Log@{Log}!Log@{Log}}
+\index{Log@{Log}!Log@{Log}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Log\-::\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_log_af6071a60aa52b6c1b511f99b4bc1b8fe}
+\index{Log@{Log}!$\sim$\-Log@{$\sim$\-Log}}
+\index{$\sim$\-Log@{$\sim$\-Log}!Log@{Log}}
+\subsubsection[{$\sim$\-Log}]{\setlength{\rightskip}{0pt plus 5cm}Log\-::$\sim$\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_log_a0fbfda88fbee5027c89f6eb121059360}
+
+
+\subsection{Member Function Documentation}
+\index{Log@{Log}!Append@{Append}}
+\index{Append@{Append}!Log@{Log}}
+\subsubsection[{Append}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-::\-Append (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{append\-\_\-string}
+\end{DoxyParamCaption}
+)}\label{class_log_a7322cffafaf49b852e50f49e5d5fd56d}
+Used for inserting data when desiring a custom layout going to the log file. This bypasses any Log\-Level, file/line info, and accesses the stream directly.
+
+It's usage should be limited to formatting within the file, such as printing out a list of memory addresses with text -\/ having a file + line for each at the start would be detrimental to legibility.
+
+Use Log\-With\-Level(...) to get a similar result, and should be preferred where possible.
+
+
+\begin{DoxyParams}{Parameters}
+{\em append\-\_\-string} & The string to append to the stream \\
+\hline
+\end{DoxyParams}
+\index{Log@{Log}!Close@{Close}}
+\index{Close@{Close}!Log@{Log}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-::\-Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_log_ad836545209976c5bf2e028f7036c68a6}
+Closes the file previously opened by \hyperlink{class_log_a4b1b095c3ca027c4e6f28226b5347399}{Open()}, if any. Will \hyperlink{class_log_afb04394b40af57b572c2f2a0eb3aa47b}{Flush()} before the file is closed, with a notification suffix line.
+
+Will cause \-\_\-file to be a nullptr after execution. \index{Log@{Log}!Flush@{Flush}}
+\index{Flush@{Flush}!Log@{Log}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-::\-Flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_log_afb04394b40af57b572c2f2a0eb3aa47b}
+Forces the current contents of the logging stream to be written to file, if it's open.
+
+If the file is not open, the stream is reset, just like if there was data to write. \index{Log@{Log}!Log\-Level@{Log\-Level}}
+\index{Log\-Level@{Log\-Level}!Log@{Log}}
+\subsubsection[{Log\-Level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L} Log\-::\-Log\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_log_ac208727583b061465ada85f2eae3b975}
+Retrieves the logging level currently set.
+
+\begin{DoxyReturn}{Returns}
+The logging level, as an E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L, currently set 
+\end{DoxyReturn}
+\index{Log@{Log}!Log\-With\-Level@{Log\-With\-Level}}
+\index{Log\-With\-Level@{Log\-With\-Level}!Log@{Log}}
+\subsubsection[{Log\-With\-Level}]{\setlength{\rightskip}{0pt plus 5cm}std\-::stringstream \& Log\-::\-Log\-With\-Level (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{log\-\_\-level, }
+\item[{const char $\ast$}]{file = {\ttfamily nullptr}, }
+\item[{const char $\ast$}]{function = {\ttfamily nullptr}, }
+\item[{const {\bf uint32\-\_\-t}}]{line = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_log_a2d39e1371315e0db314073c61a6d5194}
+Writes to the logging stream, preparing for the input from a runtime file. Returns the actual stream, so game code can perform logging in a single, non-\/descriptive line\-: 
+\begin{DoxyCode}
+LOG(LL_Warn) << \textcolor{stringliteral}{"This operation should have succeeded: "} << info\_detail;
+\end{DoxyCode}
+
+
+Newlines are not automatically added (since the caller has the stream on return), so must be provided.
+
+If the logging level would not write the supplied data, it is redirected to a unused stream.
+
+While all other parameters are optional, if you supply a filename, then the function + line are mandatory to be supplied. This is why, amongst clarity, the \hyperlink{_log_8h_a0b7fe247d21ea2cda560075ca24c2ba0}{L\-O\-G()} macro should be used for all output, unless you need fine grained control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em log\-\_\-level} & The criticality level at which the incoming entry is deemed \\
+\hline
+\mbox{\tt in}  & {\em file} & Optional pointer to the filename this log entry will contain \\
+\hline
+\mbox{\tt in}  & {\em function} & Optional pointer to the function this log entry will contain \\
+\hline
+\mbox{\tt in}  & {\em line} & Optional line number of the filename this log entry will contain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the logging stream 
+\end{DoxyReturn}
+\index{Log@{Log}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Log@{Log}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Log\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Log}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_log_a7bb0133b6592fd0a5ce501b78ccaa6f8}
+\index{Log@{Log}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Log@{Log}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Log\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Log}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_log_a84cd9f10ec90924af12968fb433856f3}
+\index{Log@{Log}!Open@{Open}}
+\index{Open@{Open}!Log@{Log}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}bool Log\-::\-Open (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_log_a4b1b095c3ca027c4e6f28226b5347399}
+Opens the file name specified for writing, erasing any prior data in the log file. This is opened in such a way that other processes may not write anything to the file, but are free to read it.
+
+This is useful for checking for an event at runtime, when we don't want to have to close the application to check, while still stopping another process from being able to wipe our data out.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & The name of the file to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file is opened with a restricted share mode 
+
+false if the file could not be opened with the desired share mode 
+\end{DoxyReturn}
+\index{Log@{Log}!Set\-Log\-Level@{Set\-Log\-Level}}
+\index{Set\-Log\-Level@{Set\-Log\-Level}!Log@{Log}}
+\subsubsection[{Set\-Log\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void Log\-::\-Set\-Log\-Level (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L}}]{loglevel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_log_a746b725c837b9061aa17b2aeebeace20}
+Changes what level of events will be logged, and those that will be sent to /dev/null.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em loglevel} & The new log level to use \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Log@{Log}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!Log@{Log}}
+\subsubsection[{Runtime}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Runtime}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_log_af3d14e26ba8af9e6cc5a32aad8446de7}
+
+
+\subsection{Member Data Documentation}
+\index{Log@{Log}!\-\_\-file@{\-\_\-file}}
+\index{\-\_\-file@{\-\_\-file}!Log@{Log}}
+\subsubsection[{\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ Log\-::\-\_\-file\hspace{0.3cm}{\ttfamily [private]}}\label{class_log_ab8a09fa20d7911772a2f3c1af1da2fef}
+we need error handling beyond that of 'an error occurred' so we need to call into the platforms A\-P\-Is to retain control; hence the usage of the C-\/style F\-I\-L\-E and not a std\-::ofstream \index{Log@{Log}!\-\_\-log\-\_\-level@{\-\_\-log\-\_\-level}}
+\index{\-\_\-log\-\_\-level@{\-\_\-log\-\_\-level}!Log@{Log}}
+\subsubsection[{\-\_\-log\-\_\-level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L} Log\-::\-\_\-log\-\_\-level\hspace{0.3cm}{\ttfamily [private]}}\label{class_log_a65f1cae0e84627fe046ff4cb5671f53c}
+The active logging level; log requests with a lower rating will not log those with higher levels unless set here. \index{Log@{Log}!\-\_\-next\-\_\-log@{\-\_\-next\-\_\-log}}
+\index{\-\_\-next\-\_\-log@{\-\_\-next\-\_\-log}!Log@{Log}}
+\subsubsection[{\-\_\-next\-\_\-log}]{\setlength{\rightskip}{0pt plus 5cm}std\-::stringstream Log\-::\-\_\-next\-\_\-log\hspace{0.3cm}{\ttfamily [private]}}\label{class_log_abdde24b4792aed62365ff7c2ef079085}
+This holds all of the data written into the stream inbetween calls to the {\itshape flush} function, which actually writes out to file \index{Log@{Log}!\-\_\-null\-\_\-log@{\-\_\-null\-\_\-log}}
+\index{\-\_\-null\-\_\-log@{\-\_\-null\-\_\-log}!Log@{Log}}
+\subsubsection[{\-\_\-null\-\_\-log}]{\setlength{\rightskip}{0pt plus 5cm}std\-::stringstream Log\-::\-\_\-null\-\_\-log\hspace{0.3cm}{\ttfamily [private]}}\label{class_log_ab6a39fa59661a3d6bcd2fdaf69f6b74d}
+A stream to hold logging events that don't reach the required level to be put to the normal stream. Nasty hack, as all the data is still written to the stream, where it then gets wiped straight away. 

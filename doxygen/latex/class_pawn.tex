@@ -1,0 +1,186 @@
+\section{Pawn Class Reference}
+\label{class_pawn}\index{Pawn@{Pawn}}
+
+
+{\ttfamily \#include $<$Pawn.\-h$>$}
+
+Inheritance diagram for Pawn\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_pawn}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pawn_ab7880b10c514f4b9fab9766fbe7c06fd}{Pawn} ()
+\item 
+\hyperlink{class_pawn_a3095938fb8326469c3bd05da0b8f50af}{$\sim$\-Pawn} ()
+\item 
+virtual void \hyperlink{class_pawn_a42f7e429e2ba92bc057d45ce0950d3ca}{Fire\-Weapon} ()
+\item 
+virtual bool \hyperlink{class_pawn_ad745a3758a8e801b484dadd39071c492}{Give\-Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_pawn_a228f2c679de9cd06cde2144fe44d9437}{Health} () const 
+\item 
+bool \hyperlink{class_pawn_a8d73d6bb3cd96916b6257ad9aaf9e8c1}{Is\-Dead} () const 
+\item 
+void \hyperlink{class_pawn_a7a97c270622036e644c54ad5f13a1cf5}{Reload\-Weapon} ()
+\item 
+void \hyperlink{class_pawn_aa90523cf62ddf7a356554d80e01540b5}{Remove\-Weapon} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_pawn_a5c53c3eb70da162a5336198f963dc350}{\-\_\-max\-\_\-health}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_pawn_afdc8ca44139d27704a2b728cde4a944e}{\-\_\-cur\-\_\-health}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_pawn_a45c9336f40515d51ac568db250e198d9}{\-\_\-max\-\_\-armour}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_pawn_a577fc2cfe23224c96949c4bb3867e8e9}{\-\_\-cur\-\_\-armour}
+\item 
+\hyperlink{class_weapon}{Weapon} $\ast$ \hyperlink{class_pawn_ac36716d4e38c7031fc48320989ead73d}{\-\_\-weapon}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pawn_ae0a9b64c38063a699be94955ad5a212d}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_pawn}{Pawn})
+\item 
+\hyperlink{class_pawn_a74ea3f3372802ad900cc506db056d894}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_pawn}{Pawn})
+\item 
+void \hyperlink{class_pawn_a9568288d000383638db8c8d56e28e3b0}{Attach} (\hyperlink{class_entity}{Entity} $\ast$owner)
+\item 
+void \hyperlink{class_pawn_a03d4de56f8932dd8bb2fd8160295ddbf}{Detach} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_pawn_a3e1914489e4bed4f9f23cdeab34a43dc}{Engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\subsubsection[{Pawn}]{\setlength{\rightskip}{0pt plus 5cm}Pawn\-::\-Pawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pawn_ab7880b10c514f4b9fab9766fbe7c06fd}
+\index{Pawn@{Pawn}!$\sim$\-Pawn@{$\sim$\-Pawn}}
+\index{$\sim$\-Pawn@{$\sim$\-Pawn}!Pawn@{Pawn}}
+\subsubsection[{$\sim$\-Pawn}]{\setlength{\rightskip}{0pt plus 5cm}Pawn\-::$\sim$\-Pawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pawn_a3095938fb8326469c3bd05da0b8f50af}
+
+
+\subsection{Member Function Documentation}
+\index{Pawn@{Pawn}!Attach@{Attach}}
+\index{Attach@{Attach}!Pawn@{Pawn}}
+\subsubsection[{Attach}]{\setlength{\rightskip}{0pt plus 5cm}void Pawn\-::\-Attach (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pawn_a9568288d000383638db8c8d56e28e3b0}
+Attaches to another entity, which owns this \hyperlink{class_pawn}{Pawn}. \index{Pawn@{Pawn}!Detach@{Detach}}
+\index{Detach@{Detach}!Pawn@{Pawn}}
+\subsubsection[{Detach}]{\setlength{\rightskip}{0pt plus 5cm}void Pawn\-::\-Detach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pawn_a03d4de56f8932dd8bb2fd8160295ddbf}
+\index{Pawn@{Pawn}!Fire\-Weapon@{Fire\-Weapon}}
+\index{Fire\-Weapon@{Fire\-Weapon}!Pawn@{Pawn}}
+\subsubsection[{Fire\-Weapon}]{\setlength{\rightskip}{0pt plus 5cm}void Pawn\-::\-Fire\-Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pawn_a42f7e429e2ba92bc057d45ce0950d3ca}
+\index{Pawn@{Pawn}!Give\-Weapon@{Give\-Weapon}}
+\index{Give\-Weapon@{Give\-Weapon}!Pawn@{Pawn}}
+\subsubsection[{Give\-Weapon}]{\setlength{\rightskip}{0pt plus 5cm}bool Pawn\-::\-Give\-Weapon (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pawn_ad745a3758a8e801b484dadd39071c492}
+\index{Pawn@{Pawn}!Health@{Health}}
+\index{Health@{Health}!Pawn@{Pawn}}
+\subsubsection[{Health}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Pawn\-::\-Health (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pawn_a228f2c679de9cd06cde2144fe44d9437}
+\index{Pawn@{Pawn}!Is\-Dead@{Is\-Dead}}
+\index{Is\-Dead@{Is\-Dead}!Pawn@{Pawn}}
+\subsubsection[{Is\-Dead}]{\setlength{\rightskip}{0pt plus 5cm}bool Pawn\-::\-Is\-Dead (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pawn_a8d73d6bb3cd96916b6257ad9aaf9e8c1}
+\index{Pawn@{Pawn}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Pawn@{Pawn}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Pawn\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Pawn}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pawn_ae0a9b64c38063a699be94955ad5a212d}
+\index{Pawn@{Pawn}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Pawn@{Pawn}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Pawn\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Pawn}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pawn_a74ea3f3372802ad900cc506db056d894}
+\index{Pawn@{Pawn}!Reload\-Weapon@{Reload\-Weapon}}
+\index{Reload\-Weapon@{Reload\-Weapon}!Pawn@{Pawn}}
+\subsubsection[{Reload\-Weapon}]{\setlength{\rightskip}{0pt plus 5cm}void Pawn\-::\-Reload\-Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pawn_a7a97c270622036e644c54ad5f13a1cf5}
+\index{Pawn@{Pawn}!Remove\-Weapon@{Remove\-Weapon}}
+\index{Remove\-Weapon@{Remove\-Weapon}!Pawn@{Pawn}}
+\subsubsection[{Remove\-Weapon}]{\setlength{\rightskip}{0pt plus 5cm}void Pawn\-::\-Remove\-Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pawn_aa90523cf62ddf7a356554d80e01540b5}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Pawn@{Pawn}!Engine@{Engine}}
+\index{Engine@{Engine}!Pawn@{Pawn}}
+\subsubsection[{Engine}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Engine}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_pawn_a3e1914489e4bed4f9f23cdeab34a43dc}
+
+
+Reimplemented from \hyperlink{class_entity_a3e1914489e4bed4f9f23cdeab34a43dc}{Entity}.
+
+
+
+Reimplemented in \hyperlink{class_unit_a3e1914489e4bed4f9f23cdeab34a43dc}{Unit}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Pawn@{Pawn}!\-\_\-cur\-\_\-armour@{\-\_\-cur\-\_\-armour}}
+\index{\-\_\-cur\-\_\-armour@{\-\_\-cur\-\_\-armour}!Pawn@{Pawn}}
+\subsubsection[{\-\_\-cur\-\_\-armour}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Pawn\-::\-\_\-cur\-\_\-armour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pawn_a577fc2cfe23224c96949c4bb3867e8e9}
+\index{Pawn@{Pawn}!\-\_\-cur\-\_\-health@{\-\_\-cur\-\_\-health}}
+\index{\-\_\-cur\-\_\-health@{\-\_\-cur\-\_\-health}!Pawn@{Pawn}}
+\subsubsection[{\-\_\-cur\-\_\-health}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Pawn\-::\-\_\-cur\-\_\-health\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pawn_afdc8ca44139d27704a2b728cde4a944e}
+\index{Pawn@{Pawn}!\-\_\-max\-\_\-armour@{\-\_\-max\-\_\-armour}}
+\index{\-\_\-max\-\_\-armour@{\-\_\-max\-\_\-armour}!Pawn@{Pawn}}
+\subsubsection[{\-\_\-max\-\_\-armour}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Pawn\-::\-\_\-max\-\_\-armour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pawn_a45c9336f40515d51ac568db250e198d9}
+\index{Pawn@{Pawn}!\-\_\-max\-\_\-health@{\-\_\-max\-\_\-health}}
+\index{\-\_\-max\-\_\-health@{\-\_\-max\-\_\-health}!Pawn@{Pawn}}
+\subsubsection[{\-\_\-max\-\_\-health}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Pawn\-::\-\_\-max\-\_\-health\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pawn_a5c53c3eb70da162a5336198f963dc350}
+\index{Pawn@{Pawn}!\-\_\-weapon@{\-\_\-weapon}}
+\index{\-\_\-weapon@{\-\_\-weapon}!Pawn@{Pawn}}
+\subsubsection[{\-\_\-weapon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weapon}$\ast$ Pawn\-::\-\_\-weapon\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pawn_ac36716d4e38c7031fc48320989ead73d}
+
+
+Reimplemented in \hyperlink{class_unit_ae2fd9770344d1c6b665ec17539afb8af}{Unit}.
+

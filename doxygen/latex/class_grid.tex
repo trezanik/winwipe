@@ -1,0 +1,94 @@
+\section{Grid Class Reference}
+\label{class_grid}\index{Grid@{Grid}}
+
+
+{\ttfamily \#include $<$Grid.\-h$>$}
+
+Inheritance diagram for Grid\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grid}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grid_a3661d0a7f998caaaf8627d7a67072116}{$\sim$\-Grid} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_grid_af0cd213a5e3346545486cb0d5b9adabc}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_grid}{Grid})
+\item 
+\hyperlink{class_grid_aa8e34f41a5b31907483b89f16fe9c098}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_grid}{Grid})
+\item 
+\hyperlink{class_grid_a72099a3258586ec6ce61e1cde837989f}{Grid} (\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} x, \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} y)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_grid_a0de783a906bc60749538bbfcb5e21eec}{\-\_\-x}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_grid_ab3eb4febe35bece4a81df8bc99140583}{\-\_\-y}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_grid_a3e1914489e4bed4f9f23cdeab34a43dc}{Engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A two-\/dimensional grid, with a minimum of 2x2 -\/ each \hyperlink{class_tile}{Tile} must have a sibling so no \hyperlink{class_grid}{Grid} can have just one tile (minimum 4, if you can't work that out!). Outside of this restriction, grids can be any size, although a 3x100 grid wouldn't be much fun to play on unless you have a peculiar scenario.
+
+While the \hyperlink{class_grid}{Grid} is not an ingame entity, it provides the foundation for the tiles to reside on. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Grid@{Grid}!Grid@{Grid}}
+\index{Grid@{Grid}!Grid@{Grid}}
+\subsubsection[{Grid}]{\setlength{\rightskip}{0pt plus 5cm}Grid\-::\-Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf u32\-\_\-t}}]{x, }
+\item[{{\bf u32\-\_\-t}}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_grid_a72099a3258586ec6ce61e1cde837989f}
+\index{Grid@{Grid}!$\sim$\-Grid@{$\sim$\-Grid}}
+\index{$\sim$\-Grid@{$\sim$\-Grid}!Grid@{Grid}}
+\subsubsection[{$\sim$\-Grid}]{\setlength{\rightskip}{0pt plus 5cm}Grid\-::$\sim$\-Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_grid_a3661d0a7f998caaaf8627d7a67072116}
+
+
+\subsection{Member Function Documentation}
+\index{Grid@{Grid}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Grid@{Grid}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Grid\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_grid_af0cd213a5e3346545486cb0d5b9adabc}
+\index{Grid@{Grid}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Grid@{Grid}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Grid\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Grid}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_grid_aa8e34f41a5b31907483b89f16fe9c098}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Grid@{Grid}!Engine@{Engine}}
+\index{Engine@{Engine}!Grid@{Grid}}
+\subsubsection[{Engine}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Engine}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_grid_a3e1914489e4bed4f9f23cdeab34a43dc}
+
+
+\subsection{Member Data Documentation}
+\index{Grid@{Grid}!\-\_\-x@{\-\_\-x}}
+\index{\-\_\-x@{\-\_\-x}!Grid@{Grid}}
+\subsubsection[{\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Grid\-::\-\_\-x\hspace{0.3cm}{\ttfamily [private]}}\label{class_grid_a0de783a906bc60749538bbfcb5e21eec}
+Number of Tiles on the x-\/axis \index{Grid@{Grid}!\-\_\-y@{\-\_\-y}}
+\index{\-\_\-y@{\-\_\-y}!Grid@{Grid}}
+\subsubsection[{\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Grid\-::\-\_\-y\hspace{0.3cm}{\ttfamily [private]}}\label{class_grid_ab3eb4febe35bece4a81df8bc99140583}
+Number of Tiles on the y-\/axis 

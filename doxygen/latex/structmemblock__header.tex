@@ -1,0 +1,56 @@
+\section{memblock\-\_\-header Struct Reference}
+\label{structmemblock__header}\index{memblock\-\_\-header@{memblock\-\_\-header}}
+
+
+{\ttfamily \#include $<$Allocator.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{structmemblock__header_a10ebc950edccb690a784aceb6362d696}{magic}
+\item 
+\hyperlink{structmemblock__footer}{memblock\-\_\-footer} $\ast$ \hyperlink{structmemblock__header_ab9999ece91b34ae2742865b27791b374}{footer}
+\item 
+const \hyperlink{class_object}{Object} $\ast$ \hyperlink{structmemblock__header_a4a1f4790e308d4211fee21b6eceeebc4}{owner}
+\item 
+\hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} \hyperlink{structmemblock__header_aafc71ef9dade058f65a814a1b2e3ffd2}{file} \mbox{[}\hyperlink{build_8h_ac811ed79333c5131bf74f609b0b67fcf}{M\-E\-M\-\_\-\-M\-A\-X\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H}+1\mbox{]}
+\item 
+\hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} \hyperlink{structmemblock__header_acd1e57226698ef61dc9ffb3a55dcd7e2}{function} \mbox{[}\hyperlink{build_8h_af15f994b428f827c19ae31d1df47d7ca}{M\-E\-M\-\_\-\-M\-A\-X\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-L\-E\-N\-G\-T\-H}+1\mbox{]}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{structmemblock__header_a4d7851e5d73d69d982776d281c222b1d}{line}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{structmemblock__header_a46ddeb376649b481b8cb72fe59e90b1d}{requested\-\_\-size}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{structmemblock__header_a07b25257ab31ff95fa23911214371462}{real\-\_\-size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure is added at the start of a block of allocated memory, when U\-S\-I\-N\-G\-\_\-\-M\-E\-M\-O\-R\-Y\-\_\-\-D\-E\-B\-U\-G\-G\-I\-N\-G is defined in \hyperlink{build_8h}{build.\-h}. 
+
+\subsection{Member Data Documentation}
+\index{memblock\-\_\-header@{memblock\-\_\-header}!file@{file}}
+\index{file@{file}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf c8\-\_\-t} memblock\-\_\-header\-::file\mbox{[}{\bf M\-E\-M\-\_\-\-M\-A\-X\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H}+1\mbox{]}}\label{structmemblock__header_aafc71ef9dade058f65a814a1b2e3ffd2}
+The file this memory block was created in; is not allocated dynamically, and so is bound by the {\itshape M\-E\-M\-\_\-\-M\-A\-X\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H} definition. \index{memblock\-\_\-header@{memblock\-\_\-header}!footer@{footer}}
+\index{footer@{footer}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{footer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf memblock\-\_\-footer}$\ast$ memblock\-\_\-header\-::footer}\label{structmemblock__header_ab9999ece91b34ae2742865b27791b374}
+A pointer to this memory blocks footer \index{memblock\-\_\-header@{memblock\-\_\-header}!function@{function}}
+\index{function@{function}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf c8\-\_\-t} memblock\-\_\-header\-::function\mbox{[}{\bf M\-E\-M\-\_\-\-M\-A\-X\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-L\-E\-N\-G\-T\-H}+1\mbox{]}}\label{structmemblock__header_acd1e57226698ef61dc9ffb3a55dcd7e2}
+The function name this memory block was created in \index{memblock\-\_\-header@{memblock\-\_\-header}!line@{line}}
+\index{line@{line}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} memblock\-\_\-header\-::line}\label{structmemblock__header_a4d7851e5d73d69d982776d281c222b1d}
+The line in the file this memory block was created in \index{memblock\-\_\-header@{memblock\-\_\-header}!magic@{magic}}
+\index{magic@{magic}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{magic}]{\setlength{\rightskip}{0pt plus 5cm}unsigned memblock\-\_\-header\-::magic}\label{structmemblock__header_a10ebc950edccb690a784aceb6362d696}
+The header magic number is used to detect if an operation on memory has written into this structure. Corrupt headers usually mean something else has written into the block -\/ an exception being if an operation has stepped too far back, to the extent of overwriting the magic number \index{memblock\-\_\-header@{memblock\-\_\-header}!owner@{owner}}
+\index{owner@{owner}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{owner}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Object}$\ast$ memblock\-\_\-header\-::owner}\label{structmemblock__header_a4a1f4790e308d4211fee21b6eceeebc4}
+A pointer to the object that allocated the memory. If there was none, i.\-e. it was a standalone function, this member is a nullptr. \index{memblock\-\_\-header@{memblock\-\_\-header}!real\-\_\-size@{real\-\_\-size}}
+\index{real\-\_\-size@{real\-\_\-size}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{real\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} memblock\-\_\-header\-::real\-\_\-size}\label{structmemblock__header_a07b25257ab31ff95fa23911214371462}
+The size, in bytes, of the total allocation (header+data+footer) \index{memblock\-\_\-header@{memblock\-\_\-header}!requested\-\_\-size@{requested\-\_\-size}}
+\index{requested\-\_\-size@{requested\-\_\-size}!memblock_header@{memblock\-\_\-header}}
+\subsubsection[{requested\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} memblock\-\_\-header\-::requested\-\_\-size}\label{structmemblock__header_a46ddeb376649b481b8cb72fe59e90b1d}
+The size, in bytes, the original request desired 

@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['_5fcf',['_cf',['../class_user_interface.html#a3ccd60a6a765b9935cb9e357dae0e601',1,'UserInterface']]],
+  ['_5fcurrent_5foperation',['_current_operation',['../class_wiper.html#a98c5b4449bd30c40d0ead348c57f0f7f',1,'Wiper']]],
+  ['_5fdata',['_data',['../class_operation.html#a383d54b86fa3d166b491bcc82d1ce266',1,'Operation']]],
+  ['_5ferr_5fcode',['_err_code',['../class_operation.html#a64908392b807de489bf0913eab33f859',1,'Operation']]],
+  ['_5ferr_5fmsg',['_err_msg',['../class_operation.html#aa1233375b7028c9870788468b8adf749',1,'Operation']]],
+  ['_5fextra_5fdata',['_extra_data',['../class_operation.html#a1e970bd91884353e9bcb147ca27ecfa0',1,'Operation']]],
+  ['_5ffile',['_file',['../class_log.html#ab8a09fa20d7911772a2f3c1af1da2fef',1,'Log']]],
+  ['_5ffile_5fpath',['_file_path',['../class_configuration.html#adc160577cbe5851fbdf3e1bef18d288e',1,'Configuration']]],
+  ['_5fis_5floaded',['_is_loaded',['../class_configuration.html#ad1188017dffdee79cee71bd3eddf8d96',1,'Configuration']]],
+  ['_5flog_5flevel',['_log_level',['../class_log.html#a65f1cae0e84627fe046ff4cb5671f53c',1,'Log']]],
+  ['_5fnext_5flog',['_next_log',['../class_log.html#abdde24b4792aed62365ff7c2ef079085',1,'Log']]],
+  ['_5fnull_5flog',['_null_log',['../class_log.html#ab6a39fa59661a3d6bcd2fdaf69f6b74d',1,'Log']]],
+  ['_5fobservers',['_observers',['../class_subject.html#aa8ec70aef81be61ebfd03d4f0bc9c012',1,'Subject']]],
+  ['_5fop_5fstate',['_op_state',['../class_operation.html#afcd7896bcf67fa412e1af85cbb6d6b6b',1,'Operation']]],
+  ['_5foperation',['_operation',['../class_operation.html#ad78d85f09c55913fe1f82a0f77a0dc8c',1,'Operation::_operation()'],['../class_user_interface.html#a3b2271f8ea1c216fa72b0be285b4d496',1,'UserInterface::_operation()']]],
+  ['_5foperations',['_operations',['../class_wiper.html#a2ac92738b2626a47eecff22843e1ccd3',1,'Wiper']]],
+  ['_5foperations_5fstack',['_operations_stack',['../class_wiper.html#a98e266ae56c41c58c0d21ce30064d684',1,'Wiper']]],
+  ['_5fscm',['_scm',['../class_wiper.html#aa14de868e468e980872140bd970eb3e5',1,'Wiper']]],
+  ['_5ftoken',['_token',['../class_file_parser.html#abb6d21bebba226019e13530b08a57137',1,'FileParser']]],
+  ['_5fuser_5fpath',['_user_path',['../class_file_parser.html#aaf1c4178ca8624865e2640da03b05c53',1,'FileParser']]]
+];

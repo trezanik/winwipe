@@ -1,0 +1,125 @@
+\section{compiler.\-h File Reference}
+\label{compiler_8h}\index{compiler.\-h@{compiler.\-h}}
+
+
+Supported compiler macros, definitions and functionality.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{compiler_8h_a83066e93cc60e5e161e16a95080a41cd}{I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O}~1
+\item 
+\#define \hyperlink{compiler_8h_a8d5296555daf8174a33c160b74544b83}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8}~1400
+\item 
+\#define \hyperlink{compiler_8h_a3ab56482f6de80825bbeab1ac53c5c2b}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9}~1500
+\item 
+\#define \hyperlink{compiler_8h_a963332af49ce1d9aa3728e52afb50f71}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10}~1600
+\item 
+\#define \hyperlink{compiler_8h_a24c48fd4189f4008595d93e3df426a35}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11}~1700
+\item 
+\#define \hyperlink{compiler_8h_a4396862b9c97b42748a1ca6cfda303f6}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == \hyperlink{compiler_8h_a8d5296555daf8174a33c160b74544b83}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})
+\item 
+\#define \hyperlink{compiler_8h_a23c12c9de144a2d49351371b72cb78f3}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == \hyperlink{compiler_8h_a3ab56482f6de80825bbeab1ac53c5c2b}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})
+\item 
+\#define \hyperlink{compiler_8h_ae4a092a868efb6f8dee93483eea71e2c}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == \hyperlink{compiler_8h_a963332af49ce1d9aa3728e52afb50f71}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})
+\item 
+\#define \hyperlink{compiler_8h_a70c2c6f6a445cfd4a9f4464023c84e76}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == \hyperlink{compiler_8h_a24c48fd4189f4008595d93e3df426a35}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})
+\item 
+\#define \hyperlink{compiler_8h_a2e30ef2059814414a404f5d2c8f468ca}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= \hyperlink{compiler_8h_a8d5296555daf8174a33c160b74544b83}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})
+\item 
+\#define \hyperlink{compiler_8h_a8f219e87872c2515fcad8d6439de117e}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= \hyperlink{compiler_8h_a3ab56482f6de80825bbeab1ac53c5c2b}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})
+\item 
+\#define \hyperlink{compiler_8h_a1eb316291d7106b16beaae116ad9c978}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= \hyperlink{compiler_8h_a963332af49ce1d9aa3728e52afb50f71}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})
+\item 
+\#define \hyperlink{compiler_8h_ab7edeab9cbdc5849ca685842916087e6}{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= \hyperlink{compiler_8h_a24c48fd4189f4008595d93e3df426a35}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})
+\item 
+\#define \hyperlink{compiler_8h_a25b7f21e3200c29abbc43ea4b844906b}{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ \hyperlink{compiler_8h_a8d5296555daf8174a33c160b74544b83}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})
+\item 
+\#define \hyperlink{compiler_8h_ac252a9a5562eb12cf0afb88ede000494}{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ \hyperlink{compiler_8h_a3ab56482f6de80825bbeab1ac53c5c2b}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})
+\item 
+\#define \hyperlink{compiler_8h_a80c2d6e6796d0a40df4a06413904b0a8}{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ \hyperlink{compiler_8h_a963332af49ce1d9aa3728e52afb50f71}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})
+\item 
+\#define \hyperlink{compiler_8h_a214fa704cbedb50338403c72f3785ac1}{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ \hyperlink{compiler_8h_a24c48fd4189f4008595d93e3df426a35}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})
+\item 
+\#define \hyperlink{compiler_8h_a3aa56032296678f21daa253500748995}{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ \hyperlink{compiler_8h_a8d5296555daf8174a33c160b74544b83}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})
+\item 
+\#define \hyperlink{compiler_8h_a75e803ab5757767469727263545f9a8a}{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ \hyperlink{compiler_8h_a3ab56482f6de80825bbeab1ac53c5c2b}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})
+\item 
+\#define \hyperlink{compiler_8h_ae9c1bfa45d063a435f0bd27ddf712488}{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ \hyperlink{compiler_8h_a963332af49ce1d9aa3728e52afb50f71}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})
+\item 
+\#define \hyperlink{compiler_8h_a43722d19695f9c0c2079fdaa8f021340}{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11}~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ \hyperlink{compiler_8h_a24c48fd4189f4008595d93e3df426a35}{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Supported compiler macros, definitions and functionality. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{compiler.\-h@{compiler.\-h}!I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O@{I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O}}
+\index{I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O@{I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O}!compiler.h@{compiler.\-h}}
+\subsubsection[{I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-S\-T\-U\-D\-I\-O~1}\label{compiler_8h_a83066e93cc60e5e161e16a95080a41cd}
+\index{compiler.\-h@{compiler.\-h}!M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10}}
+\index{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10~1600}\label{compiler_8h_a963332af49ce1d9aa3728e52afb50f71}
+Visual Studio 2010 \index{compiler.\-h@{compiler.\-h}!M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11}}
+\index{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11~1700}\label{compiler_8h_a24c48fd4189f4008595d93e3df426a35}
+Visual Studio 2012 \index{compiler.\-h@{compiler.\-h}!M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8}}
+\index{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8~1400}\label{compiler_8h_a8d5296555daf8174a33c160b74544b83}
+Visual Studio 2005 \index{compiler.\-h@{compiler.\-h}!M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9}}
+\index{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9@{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9~1500}\label{compiler_8h_a3ab56482f6de80825bbeab1ac53c5c2b}
+Visual Studio 2008 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10}}
+\index{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S10~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})}\label{compiler_8h_a80c2d6e6796d0a40df4a06413904b0a8}
+Is Pre-\/\-Visual Studio 2010 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11}}
+\index{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S11~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})}\label{compiler_8h_a214fa704cbedb50338403c72f3785ac1}
+Is Pre-\/\-Visual Studio 2012 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8}}
+\index{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S8~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})}\label{compiler_8h_a25b7f21e3200c29abbc43ea4b844906b}
+Is Pre-\/\-Visual Studio 2005 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9}}
+\index{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9@{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-B\-E\-F\-O\-R\-E\-\_\-\-V\-S9~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $<$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})}\label{compiler_8h_ac252a9a5562eb12cf0afb88ede000494}
+Is Pre-\/\-Visual Studio 2008 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})}\label{compiler_8h_ae4a092a868efb6f8dee93483eea71e2c}
+Is Visual Studio 2010 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S10\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})}\label{compiler_8h_a1eb316291d7106b16beaae116ad9c978}
+Is or later than Visual Studio 2010 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})}\label{compiler_8h_a70c2c6f6a445cfd4a9f4464023c84e76}
+Is Visual Studio 2012 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S11\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})}\label{compiler_8h_ab7edeab9cbdc5849ca685842916087e6}
+Is or later than Visual Studio 2012 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})}\label{compiler_8h_a4396862b9c97b42748a1ca6cfda303f6}
+Is Visual Studio 2005 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S8\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})}\label{compiler_8h_a2e30ef2059814414a404f5d2c8f468ca}
+Is or later than Visual Studio 2005 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R == {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})}\label{compiler_8h_a23c12c9de144a2d49351371b72cb78f3}
+Is Visual Studio 2008 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}}
+\index{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R@{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-I\-S\-\_\-\-V\-S9\-\_\-\-O\-R\-\_\-\-L\-A\-T\-E\-R~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$= {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})}\label{compiler_8h_a8f219e87872c2515fcad8d6439de117e}
+Is or later than Visual Studio 2008 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10}}
+\index{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S10~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S10})}\label{compiler_8h_ae9c1bfa45d063a435f0bd27ddf712488}
+Is Post-\/\-Visual Studio 2010 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11}}
+\index{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S11~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S11})}\label{compiler_8h_a43722d19695f9c0c2079fdaa8f021340}
+Is Post-\/\-Visual Studio 2012 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8}}
+\index{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S8~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S8})}\label{compiler_8h_a3aa56032296678f21daa253500748995}
+Is Post-\/\-Visual Studio 2005 \index{compiler.\-h@{compiler.\-h}!M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9}}
+\index{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9@{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9}!compiler.h@{compiler.\-h}}
+\subsubsection[{M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-V\-C\-\_\-\-L\-A\-T\-E\-R\-\_\-\-T\-H\-A\-N\-\_\-\-V\-S9~(\-\_\-\-M\-S\-C\-\_\-\-V\-E\-R $>$ {\bf M\-S\-\_\-\-V\-I\-S\-U\-A\-L\-\_\-\-C\-P\-P\-\_\-\-V\-S9})}\label{compiler_8h_a75e803ab5757767469727263545f9a8a}
+Is Post-\/\-Visual Studio 2008 

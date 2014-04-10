@@ -1,0 +1,11 @@
+# CSIDL_COMMON_APPDATA -> C:\Documents and Settings\All Users\Application Data
+# CSIDL_APPDATA -> C:\Documents and Settings\username\Application Data
+# CSIDL_LOCAL_APPDATA -> C:\Documents and Settings\username\Local Settings\Application Data
+# HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{3EB685DB-65F9-4CF6-A03A-E3EF65729F3D}
+#	Name = AppData, RelativePath = AppData\Roaming
+# HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{F1B32785-6FBA-4FCF-9D55-7B8E7F157091}
+#	Name = Local AppData, RelativePath = AppData\Local
+
+# %LOCALAPPDATA%	will resolve to AppData\Local | <does not exist on xp>
+# %APPDATA%		will resolve to AppData\Roaming | Application Data
+

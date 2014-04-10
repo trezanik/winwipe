@@ -1,0 +1,160 @@
+\section{error.\-cc File Reference}
+\label{error_8cc}\index{error.\-cc@{error.\-cc}}
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$cstdarg$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include \char`\"{}error.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{error_8cc_a3f6a69bae6a67e88cc0a4f1ff089788b}{E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~2048
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{error_8cc_a41a98a7a0cc1961bdcd8a8a782909fe0}{lookup\-\_\-error} (\hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, char $\ast$buffer, uint32\-\_\-t buffer\-\_\-size)
+\item 
+int32\-\_\-t \hyperlink{error_8cc_a5788f5ff43a324150d753689966c4126}{get\-\_\-cur\-\_\-date\-\_\-time} (char $\ast$buffer, uint32\-\_\-t buffer\-\_\-size)
+\item 
+char $\ast$ \hyperlink{error_8cc_adcb65b9305341e99dd8a03c9ae58690e}{extract\-\_\-param} (va\-\_\-list $\ast$last)
+\item 
+int32\-\_\-t \hyperlink{error_8cc_ab2431ac942072c3c5bec968d7aa8c93f}{report} (const \hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name, const char $\ast$message, va\-\_\-list $\ast$args)
+\item 
+int32\-\_\-t \hyperlink{error_8cc_ad7abb0eedaaa25e5cce2141a13bd4af5}{gen\-\_\-critical} (const \hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name,...)
+\item 
+int32\-\_\-t \hyperlink{error_8cc_a9a006343667fc7ba3700717a088db087}{gen\-\_\-debug} (const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name, const char $\ast$format,...)
+\item 
+int32\-\_\-t \hyperlink{error_8cc_a8766f7f2f28c3dcb552239443cbb1df6}{gen\-\_\-informational} (const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name, const char $\ast$format,...)
+\item 
+int32\-\_\-t \hyperlink{error_8cc_a41deb0a263cb65f98cded303082fc4e0}{gen\-\_\-warning} (const \hyperlink{error_8h_a02135c3838fd11f1cf862ae2daf29e4c}{E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E} err\-\_\-code, const int32\-\_\-t line\-\_\-num, const char $\ast$func\-\_\-name,...)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structerr__table}{err\-\_\-table} \hyperlink{error_8cc_a2e4011b05d0091e60fb89c626a3b0596}{err} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+James Warren, 2013 
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License\-:}
+Zlib (see license.\-txt or \href{http://opensource.org/licenses/Zlib}{\tt http\-://opensource.\-org/licenses/\-Zlib}) 
+\end{DoxyParagraph}
+
+
+\subsection{Macro Definition Documentation}
+\index{error.\-cc@{error.\-cc}!E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!error.cc@{error.\-cc}}
+\subsubsection[{E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-R\-R\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~2048}\label{error_8cc_a3f6a69bae6a67e88cc0a4f1ff089788b}
+
+
+\subsection{Function Documentation}
+\index{error.\-cc@{error.\-cc}!extract\-\_\-param@{extract\-\_\-param}}
+\index{extract\-\_\-param@{extract\-\_\-param}!error.cc@{error.\-cc}}
+\subsubsection[{extract\-\_\-param}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ extract\-\_\-param (
+\begin{DoxyParamCaption}
+\item[{va\-\_\-list $\ast$}]{last}
+\end{DoxyParamCaption}
+)}\label{error_8cc_adcb65b9305341e99dd8a03c9ae58690e}
+\index{error.\-cc@{error.\-cc}!gen\-\_\-critical@{gen\-\_\-critical}}
+\index{gen\-\_\-critical@{gen\-\_\-critical}!error.cc@{error.\-cc}}
+\subsubsection[{gen\-\_\-critical}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-critical (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8cc_ad7abb0eedaaa25e5cce2141a13bd4af5}
+\index{error.\-cc@{error.\-cc}!gen\-\_\-debug@{gen\-\_\-debug}}
+\index{gen\-\_\-debug@{gen\-\_\-debug}!error.cc@{error.\-cc}}
+\subsubsection[{gen\-\_\-debug}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-debug (
+\begin{DoxyParamCaption}
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8cc_a9a006343667fc7ba3700717a088db087}
+\index{error.\-cc@{error.\-cc}!gen\-\_\-informational@{gen\-\_\-informational}}
+\index{gen\-\_\-informational@{gen\-\_\-informational}!error.cc@{error.\-cc}}
+\subsubsection[{gen\-\_\-informational}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-informational (
+\begin{DoxyParamCaption}
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8cc_a8766f7f2f28c3dcb552239443cbb1df6}
+\index{error.\-cc@{error.\-cc}!gen\-\_\-warning@{gen\-\_\-warning}}
+\index{gen\-\_\-warning@{gen\-\_\-warning}!error.cc@{error.\-cc}}
+\subsubsection[{gen\-\_\-warning}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t gen\-\_\-warning (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{error_8cc_a41deb0a263cb65f98cded303082fc4e0}
+\index{error.\-cc@{error.\-cc}!get\-\_\-cur\-\_\-date\-\_\-time@{get\-\_\-cur\-\_\-date\-\_\-time}}
+\index{get\-\_\-cur\-\_\-date\-\_\-time@{get\-\_\-cur\-\_\-date\-\_\-time}!error.cc@{error.\-cc}}
+\subsubsection[{get\-\_\-cur\-\_\-date\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t get\-\_\-cur\-\_\-date\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{buffer\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{error_8cc_a5788f5ff43a324150d753689966c4126}
+\index{error.\-cc@{error.\-cc}!lookup\-\_\-error@{lookup\-\_\-error}}
+\index{lookup\-\_\-error@{lookup\-\_\-error}!error.cc@{error.\-cc}}
+\subsubsection[{lookup\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ lookup\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{char $\ast$}]{buffer, }
+\item[{uint32\-\_\-t}]{buffer\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{error_8cc_a41a98a7a0cc1961bdcd8a8a782909fe0}
+\index{error.\-cc@{error.\-cc}!report@{report}}
+\index{report@{report}!error.cc@{error.\-cc}}
+\subsubsection[{report}]{\setlength{\rightskip}{0pt plus 5cm}int32\-\_\-t report (
+\begin{DoxyParamCaption}
+\item[{const {\bf E\-\_\-\-E\-R\-R\-O\-R\-\_\-\-C\-O\-D\-E}}]{err\-\_\-code, }
+\item[{const int32\-\_\-t}]{line\-\_\-num, }
+\item[{const char $\ast$}]{func\-\_\-name, }
+\item[{const char $\ast$}]{message, }
+\item[{va\-\_\-list $\ast$}]{args}
+\end{DoxyParamCaption}
+)}\label{error_8cc_ab2431ac942072c3c5bec968d7aa8c93f}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]maxlen of an errno message? \end{DoxyRefDesc}
+
+
+\subsection{Variable Documentation}
+\index{error.\-cc@{error.\-cc}!err@{err}}
+\index{err@{err}!error.cc@{error.\-cc}}
+\subsubsection[{err}]{\setlength{\rightskip}{0pt plus 5cm}{\bf err\-\_\-table} err\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{error_8cc_a2e4011b05d0091e60fb89c626a3b0596}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=
+\{
+        \{ EC_Success,           \textcolor{stringliteral}{"No error occurred"} \},
+        \{ EC_InvalidParameter,  \textcolor{stringliteral}{"A supplied parameter was invalid; '%s' %s"} \},
+        \{ EC_NullPointer,       \textcolor{stringliteral}{"'%s' was a nullptr"} \},
+        \{ EC_ApiFunctionFailed, \textcolor{stringliteral}{"The API function call to '%s' failed; %s"} \},
+        \{ EC_InvalidData,       \textcolor{stringliteral}{"'%s' contains invalid data; %s"} \},
+        \{ EC_Custom,            \textcolor{stringliteral}{"%s"} \},
+        \{ EC_Arpa,              \textcolor{stringliteral}{"A network error occurred"} \},
+        \{ EC_GetAddrInfo,       \textcolor{stringliteral}{"A network error occurred"} \},
+        \{ EC_Max,               \textcolor{stringliteral}{"Invalid error code; nothing should use this!!"} \},
+        \{ EC_Abnormal,          \textcolor{stringliteral}{"An unrecognized or unexpected error occurred; %s"} \}
+\}
+\end{DoxyCode}

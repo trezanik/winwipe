@@ -1,0 +1,177 @@
+\section{Allocator Class Reference}
+\label{class_allocator}\index{Allocator@{Allocator}}
+
+
+{\ttfamily \#include $<$Allocator.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_allocator_ae6af139c96381e0c00dc82d291669577}{$\sim$\-Allocator} ()
+\item 
+\hyperlink{_allocator_8h_adc7040deea27628dba424c534b71dbbf}{E\-\_\-\-M\-E\-M\-O\-R\-Y\-\_\-\-E\-R\-R\-O\-R} \hyperlink{class_allocator_ad1c15835d7b080beb8c56b21e0014553}{Check\-Block} (\hyperlink{structmemblock__header}{memblock\-\_\-header} $\ast$memory\-\_\-block) const 
+\item 
+void $\ast$ \hyperlink{class_allocator_a17c7ab1b99c5c4d6860af66f34002d1f}{Tracked\-Alloc} (const \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} num\-\_\-bytes, const \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$file, const \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$function, const \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} line, const \hyperlink{class_object}{Object} $\ast$owner=nullptr)
+\item 
+void \hyperlink{class_allocator_ae88ef2e17cf916e2efdf96280adca9fb}{Tracked\-Free} (void $\ast$memory)
+\item 
+void $\ast$ \hyperlink{class_allocator_a73c073a5655a9d690ae092451fd65b2d}{Tracked\-Realloc} (void $\ast$memory\-\_\-block, const \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} num\-\_\-bytes, const \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$file, const \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$function, const \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} line, const \hyperlink{class_object}{Object} $\ast$owner=nullptr)
+\item 
+bool \hyperlink{class_allocator_a75eb91f24cd96d106d9f9559e2a2b2e1}{Validate\-Memory} (void $\ast$memory)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_allocator_a124b907bf555ce43c370857ad98b3b46}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_allocator}{Allocator})
+\item 
+\hyperlink{class_allocator_a33b1ff5ecdda6afcfae215629a885118}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_allocator}{Allocator})
+\item 
+\hyperlink{class_allocator_acd81cd6a9337a081c558f89661b623d7}{Allocator} ()
+\item 
+void \hyperlink{class_allocator_a9aa138078a8697e4f8769cf5a26efb1d}{Report\-Memory\-Leak} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_allocator_aab4bbddc6f90d86d41d9884dc9815be3}{\-\_\-allocs}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_allocator_a2b00d5fffca1bc0ba5fc82cffc582799}{\-\_\-frees}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_allocator_a67b52b7b9bd22b33661529c5743fe2d9}{\-\_\-current\-\_\-allocated}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_allocator_a3a87f7139ce300ab94ea2fb7748922e7}{\-\_\-total\-\_\-allocated}
+\item 
+std\-::mutex \hyperlink{class_allocator_aba61a1bd22a0ba615f0c3030ca3a4b2a}{\-\_\-mutex}
+\item 
+std\-::vector$<$ \hyperlink{structmemblock__header}{memblock\-\_\-header} $\ast$ $>$ \hyperlink{class_allocator_a14b439fa46e392aca969b4c4cf99fd19}{\-\_\-memblocks}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_allocator_a1403d1314bafa072ebbdb057833ed608}{app\-\_\-init} (\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} argc, \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Resides within the application runtime and tracks all memory allocations and frees, ensuring data is not corrupt or the memory leaked.
+
+This overrides all new/delete/malloc/free calls so they will N\-O\-T be usable, ensuring the correct functions are always called for the application. As system headers should always be included before this one, it will not stop normal A\-P\-I functions from working -\/ though no doubt we'll encounter a problem along the way, probably via inclusion order. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Allocator@{Allocator}!Allocator@{Allocator}}
+\index{Allocator@{Allocator}!Allocator@{Allocator}}
+\subsubsection[{Allocator}]{\setlength{\rightskip}{0pt plus 5cm}Allocator\-::\-Allocator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_acd81cd6a9337a081c558f89661b623d7}
+private, must be constructed in app\-\_\-init W\-A\-R\-N\-I\-N\-G\-: This constructor is never called, as allocation is done by malloc and we can't use placement new.\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]See if this is resolvable -\/ at the moment we just memset the class to 0 (which appears to kill the vfptr table) \end{DoxyRefDesc}
+\index{Allocator@{Allocator}!$\sim$\-Allocator@{$\sim$\-Allocator}}
+\index{$\sim$\-Allocator@{$\sim$\-Allocator}!Allocator@{Allocator}}
+\subsubsection[{$\sim$\-Allocator}]{\setlength{\rightskip}{0pt plus 5cm}Allocator\-::$\sim$\-Allocator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_allocator_ae6af139c96381e0c00dc82d291669577}
+
+
+\subsection{Member Function Documentation}
+\index{Allocator@{Allocator}!Check\-Block@{Check\-Block}}
+\index{Check\-Block@{Check\-Block}!Allocator@{Allocator}}
+\subsubsection[{Check\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-\_\-\-M\-E\-M\-O\-R\-Y\-\_\-\-E\-R\-R\-O\-R} Allocator\-::\-Check\-Block (
+\begin{DoxyParamCaption}
+\item[{{\bf memblock\-\_\-header} $\ast$}]{memory\-\_\-block}
+\end{DoxyParamCaption}
+) const}\label{class_allocator_ad1c15835d7b080beb8c56b21e0014553}
+\index{Allocator@{Allocator}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Allocator@{Allocator}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Allocator\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Allocator}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a124b907bf555ce43c370857ad98b3b46}
+\index{Allocator@{Allocator}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Allocator@{Allocator}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Allocator\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Allocator}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a33b1ff5ecdda6afcfae215629a885118}
+\index{Allocator@{Allocator}!Report\-Memory\-Leak@{Report\-Memory\-Leak}}
+\index{Report\-Memory\-Leak@{Report\-Memory\-Leak}!Allocator@{Allocator}}
+\subsubsection[{Report\-Memory\-Leak}]{\setlength{\rightskip}{0pt plus 5cm}void Allocator\-::\-Report\-Memory\-Leak (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a9aa138078a8697e4f8769cf5a26efb1d}
+Called only in the destructor; if \-\_\-memblocks is not empty, writes the list of allocations out to a log file for perusal. \index{Allocator@{Allocator}!Tracked\-Alloc@{Tracked\-Alloc}}
+\index{Tracked\-Alloc@{Tracked\-Alloc}!Allocator@{Allocator}}
+\subsubsection[{Tracked\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Allocator\-::\-Tracked\-Alloc (
+\begin{DoxyParamCaption}
+\item[{const {\bf u32\-\_\-t}}]{num\-\_\-bytes, }
+\item[{const {\bf c8\-\_\-t} $\ast$}]{file, }
+\item[{const {\bf c8\-\_\-t} $\ast$}]{function, }
+\item[{const {\bf u32\-\_\-t}}]{line, }
+\item[{const {\bf Object} $\ast$}]{owner = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_allocator_a17c7ab1b99c5c4d6860af66f34002d1f}
+\index{Allocator@{Allocator}!Tracked\-Free@{Tracked\-Free}}
+\index{Tracked\-Free@{Tracked\-Free}!Allocator@{Allocator}}
+\subsubsection[{Tracked\-Free}]{\setlength{\rightskip}{0pt plus 5cm}void Allocator\-::\-Tracked\-Free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{memory}
+\end{DoxyParamCaption}
+)}\label{class_allocator_ae88ef2e17cf916e2efdf96280adca9fb}
+\index{Allocator@{Allocator}!Tracked\-Realloc@{Tracked\-Realloc}}
+\index{Tracked\-Realloc@{Tracked\-Realloc}!Allocator@{Allocator}}
+\subsubsection[{Tracked\-Realloc}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Allocator\-::\-Tracked\-Realloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{memory\-\_\-block, }
+\item[{const {\bf u32\-\_\-t}}]{num\-\_\-bytes, }
+\item[{const {\bf c8\-\_\-t} $\ast$}]{file, }
+\item[{const {\bf c8\-\_\-t} $\ast$}]{function, }
+\item[{const {\bf u32\-\_\-t}}]{line, }
+\item[{const {\bf Object} $\ast$}]{owner = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_allocator_a73c073a5655a9d690ae092451fd65b2d}
+\index{Allocator@{Allocator}!Validate\-Memory@{Validate\-Memory}}
+\index{Validate\-Memory@{Validate\-Memory}!Allocator@{Allocator}}
+\subsubsection[{Validate\-Memory}]{\setlength{\rightskip}{0pt plus 5cm}bool Allocator\-::\-Validate\-Memory (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{memory}
+\end{DoxyParamCaption}
+)}\label{class_allocator_a75eb91f24cd96d106d9f9559e2a2b2e1}
+Doesn't make changes to the class internals, but because we need to lock/unlock the mutex, we can't declare this const (as it does modify the class). 
+
+\subsection{Friends And Related Function Documentation}
+\index{Allocator@{Allocator}!app\-\_\-init@{app\-\_\-init}}
+\index{app\-\_\-init@{app\-\_\-init}!Allocator@{Allocator}}
+\subsubsection[{app\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf s32\-\_\-t}}]{argc, }
+\item[{{\bf c8\-\_\-t} $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_allocator_a1403d1314bafa072ebbdb057833ed608}
+
+
+\subsection{Member Data Documentation}
+\index{Allocator@{Allocator}!\-\_\-allocs@{\-\_\-allocs}}
+\index{\-\_\-allocs@{\-\_\-allocs}!Allocator@{Allocator}}
+\subsubsection[{\-\_\-allocs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Allocator\-::\-\_\-allocs\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_aab4bbddc6f90d86d41d9884dc9815be3}
+The amount of times alloc has been called successfully \index{Allocator@{Allocator}!\-\_\-current\-\_\-allocated@{\-\_\-current\-\_\-allocated}}
+\index{\-\_\-current\-\_\-allocated@{\-\_\-current\-\_\-allocated}!Allocator@{Allocator}}
+\subsubsection[{\-\_\-current\-\_\-allocated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Allocator\-::\-\_\-current\-\_\-allocated\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a67b52b7b9bd22b33661529c5743fe2d9}
+Currently allocated amount of bytes \index{Allocator@{Allocator}!\-\_\-frees@{\-\_\-frees}}
+\index{\-\_\-frees@{\-\_\-frees}!Allocator@{Allocator}}
+\subsubsection[{\-\_\-frees}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Allocator\-::\-\_\-frees\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a2b00d5fffca1bc0ba5fc82cffc582799}
+The amount of times free has been called successfully \index{Allocator@{Allocator}!\-\_\-memblocks@{\-\_\-memblocks}}
+\index{\-\_\-memblocks@{\-\_\-memblocks}!Allocator@{Allocator}}
+\subsubsection[{\-\_\-memblocks}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf memblock\-\_\-header}$\ast$$>$ Allocator\-::\-\_\-memblocks\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a14b439fa46e392aca969b4c4cf99fd19}
+Performance benchmarks have shown that a vector is fastest when the size of the element is known, for insert, remove, and search! \href{http://www.baptiste-wicht.com/2012/12/cpp-benchmark-vector-list-deque/}{\tt http\-://www.\-baptiste-\/wicht.\-com/2012/12/cpp-\/benchmark-\/vector-\/list-\/deque/} The small data type (a pointer) is most beneficial here. \index{Allocator@{Allocator}!\-\_\-mutex@{\-\_\-mutex}}
+\index{\-\_\-mutex@{\-\_\-mutex}!Allocator@{Allocator}}
+\subsubsection[{\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex Allocator\-::\-\_\-mutex\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_aba61a1bd22a0ba615f0c3030ca3a4b2a}
+The lock for making modifications to {\itshape \-\_\-memblocks} \index{Allocator@{Allocator}!\-\_\-total\-\_\-allocated@{\-\_\-total\-\_\-allocated}}
+\index{\-\_\-total\-\_\-allocated@{\-\_\-total\-\_\-allocated}!Allocator@{Allocator}}
+\subsubsection[{\-\_\-total\-\_\-allocated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Allocator\-::\-\_\-total\-\_\-allocated\hspace{0.3cm}{\ttfamily [private]}}\label{class_allocator_a3a87f7139ce300ab94ea2fb7748922e7}
+The total amount of allocated bytes 

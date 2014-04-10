@@ -1,0 +1,100 @@
+\section{Configuration\-:\-:proxy$<$ T $>$ Class Template Reference}
+\label{class_configuration_1_1proxy}\index{Configuration\-::proxy$<$ T $>$@{Configuration\-::proxy$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Configuration.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_configuration_1_1proxy_ab4337c85e11d9a259e394590c07a5fe4}{proxy} ()
+\item 
+\hyperlink{class_configuration_1_1proxy_a38a07083e576ba14cabfc23461e8c089}{operator const T \&} () const 
+\item 
+\hyperlink{class_configuration_1_1proxy_a631982c73c73189824f209c1178cff2d}{operator const T \&} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{class_configuration_1_1proxy_a80e382c028406f4599ef088f0d64849b}{operator=} (const T \&arg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{class_configuration_1_1proxy_aeff1982d30095641c59ada398672b8e1}{data}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_configuration_1_1proxy_a30221ddc558692a7b52598b963a74bc2}{Configuration}
+\item 
+bool \hyperlink{class_configuration_1_1proxy_a77d8ecb3e2084eecf8db1cf62276bcf0}{parse\-\_\-commandline} (\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!proxy@{proxy}}
+\index{proxy@{proxy}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{proxy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Configuration\-::proxy}$<$ T $>$\-::{\bf proxy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_configuration_1_1proxy_ab4337c85e11d9a259e394590c07a5fe4}
+
+
+\subsection{Member Function Documentation}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!operator const T \&@{operator const T \&}}
+\index{operator const T \&@{operator const T \&}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{operator const T \&}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Configuration\-::proxy}$<$ T $>$\-::operator const T \& (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_configuration_1_1proxy_a38a07083e576ba14cabfc23461e8c089}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!operator const T \&@{operator const T \&}}
+\index{operator const T \&@{operator const T \&}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{operator const T \&}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Configuration\-::proxy}$<$ T $>$\-::operator const T \& (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_configuration_1_1proxy_a631982c73c73189824f209c1178cff2d}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!operator=@{operator=}}
+\index{operator=@{operator=}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf Configuration\-::proxy}$<$ T $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_configuration_1_1proxy_a80e382c028406f4599ef088f0d64849b}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!Configuration@{Configuration}}
+\index{Configuration@{Configuration}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{Configuration}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ friend class {\bf Configuration}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_configuration_1_1proxy_a30221ddc558692a7b52598b963a74bc2}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!parse\-\_\-commandline@{parse\-\_\-commandline}}
+\index{parse\-\_\-commandline@{parse\-\_\-commandline}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{parse\-\_\-commandline}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool parse\-\_\-commandline (
+\begin{DoxyParamCaption}
+\item[{{\bf int32\-\_\-t}}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_configuration_1_1proxy_a77d8ecb3e2084eecf8db1cf62276bcf0}
+Parses the application command line, setting runtime configuration options. Separate function from the \hyperlink{class_configuration}{Configuration} as it should only be executed once, and within \hyperlink{app_8cc_a7ab0624f9c8aeab843f91432c75638ee}{app\-\_\-init()}, where the parameters are available.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of arguments passed in \\
+\hline
+{\em argv} & An array of pointers to the arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is returned if any and all command line options are processed successfully 
+
+false is only returned if an unknown parameter is provided, or an invalid option is passed to a parameter 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Configuration\-::proxy@{Configuration\-::proxy}!data@{data}}
+\index{data@{data}!Configuration::proxy@{Configuration\-::proxy}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ T {\bf Configuration\-::proxy}$<$ T $>$\-::data\hspace{0.3cm}{\ttfamily [private]}}\label{class_configuration_1_1proxy_aeff1982d30095641c59ada398672b8e1}

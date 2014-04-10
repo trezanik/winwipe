@@ -1,0 +1,50 @@
+Originally created due to an application requiring smartcard drivers, software,
+Java, and digital certificates encountering installation failures if a single
+registry key existed from an older installation. As this was a network of 
+thousands of machines with variable ages that I inherited, I could guarantee
+nothing, and so wrote a tool to eradicate and reapply in a single hit. This
+is the result of that work.
+The removal is very similar to an older version of JavaRa, from the 1.1 series
+(http://singularlabs.com/software/javara/) except at the time it was purely a 
+removal tool - I see the newer 2.x version have now added the ability to update
+the versions and some additional features.
+They have helped with some of the registry keys Java installs that I had not
+encountered (before I was making this project public), and have supplied them
+as part of the demo for this tool - so credit where due.
+
+
+Pre-configured and supported projects:
+- Visual Studio 2008	(vs2008\winwipe.sln)
+- Visual Studio 2010	(vs2010\winwipe.sln)
+- Visual Studio 2012	(vs2012\winwipe.sln)
+
+
+Notable Folder Structure:
++ winwipe
+    + bin		# contains compiled binaries and associated resources
+    + doxygen		# contains the doxygen source code documentation
+        - custom.css		# Modified doxygen stylesheet
+        - winwipe.doxygen	# Doxygen configuration for this project
+    + notes_screenshots_temp	# temporary notes, screenshots, etc. (not in repo)
+    + src		# the application source code
+    + vs2008		# Visual Studio 2008 project files
+    + vs2010		# Visual Studio 2010 project files
+    + vs2012		# Visual Studio 2012 project files
+    - gen_doxygen.cmd	# Generates the doxygen documentation
+    - view_doxygen.cmd	# Uses the default web browser to open doxygen index
+    - appicon.ico	# Icon used as resource for the exe
+    - LICENCE		# Project/Source licence
+    - README		# This readme
+    
+If you try to run the binary straight from the GUI, you'll find it will close
+instantaneously; those of you used to it, will open a command prompt and run it
+from there. When you do, you'll see:
+Critical exception in initialization:
+        Could not open '\\path\to\winwipe\bin\config.ini'; error: The system cannot find the file specified.
+As you can no doubt guess - a configuration file is required. Our design
+recommends that you create a batch script for each 'fix' you create, and this
+supplies the path to the config file to use. For example, the default empty fix
+supplied in the bin directory executes:
+	"%~dp0winwipe.exe" -c default\config.ini
+
+Run winwipe in a command prompt with the '-h' parameter to get the cli options.

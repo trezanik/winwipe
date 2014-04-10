@@ -1,0 +1,269 @@
+\section{ntdll.\-h File Reference}
+\label{ntdll_8h}\index{ntdll.\-h@{ntdll.\-h}}
+
+
+Local implementation of Windows ntdll functions we use.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct___c_l_i_e_n_t___i_d}{\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}
+\item 
+struct \hyperlink{struct___u_n_i_c_o_d_e___s_t_r_i_n_g}{\-\_\-\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}
+\item 
+struct \hyperlink{struct___v_m___c_o_u_n_t_e_r_s}{\-\_\-\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ntdll_8h_a4fc6529ce775df5fb3ceff4e7674db71}{M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H}~256
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef L\-O\-N\-G \hyperlink{ntdll_8h_a77a2f6628aaa056315f8c8ad2c466fdc}{N\-T\-S\-T\-A\-T\-U\-S}
+\item 
+typedef L\-O\-N\-G \hyperlink{ntdll_8h_ade7f74903369701780e5940b2d929167}{K\-P\-R\-I\-O\-R\-I\-T\-Y}
+\item 
+typedef enum \hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4}{\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E} \hyperlink{ntdll_8h_a1777c735cde3f8f24e73e01ebb4c4bd9}{K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}
+\item 
+typedef enum \hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fb}{\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N} \hyperlink{ntdll_8h_a13049b283e815004e7114b280c287376}{K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}
+\item 
+typedef struct \hyperlink{struct___c_l_i_e_n_t___i_d}{\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D} \hyperlink{ntdll_8h_a84b8c09135ebbc3f50857e14c3823c39}{C\-L\-I\-E\-N\-T\-\_\-\-I\-D}
+\item 
+typedef struct \hyperlink{struct___c_l_i_e_n_t___i_d}{\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D} $\ast$ \hyperlink{ntdll_8h_af4a8336b9d73c09d52442844aea25b75}{P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}
+\item 
+typedef struct \hyperlink{struct___u_n_i_c_o_d_e___s_t_r_i_n_g}{\-\_\-\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G} \hyperlink{ntdll_8h_afb1771465aaa5d77efedcfc1a3a43dfb}{U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}
+\item 
+typedef struct \hyperlink{struct___u_n_i_c_o_d_e___s_t_r_i_n_g}{\-\_\-\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G} $\ast$ \hyperlink{ntdll_8h_a9d9596239ae6918bf1780d06c3124e8b}{P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}
+\item 
+typedef struct \hyperlink{struct___v_m___c_o_u_n_t_e_r_s}{\-\_\-\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S} \hyperlink{ntdll_8h_aa97dd8030df9ac9a6e6a71ba2819f19b}{V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}
+\item 
+typedef struct \hyperlink{struct___v_m___c_o_u_n_t_e_r_s}{\-\_\-\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S} $\ast$ \hyperlink{ntdll_8h_aa8b45a9e44cb284384d22cf7c8ae94c4}{P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4}{\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E} \{ \\*
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4aae32940b344dab2f4e31be660ce1ab02}{Initialized} = 0, 
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a0e73e048b83849a411148a8dddc6dfcb}{Ready} = 1, 
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a2f5f2c4a8c4f4f0519d503dcdfbf55cb}{Running} = 2, 
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a5041f8eeeb1d047f3c6952d027e66a7b}{Standby} = 3, 
+\\*
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a0bd9962868a464e4730ffcf8d3fa798d}{Terminated} = 4, 
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a7ac9ab6c2e98f6df96b82b175d42747a}{Waiting} = 5, 
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a85816c4b53ccbb05752df16c8c9a4e8a}{Transition} = 6, 
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a5fc17b70dbe9814b32f557cb4abfa0e5}{Deferred\-Ready} = 7, 
+\\*
+\hyperlink{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a4be3b73d0158d2552ddc472fb49561f8}{Gate\-Wait} = 8
+ \}
+\item 
+enum \hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fb}{\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N} \{ \\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbaef4a94e9f8e774dbbdc34d5860262fae}{Executive} = 0, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbadaa3d36be1e2b0f00a31fe666ff6b85f}{Free\-Page} = 1, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba1a0a17b59dd51c768784938f7637b728}{Page\-In} = 2, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba2d270f2a588a9651353aab6408291fb7}{Pool\-Allocation} = 3, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba78b3e2e548f01fcfc22c3779f39e53de}{Delay\-Execution} = 4, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba13bd6ff4bd5714ccc293f6802aacb40d}{Suspended} = 5, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba52c5e5ff72e961e2e009b1259be78c14}{User\-Request} = 6, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba969ddd4774e799fa71d5d4d664d87f47}{Wr\-Executive} = 7, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba759c34e899dc3a35732f50f274b75b04}{Wr\-Free\-Page} = 8, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba0fced87c9a2500dc1fafb268d0ec514d}{Wr\-Page\-In} = 9, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba1365cd4b66c40fd1a8c1101e075bcc09}{Wr\-Pool\-Allocation} = 10, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbae1ce0c7da79719a79684e26ae8d321ab}{Wr\-Delay\-Execution} = 11, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbae92fb683e3b3f8affdaf44d7a9c82475}{Wr\-Suspended} = 12, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba44aace94aefcd339d4a1890d5d76bfda}{Wr\-User\-Request} = 13, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbaa17d65f0acdaad0ab77445398576c4ac}{Wr\-Event\-Pair} = 14, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbab8bd8a76ae621ccb0796e578934bbb0f}{Wr\-Queue} = 15, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba7488fe330f6d440f2425466cc3c5761b}{Wr\-Lpc\-Receive} = 16, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba0190d1d8e04d81ad4078be9456635640}{Wr\-Lpc\-Reply} = 17, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbadbd6bd55769e8d3652fb35decbcc3616}{Wr\-Virtual\-Memory} = 18, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba1438227fe85c4012981228d87f9a9fe1}{Wr\-Page\-Out} = 19, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbad104639f1637dc3caf3dcf6a32d45328}{Wr\-Rendezvous} = 20, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbac092755953fd2d4be334cf90145ecef3}{Spare2} = 21, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba8d88a69a9475ed48eaeb08e00cb8c3c8}{Spare3} = 22, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbadf5c68f66552beb2a70526fbc4e2e2e8}{Spare4} = 23, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba7fad8320d925ccd7a241256154880cc4}{Spare5} = 24, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbaa3b868e862a7cb5db29824ad64362ce0}{Wr\-Callout\-Stack} = 25, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba20b9a71622898ec7b7aca15f8a6c4e12}{Wr\-Kernel} = 26, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba9f4484672ff5cd526b18d224223e5275}{Wr\-Resource} = 27, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbaabde226cc9ac46379ea0944fa630e665}{Wr\-Push\-Lock} = 28, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba8a852c6316a3ccf721554f44d48d1505}{Wr\-Mutex} = 29, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba997d9d64e312a72bde6918e42d546df5}{Wr\-Quantum\-End} = 30, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba88c2e6158d2042274614a4f26d020801}{Wr\-Dispatch\-Int} = 31, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbab7bf3ed2c07b3c8fd89fa4ca71b2d271}{Wr\-Preempted} = 32, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba42d0ec1df734874fe5f6eaae5804d616}{Wr\-Yield\-Execution} = 33, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbac0372499f802bb433d86b7a66f87e3aa}{Wr\-Fast\-Mutex} = 34, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba08bd72ed89d58e4a864ea7e9b2310288}{Wr\-Guarded\-Mutex} = 35, 
+\\*
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fba225bf8a24fd5089538d7807566245509}{Wr\-Rundown} = 36, 
+\hyperlink{ntdll_8h_a32f8868bc010efa7da787526013b93fbace7c70038ba60a65a6d9d9a83000bbb1}{Maximum\-Wait\-Reason} = 37
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Local implementation of Windows ntdll functions we use. \begin{DoxyAuthor}{Author}
+James Warren (sources referenced for enums/structs) 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{ntdll.\-h@{ntdll.\-h}!M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-I\-M\-U\-M\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-\_\-\-L\-E\-N\-G\-T\-H~256}\label{ntdll_8h_a4fc6529ce775df5fb3ceff4e7674db71}
+
+
+\subsection{Typedef Documentation}
+\index{ntdll.\-h@{ntdll.\-h}!C\-L\-I\-E\-N\-T\-\_\-\-I\-D@{C\-L\-I\-E\-N\-T\-\_\-\-I\-D}}
+\index{C\-L\-I\-E\-N\-T\-\_\-\-I\-D@{C\-L\-I\-E\-N\-T\-\_\-\-I\-D}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{C\-L\-I\-E\-N\-T\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}  {\bf C\-L\-I\-E\-N\-T\-\_\-\-I\-D}}\label{ntdll_8h_a84b8c09135ebbc3f50857e14c3823c39}
+\index{ntdll.\-h@{ntdll.\-h}!K\-P\-R\-I\-O\-R\-I\-T\-Y@{K\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{K\-P\-R\-I\-O\-R\-I\-T\-Y@{K\-P\-R\-I\-O\-R\-I\-T\-Y}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{K\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}typedef L\-O\-N\-G {\bf K\-P\-R\-I\-O\-R\-I\-T\-Y}}\label{ntdll_8h_ade7f74903369701780e5940b2d929167}
+\index{ntdll.\-h@{ntdll.\-h}!K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E@{K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}}
+\index{K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E@{K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}  {\bf K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}}\label{ntdll_8h_a1777c735cde3f8f24e73e01ebb4c4bd9}
+\index{ntdll.\-h@{ntdll.\-h}!K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N@{K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}}
+\index{K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N@{K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}  {\bf K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}}\label{ntdll_8h_a13049b283e815004e7114b280c287376}
+\index{ntdll.\-h@{ntdll.\-h}!N\-T\-S\-T\-A\-T\-U\-S@{N\-T\-S\-T\-A\-T\-U\-S}}
+\index{N\-T\-S\-T\-A\-T\-U\-S@{N\-T\-S\-T\-A\-T\-U\-S}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{N\-T\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}typedef L\-O\-N\-G {\bf N\-T\-S\-T\-A\-T\-U\-S}}\label{ntdll_8h_a77a2f6628aaa056315f8c8ad2c466fdc}
+\index{ntdll.\-h@{ntdll.\-h}!P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D@{P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}}
+\index{P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D@{P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D} $\ast$ {\bf P\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}}\label{ntdll_8h_af4a8336b9d73c09d52442844aea25b75}
+\index{ntdll.\-h@{ntdll.\-h}!P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G@{P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G@{P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G} $\ast$ {\bf P\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}}\label{ntdll_8h_a9d9596239ae6918bf1780d06c3124e8b}
+\index{ntdll.\-h@{ntdll.\-h}!P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S@{P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}}
+\index{P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S@{P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S} $\ast$ {\bf P\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}}\label{ntdll_8h_aa8b45a9e44cb284384d22cf7c8ae94c4}
+\index{ntdll.\-h@{ntdll.\-h}!U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G@{U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G@{U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}  {\bf U\-N\-I\-C\-O\-D\-E\-\_\-\-S\-T\-R\-I\-N\-G}}\label{ntdll_8h_afb1771465aaa5d77efedcfc1a3a43dfb}
+\index{ntdll.\-h@{ntdll.\-h}!V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S@{V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}}
+\index{V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S@{V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}  {\bf V\-M\-\_\-\-C\-O\-U\-N\-T\-E\-R\-S}}\label{ntdll_8h_aa97dd8030df9ac9a6e6a71ba2819f19b}
+
+
+\subsection{Enumeration Type Documentation}
+\index{ntdll.\-h@{ntdll.\-h}!\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E@{\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}}
+\index{\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E@{\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{\-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-K\-T\-H\-R\-E\-A\-D\-\_\-\-S\-T\-A\-T\-E}}\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Initialized@{Initialized}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Initialized@{Initialized}}\item[{\em 
+Initialized\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4aae32940b344dab2f4e31be660ce1ab02}
+}]\index{Ready@{Ready}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Ready@{Ready}}\item[{\em 
+Ready\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a0e73e048b83849a411148a8dddc6dfcb}
+}]\index{Running@{Running}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Running@{Running}}\item[{\em 
+Running\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a2f5f2c4a8c4f4f0519d503dcdfbf55cb}
+}]\index{Standby@{Standby}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Standby@{Standby}}\item[{\em 
+Standby\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a5041f8eeeb1d047f3c6952d027e66a7b}
+}]\index{Terminated@{Terminated}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Terminated@{Terminated}}\item[{\em 
+Terminated\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a0bd9962868a464e4730ffcf8d3fa798d}
+}]\index{Waiting@{Waiting}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Waiting@{Waiting}}\item[{\em 
+Waiting\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a7ac9ab6c2e98f6df96b82b175d42747a}
+}]\index{Transition@{Transition}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Transition@{Transition}}\item[{\em 
+Transition\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a85816c4b53ccbb05752df16c8c9a4e8a}
+}]\index{Deferred\-Ready@{Deferred\-Ready}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Deferred\-Ready@{Deferred\-Ready}}\item[{\em 
+Deferred\-Ready\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a5fc17b70dbe9814b32f557cb4abfa0e5}
+}]\index{Gate\-Wait@{Gate\-Wait}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Gate\-Wait@{Gate\-Wait}}\item[{\em 
+Gate\-Wait\label{ntdll_8h_a89cf35e06b66523904596d9dbdd93af4a4be3b73d0158d2552ddc472fb49561f8}
+}]\end{description}
+\end{Desc}
+\index{ntdll.\-h@{ntdll.\-h}!\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N@{\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}}
+\index{\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N@{\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}!ntdll.h@{ntdll.\-h}}
+\subsubsection[{\-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-K\-W\-A\-I\-T\-\_\-\-R\-E\-A\-S\-O\-N}}\label{ntdll_8h_a32f8868bc010efa7da787526013b93fb}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Executive@{Executive}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Executive@{Executive}}\item[{\em 
+Executive\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbaef4a94e9f8e774dbbdc34d5860262fae}
+}]\index{Free\-Page@{Free\-Page}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Free\-Page@{Free\-Page}}\item[{\em 
+Free\-Page\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbadaa3d36be1e2b0f00a31fe666ff6b85f}
+}]\index{Page\-In@{Page\-In}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Page\-In@{Page\-In}}\item[{\em 
+Page\-In\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba1a0a17b59dd51c768784938f7637b728}
+}]\index{Pool\-Allocation@{Pool\-Allocation}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Pool\-Allocation@{Pool\-Allocation}}\item[{\em 
+Pool\-Allocation\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba2d270f2a588a9651353aab6408291fb7}
+}]\index{Delay\-Execution@{Delay\-Execution}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Delay\-Execution@{Delay\-Execution}}\item[{\em 
+Delay\-Execution\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba78b3e2e548f01fcfc22c3779f39e53de}
+}]\index{Suspended@{Suspended}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Suspended@{Suspended}}\item[{\em 
+Suspended\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba13bd6ff4bd5714ccc293f6802aacb40d}
+}]\index{User\-Request@{User\-Request}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!User\-Request@{User\-Request}}\item[{\em 
+User\-Request\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba52c5e5ff72e961e2e009b1259be78c14}
+}]\index{Wr\-Executive@{Wr\-Executive}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Executive@{Wr\-Executive}}\item[{\em 
+Wr\-Executive\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba969ddd4774e799fa71d5d4d664d87f47}
+}]\index{Wr\-Free\-Page@{Wr\-Free\-Page}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Free\-Page@{Wr\-Free\-Page}}\item[{\em 
+Wr\-Free\-Page\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba759c34e899dc3a35732f50f274b75b04}
+}]\index{Wr\-Page\-In@{Wr\-Page\-In}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Page\-In@{Wr\-Page\-In}}\item[{\em 
+Wr\-Page\-In\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba0fced87c9a2500dc1fafb268d0ec514d}
+}]\index{Wr\-Pool\-Allocation@{Wr\-Pool\-Allocation}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Pool\-Allocation@{Wr\-Pool\-Allocation}}\item[{\em 
+Wr\-Pool\-Allocation\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba1365cd4b66c40fd1a8c1101e075bcc09}
+}]\index{Wr\-Delay\-Execution@{Wr\-Delay\-Execution}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Delay\-Execution@{Wr\-Delay\-Execution}}\item[{\em 
+Wr\-Delay\-Execution\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbae1ce0c7da79719a79684e26ae8d321ab}
+}]\index{Wr\-Suspended@{Wr\-Suspended}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Suspended@{Wr\-Suspended}}\item[{\em 
+Wr\-Suspended\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbae92fb683e3b3f8affdaf44d7a9c82475}
+}]\index{Wr\-User\-Request@{Wr\-User\-Request}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-User\-Request@{Wr\-User\-Request}}\item[{\em 
+Wr\-User\-Request\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba44aace94aefcd339d4a1890d5d76bfda}
+}]\index{Wr\-Event\-Pair@{Wr\-Event\-Pair}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Event\-Pair@{Wr\-Event\-Pair}}\item[{\em 
+Wr\-Event\-Pair\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbaa17d65f0acdaad0ab77445398576c4ac}
+}]\index{Wr\-Queue@{Wr\-Queue}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Queue@{Wr\-Queue}}\item[{\em 
+Wr\-Queue\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbab8bd8a76ae621ccb0796e578934bbb0f}
+}]\index{Wr\-Lpc\-Receive@{Wr\-Lpc\-Receive}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Lpc\-Receive@{Wr\-Lpc\-Receive}}\item[{\em 
+Wr\-Lpc\-Receive\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba7488fe330f6d440f2425466cc3c5761b}
+}]\index{Wr\-Lpc\-Reply@{Wr\-Lpc\-Reply}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Lpc\-Reply@{Wr\-Lpc\-Reply}}\item[{\em 
+Wr\-Lpc\-Reply\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba0190d1d8e04d81ad4078be9456635640}
+}]\index{Wr\-Virtual\-Memory@{Wr\-Virtual\-Memory}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Virtual\-Memory@{Wr\-Virtual\-Memory}}\item[{\em 
+Wr\-Virtual\-Memory\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbadbd6bd55769e8d3652fb35decbcc3616}
+}]\index{Wr\-Page\-Out@{Wr\-Page\-Out}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Page\-Out@{Wr\-Page\-Out}}\item[{\em 
+Wr\-Page\-Out\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba1438227fe85c4012981228d87f9a9fe1}
+}]\index{Wr\-Rendezvous@{Wr\-Rendezvous}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Rendezvous@{Wr\-Rendezvous}}\item[{\em 
+Wr\-Rendezvous\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbad104639f1637dc3caf3dcf6a32d45328}
+}]\index{Spare2@{Spare2}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Spare2@{Spare2}}\item[{\em 
+Spare2\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbac092755953fd2d4be334cf90145ecef3}
+}]\index{Spare3@{Spare3}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Spare3@{Spare3}}\item[{\em 
+Spare3\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba8d88a69a9475ed48eaeb08e00cb8c3c8}
+}]\index{Spare4@{Spare4}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Spare4@{Spare4}}\item[{\em 
+Spare4\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbadf5c68f66552beb2a70526fbc4e2e2e8}
+}]\index{Spare5@{Spare5}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Spare5@{Spare5}}\item[{\em 
+Spare5\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba7fad8320d925ccd7a241256154880cc4}
+}]\index{Wr\-Callout\-Stack@{Wr\-Callout\-Stack}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Callout\-Stack@{Wr\-Callout\-Stack}}\item[{\em 
+Wr\-Callout\-Stack\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbaa3b868e862a7cb5db29824ad64362ce0}
+}]\index{Wr\-Kernel@{Wr\-Kernel}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Kernel@{Wr\-Kernel}}\item[{\em 
+Wr\-Kernel\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba20b9a71622898ec7b7aca15f8a6c4e12}
+}]\index{Wr\-Resource@{Wr\-Resource}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Resource@{Wr\-Resource}}\item[{\em 
+Wr\-Resource\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba9f4484672ff5cd526b18d224223e5275}
+}]\index{Wr\-Push\-Lock@{Wr\-Push\-Lock}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Push\-Lock@{Wr\-Push\-Lock}}\item[{\em 
+Wr\-Push\-Lock\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbaabde226cc9ac46379ea0944fa630e665}
+}]\index{Wr\-Mutex@{Wr\-Mutex}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Mutex@{Wr\-Mutex}}\item[{\em 
+Wr\-Mutex\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba8a852c6316a3ccf721554f44d48d1505}
+}]\index{Wr\-Quantum\-End@{Wr\-Quantum\-End}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Quantum\-End@{Wr\-Quantum\-End}}\item[{\em 
+Wr\-Quantum\-End\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba997d9d64e312a72bde6918e42d546df5}
+}]\index{Wr\-Dispatch\-Int@{Wr\-Dispatch\-Int}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Dispatch\-Int@{Wr\-Dispatch\-Int}}\item[{\em 
+Wr\-Dispatch\-Int\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba88c2e6158d2042274614a4f26d020801}
+}]\index{Wr\-Preempted@{Wr\-Preempted}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Preempted@{Wr\-Preempted}}\item[{\em 
+Wr\-Preempted\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbab7bf3ed2c07b3c8fd89fa4ca71b2d271}
+}]\index{Wr\-Yield\-Execution@{Wr\-Yield\-Execution}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Yield\-Execution@{Wr\-Yield\-Execution}}\item[{\em 
+Wr\-Yield\-Execution\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba42d0ec1df734874fe5f6eaae5804d616}
+}]\index{Wr\-Fast\-Mutex@{Wr\-Fast\-Mutex}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Fast\-Mutex@{Wr\-Fast\-Mutex}}\item[{\em 
+Wr\-Fast\-Mutex\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbac0372499f802bb433d86b7a66f87e3aa}
+}]\index{Wr\-Guarded\-Mutex@{Wr\-Guarded\-Mutex}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Guarded\-Mutex@{Wr\-Guarded\-Mutex}}\item[{\em 
+Wr\-Guarded\-Mutex\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba08bd72ed89d58e4a864ea7e9b2310288}
+}]\index{Wr\-Rundown@{Wr\-Rundown}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Wr\-Rundown@{Wr\-Rundown}}\item[{\em 
+Wr\-Rundown\label{ntdll_8h_a32f8868bc010efa7da787526013b93fba225bf8a24fd5089538d7807566245509}
+}]\index{Maximum\-Wait\-Reason@{Maximum\-Wait\-Reason}!ntdll.\-h@{ntdll.\-h}}\index{ntdll.\-h@{ntdll.\-h}!Maximum\-Wait\-Reason@{Maximum\-Wait\-Reason}}\item[{\em 
+Maximum\-Wait\-Reason\label{ntdll_8h_a32f8868bc010efa7da787526013b93fbace7c70038ba60a65a6d9d9a83000bbb1}
+}]\end{description}
+\end{Desc}

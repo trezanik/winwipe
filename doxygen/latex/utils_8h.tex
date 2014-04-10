@@ -1,0 +1,548 @@
+\section{utils.\-h File Reference}
+\label{utils_8h}\index{utils.\-h@{utils.\-h}}
+
+
+Utility functions, mostly secure string operations.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfile__version__info}{file\-\_\-version\-\_\-info}
+\item 
+struct \hyperlink{struct_module_information}{Module\-Information}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{utils_8h_ac99ec3f1036620727a68aa8c25a8963c}{strcasecmp}~\-\_\-stricmp
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{utils_8h_a27eebb745f1dafeaf3cd7d9d19674d5a}{alloc\-\_\-and\-\_\-copy} (char $\ast$$\ast$dst, char $\ast$src)
+\item 
+bool \hyperlink{utils_8h_ab6a93d0b16768a8b1215231998e97a33}{alloc\-\_\-and\-\_\-replace} (char $\ast$$\ast$dst, char $\ast$src)
+\item 
+unsigned \-\_\-\-\_\-stdcall \hyperlink{utils_8h_af447d208726a022a2c413ca6ae5dc189}{divide\-\_\-by\-\_\-zero} (void $\ast$null)
+\item 
+char $\ast$ \hyperlink{utils_8h_a138b647135011ac5c1be76ca1ee502b3}{error\-\_\-code\-\_\-as\-\_\-string} (\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} code)
+\item 
+unsigned \-\_\-\-\_\-stdcall \hyperlink{utils_8h_a19072a21aa14204c101b56310a053f00}{exit\-\_\-process} (void $\ast$null)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{utils_8h_aeed751e935810eb5bfdbcffbb9013c13}{get\-\_\-current\-\_\-binary\-\_\-path} (char $\ast$buffer, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} buffer\-\_\-size)
+\item 
+bool \hyperlink{utils_8h_afb234253fc6ab388ccb09dd11b577ec5}{get\-\_\-file\-\_\-version\-\_\-info} (wchar\-\_\-t $\ast$path, \hyperlink{structfile__version__info}{file\-\_\-version\-\_\-info} $\ast$fvi)
+\item 
+void $\ast$ \hyperlink{utils_8h_a74f3dd1eda7408b43f7f7fb41465833c}{get\-\_\-function\-\_\-address} (char $\ast$func\-\_\-name, wchar\-\_\-t $\ast$module\-\_\-name)
+\item 
+std\-::vector$<$ \hyperlink{struct_module_information}{Module\-Information} $\ast$ $>$ \hyperlink{utils_8h_afe432f244cf72a14501d60454fdf4ebf}{get\-\_\-loaded\-\_\-modules} ()
+\item 
+\hyperlink{stdint_8h_aaa5d1cd013383c889537491c3cfd9aad}{uint64\-\_\-t} \hyperlink{utils_8h_a42ad066921539506df198aebf42ff28d}{get\-\_\-ms\-\_\-time} ()
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{utils_8h_a9f63a1b8f375c3539db473d7f4be83f0}{get\-\_\-win\-\_\-file\-\_\-version\-\_\-info} (wchar\-\_\-t $\ast$path, wchar\-\_\-t $\ast$dest\-\_\-buffer, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} buffer\-\_\-size)
+\item 
+bool \hyperlink{utils_8h_a5cdc599d3bbb0d0cbd517c7747a69ab7}{Mb\-To\-U\-T\-F8} (wchar\-\_\-t $\ast$buf, const char $\ast$mb, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} buf\-\_\-size)
+\item 
+bool \hyperlink{utils_8h_a73d99db62cbee3295fa98c3489ac9471}{U\-T\-F8\-To\-Mb} (char $\ast$buf, const wchar\-\_\-t $\ast$wchar, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} buf\-\_\-size)
+\item 
+bool \hyperlink{utils_8h_af1f4e916381d9c267c7c8d8997ed48dd}{process\-\_\-exists} (unsigned long pid)
+\item 
+char $\ast$ \hyperlink{utils_8h_afca003914e08d83abdda7e88d58e50fe}{skip\-\_\-whitespace} (char $\ast$str)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{utils_8h_a2ff8cc269a34ae7e565ed7663dc2eb3a}{strlcat} (char $\ast$dest, const char $\ast$src, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} size)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{utils_8h_a63a72ee56ddf07d1f097f4425c1cb38b}{strlcpy} (char $\ast$dest, const char $\ast$src, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} size)
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{utils_8h_a3028decc6adec38215582336b1584387}{str\-\_\-format} (char $\ast$destination, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} dest\-\_\-size, char $\ast$format,...)
+\item 
+char $\ast$ \hyperlink{utils_8h_a406ceeee42dbf78d120302a88ef8e851}{str\-\_\-token} (char $\ast$input, const char $\ast$delim, char $\ast$$\ast$last)
+\item 
+char $\ast$ \hyperlink{utils_8h_ae449a29602e667a885747f7f1f06c8dd}{str\-\_\-trim} (char $\ast$src)
+\item 
+bool \hyperlink{utils_8h_adb56a00005481d819a7e43b724b1d748}{time\-\_\-diff\-\_\-as\-\_\-string} (time\-\_\-t start\-\_\-time, time\-\_\-t end\-\_\-time, char $\ast$dest, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} dest\-\_\-size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility functions, mostly secure string operations. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{utils.\-h@{utils.\-h}!strcasecmp@{strcasecmp}}
+\index{strcasecmp@{strcasecmp}!utils.h@{utils.\-h}}
+\subsubsection[{strcasecmp}]{\setlength{\rightskip}{0pt plus 5cm}\#define strcasecmp~\-\_\-stricmp}\label{utils_8h_ac99ec3f1036620727a68aa8c25a8963c}
+
+
+\subsection{Function Documentation}
+\index{utils.\-h@{utils.\-h}!alloc\-\_\-and\-\_\-copy@{alloc\-\_\-and\-\_\-copy}}
+\index{alloc\-\_\-and\-\_\-copy@{alloc\-\_\-and\-\_\-copy}!utils.h@{utils.\-h}}
+\subsubsection[{alloc\-\_\-and\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}bool alloc\-\_\-and\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{dst, }
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a27eebb745f1dafeaf3cd7d9d19674d5a}
+Allocates a buffer large enough to hold src at the address specified by dst, and copies it in.
+
+$\ast$dst M\-U\-S\-T be a nullptr, otherwise this function returns false -\/ this is to protect against memory leaks, where the pointer could be pointing to memory allocated dynamically, and should be freed -\/ or if it's only on the stack.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em dst} & Where the allocated string will be saved to \\
+\hline
+\mbox{\tt in}  & {\em src} & The source string to be copied \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if the allocation succeeds \\
+\hline
+{\em false} & on an invalid parameter, or malloc() failure \\
+\hline
+\end{DoxyRetVals}
+\index{utils.\-h@{utils.\-h}!alloc\-\_\-and\-\_\-replace@{alloc\-\_\-and\-\_\-replace}}
+\index{alloc\-\_\-and\-\_\-replace@{alloc\-\_\-and\-\_\-replace}!utils.h@{utils.\-h}}
+\subsubsection[{alloc\-\_\-and\-\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}bool alloc\-\_\-and\-\_\-replace (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{dst, }
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{utils_8h_ab6a93d0b16768a8b1215231998e97a33}
+Does the same as \hyperlink{utils_8h_a27eebb745f1dafeaf3cd7d9d19674d5a}{alloc\-\_\-and\-\_\-copy()}, only it will call free() on the address of the destination before performing the copy. Will check if it's a nullptr first, and return false if it is.
+
+Will naturally be slower than simply reusing the buffer, but it depends on if you know the buffer size, or just the plain usage scenario. Should be used rarely (C++ allocations are to be faster here).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em dst} & The destination (and existing) allocation \\
+\hline
+\mbox{\tt in}  & {\em src} & The source string to be copied \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if the reallocation succeeds \\
+\hline
+{\em false} & on an invalid parameter, or malloc() failure \\
+\hline
+\end{DoxyRetVals}
+\index{utils.\-h@{utils.\-h}!divide\-\_\-by\-\_\-zero@{divide\-\_\-by\-\_\-zero}}
+\index{divide\-\_\-by\-\_\-zero@{divide\-\_\-by\-\_\-zero}!utils.h@{utils.\-h}}
+\subsubsection[{divide\-\_\-by\-\_\-zero}]{\setlength{\rightskip}{0pt plus 5cm}unsigned \-\_\-\-\_\-stdcall divide\-\_\-by\-\_\-zero (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{null}
+\end{DoxyParamCaption}
+)}\label{utils_8h_af447d208726a022a2c413ca6ae5dc189}
+Triggers a divide by zero exception -\/ used for forcing another process to be killed.
+
+Executed as part of a created thread, which is why it needs a void $\ast$ as a parameter, and returns unsigned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em null} & A placeholder (just pass in nullptr) -\/ not touched by the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0, even if it never gets reached 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!error\-\_\-code\-\_\-as\-\_\-string@{error\-\_\-code\-\_\-as\-\_\-string}}
+\index{error\-\_\-code\-\_\-as\-\_\-string@{error\-\_\-code\-\_\-as\-\_\-string}!utils.h@{utils.\-h}}
+\subsubsection[{error\-\_\-code\-\_\-as\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ error\-\_\-code\-\_\-as\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{{\bf uint64\-\_\-t}}]{code}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a138b647135011ac5c1be76ca1ee502b3}
+Converts a Windows error code to its string counterpart, as processed by the system.
+
+The pointer returned must not be freed -\/ the function maintains a static buffer, and the pointer is looking at it when it is returned. This limits an error message to 511 characters, which should be enough for anything.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & The Win32 error code (sometimes a long, sometimes unsigned long, but all should be good for the system). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the start of the error string, or a nullptr if the Format\-Message() function failed. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!exit\-\_\-process@{exit\-\_\-process}}
+\index{exit\-\_\-process@{exit\-\_\-process}!utils.h@{utils.\-h}}
+\subsubsection[{exit\-\_\-process}]{\setlength{\rightskip}{0pt plus 5cm}unsigned \-\_\-\-\_\-stdcall exit\-\_\-process (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{null}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a19072a21aa14204c101b56310a053f00}
+Calls Exit\-Process() -\/ used for forcing another process to be killed.
+
+Executed as part of a created thread, which is why it needs a void $\ast$ as a parameter, and returns unsigned.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em null} & A placeholder (just pass in nullptr) -\/ not touched by the function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0, even if it never gets reached 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!get\-\_\-current\-\_\-binary\-\_\-path@{get\-\_\-current\-\_\-binary\-\_\-path}}
+\index{get\-\_\-current\-\_\-binary\-\_\-path@{get\-\_\-current\-\_\-binary\-\_\-path}!utils.h@{utils.\-h}}
+\subsubsection[{get\-\_\-current\-\_\-binary\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} get\-\_\-current\-\_\-binary\-\_\-path (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{{\bf uint32\-\_\-t}}]{buffer\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_aeed751e935810eb5bfdbcffbb9013c13}
+Retrieves the current path for the executing binary, storing the result in the supplied {\itshape buffer}. Comes with the trailing \mbox{[}back\mbox{]}slash.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & The preallocated buffer to store the result in \\
+\hline
+\mbox{\tt in}  & {\em buffer\-\_\-size} & The size of the preallocated buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the amount of characters written to buffer if successful 
+
+On failure, 0 is returned 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!get\-\_\-file\-\_\-version\-\_\-info@{get\-\_\-file\-\_\-version\-\_\-info}}
+\index{get\-\_\-file\-\_\-version\-\_\-info@{get\-\_\-file\-\_\-version\-\_\-info}!utils.h@{utils.\-h}}
+\subsubsection[{get\-\_\-file\-\_\-version\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}bool get\-\_\-file\-\_\-version\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{path, }
+\item[{{\bf file\-\_\-version\-\_\-info} $\ast$}]{fvi}
+\end{DoxyParamCaption}
+)}\label{utils_8h_afb234253fc6ab388ccb09dd11b577ec5}
+Obtains the version information for the specified file.
+
+A \hyperlink{structfile__version__info}{file\-\_\-version\-\_\-info} struct is passed in, which will contain the results of the data acquisition. It is immediately reset to 0 or blank values, in the event of failure. ntdll on Win7 S\-P1 x64 would be\-:
+\begin{DoxyItemize}
+\item major = 6
+\item minor = 1
+\item rev = 7601
+\item build = 18229
+\end{DoxyItemize}
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if the acquisition succeeds, and the struct populated \\
+\hline
+{\em false} & if the acquisition fails \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]get file description \end{DoxyRefDesc}
+\index{utils.\-h@{utils.\-h}!get\-\_\-function\-\_\-address@{get\-\_\-function\-\_\-address}}
+\index{get\-\_\-function\-\_\-address@{get\-\_\-function\-\_\-address}!utils.h@{utils.\-h}}
+\subsubsection[{get\-\_\-function\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ get\-\_\-function\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{func\-\_\-name, }
+\item[{wchar\-\_\-t $\ast$}]{module\-\_\-name}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a74f3dd1eda7408b43f7f7fb41465833c}
+Obtains the memory address of func\-\_\-name, which resides in the module\-\_\-name library. Essentially a wrapper around Get\-Proc\-Address(), which loads the module for you.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em func\-\_\-name} & The name of the function to get \\
+\hline
+\mbox{\tt in}  & {\em module\-\_\-name} & The name of the module to search within for func\-\_\-name \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & on failure, as a result of an invalid parameter, or if the function was not found. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyReturn}{Returns}
+On success, a pointer to the requested functions memory address is returned. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!get\-\_\-loaded\-\_\-modules@{get\-\_\-loaded\-\_\-modules}}
+\index{get\-\_\-loaded\-\_\-modules@{get\-\_\-loaded\-\_\-modules}!utils.h@{utils.\-h}}
+\subsubsection[{get\-\_\-loaded\-\_\-modules}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Module\-Information}$\ast$$>$ get\-\_\-loaded\-\_\-modules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{utils_8h_afe432f244cf72a14501d60454fdf4ebf}
+Enumerates all the loaded modules in the running process, and logs them to file. Does not check if the config has logging enabled; the caller should do so.
+
+\begin{DoxyWarning}{Warning}
+Each Module\-Information$\ast$ returned needs its memory freeing when it is no longer needed; failure to do so will result in a memory leak.
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+A vector of structs containing information, such as the name and address, of each loaded module. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!get\-\_\-ms\-\_\-time@{get\-\_\-ms\-\_\-time}}
+\index{get\-\_\-ms\-\_\-time@{get\-\_\-ms\-\_\-time}!utils.h@{utils.\-h}}
+\subsubsection[{get\-\_\-ms\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint64\-\_\-t} get\-\_\-ms\-\_\-time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a42ad066921539506df198aebf42ff28d}
+Gets the current time in milliseconds.
+
+Used for timing operations -\/ store the first call to this as a start\-\_\-time, and then use the second call to determine the duration.
+
+\begin{DoxyReturn}{Returns}
+Returns the number of milliseconds since January 1, 1601 (U\-T\-C). 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!get\-\_\-win\-\_\-file\-\_\-version\-\_\-info@{get\-\_\-win\-\_\-file\-\_\-version\-\_\-info}}
+\index{get\-\_\-win\-\_\-file\-\_\-version\-\_\-info@{get\-\_\-win\-\_\-file\-\_\-version\-\_\-info}!utils.h@{utils.\-h}}
+\subsubsection[{get\-\_\-win\-\_\-file\-\_\-version\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} get\-\_\-win\-\_\-file\-\_\-version\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{path, }
+\item[{wchar\-\_\-t $\ast$}]{dest\-\_\-buffer, }
+\item[{{\bf uint32\-\_\-t}}]{buffer\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a9f63a1b8f375c3539db473d7f4be83f0}
+Obtains the version information for a file.
+
+Example\-:
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The path, relative or full, to the file/folder \\
+\hline
+\mbox{\tt out}  & {\em dest\-\_\-buffer} & The buffer to copy the information to \\
+\hline
+\mbox{\tt in}  & {\em buffer\-\_\-size} & The site of the destination buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of characters written to dest\-\_\-buffer is returned 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!Mb\-To\-U\-T\-F8@{Mb\-To\-U\-T\-F8}}
+\index{Mb\-To\-U\-T\-F8@{Mb\-To\-U\-T\-F8}!utils.h@{utils.\-h}}
+\subsubsection[{Mb\-To\-U\-T\-F8}]{\setlength{\rightskip}{0pt plus 5cm}bool Mb\-To\-U\-T\-F8 (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{buf, }
+\item[{const char $\ast$}]{mb, }
+\item[{{\bf uint32\-\_\-t}}]{buf\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a5cdc599d3bbb0d0cbd517c7747a69ab7}
+Take heed of the security implications; see\-: \href{http://msdn.microsoft.com/en-us/library/dd319072(v=vs.85).aspx}{\tt http\-://msdn.\-microsoft.\-com/en-\/us/library/dd319072(v=vs.\-85).\-aspx}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buf} & The destination buffer \\
+\hline
+\mbox{\tt in}  & {\em mb} & The multi-\/byte string to convert \\
+\hline
+\mbox{\tt in}  & {\em buf\-\_\-size} & The size of the buffer pointed to by buf, in characters \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if the pointers are null, buf\-\_\-size is not at least 2, or if Multi\-Byte\-To\-Wide\-Char() fails \\
+\hline
+{\em true} & if the conversion succeeds \\
+\hline
+\end{DoxyRetVals}
+\index{utils.\-h@{utils.\-h}!process\-\_\-exists@{process\-\_\-exists}}
+\index{process\-\_\-exists@{process\-\_\-exists}!utils.h@{utils.\-h}}
+\subsubsection[{process\-\_\-exists}]{\setlength{\rightskip}{0pt plus 5cm}bool process\-\_\-exists (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{pid}
+\end{DoxyParamCaption}
+)}\label{utils_8h_af1f4e916381d9c267c7c8d8997ed48dd}
+\index{utils.\-h@{utils.\-h}!skip\-\_\-whitespace@{skip\-\_\-whitespace}}
+\index{skip\-\_\-whitespace@{skip\-\_\-whitespace}!utils.h@{utils.\-h}}
+\subsubsection[{skip\-\_\-whitespace}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ skip\-\_\-whitespace (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{utils_8h_afca003914e08d83abdda7e88d58e50fe}
+Skips over all preceeding whitespace present in {\itshape str}.
+
+Has Test Case\-: no
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The source string to skip over \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the incremented source string 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!str\-\_\-format@{str\-\_\-format}}
+\index{str\-\_\-format@{str\-\_\-format}!utils.h@{utils.\-h}}
+\subsubsection[{str\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} str\-\_\-format (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{destination, }
+\item[{{\bf uint32\-\_\-t}}]{dest\-\_\-size, }
+\item[{char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a3028decc6adec38215582336b1584387}
+Formats a string into the buffer specified by {\itshape dest}.
+
+This function is identical to snprintf, only there is no need to concern with the buffer size. Nul-\/termination is guaranteed if {\itshape dest\-\_\-size} is at least 1. Improper use of format strings can still result in security risks, so always use as much safety as you would to normal statements.
+
+char buf\mbox{[}24\mbox{]}; int32\-\_\-t num = 5; str\-\_\-format(\char`\"{}\-The integer is\-: \%i; amazing stuff!\textbackslash{}\textbackslash{}n\char`\"{}, num);
+
+In this case, the string is truncated to \char`\"{}\-The integer is\-: 5; amaz\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & The destination buffer \\
+\hline
+{\em dest\-\_\-size} & The size of the destination buffer \\
+\hline
+{\em format} & The format of the string to generate, printf-\/style \\
+\hline
+{\em ...} & va\-\_\-args as determined by the format string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the number of characters written to {\itshape destination}, excluding the nul. If the buffer is not large enough, and truncation has occurred, the return value is 0 -\/ but {\itshape destination} is populated with as much as it can. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!str\-\_\-token@{str\-\_\-token}}
+\index{str\-\_\-token@{str\-\_\-token}!utils.h@{utils.\-h}}
+\subsubsection[{str\-\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ str\-\_\-token (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{input, }
+\item[{const char $\ast$}]{delim, }
+\item[{char $\ast$$\ast$}]{last}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a406ceeee42dbf78d120302a88ef8e851}
+A reentrant version of strtok; return values and functionality is identical to that of strtok\-\_\-r (as it does not exist on Windows). The {\itshape input} will be modified, so store a copy if you wish to retain any existing data it holds.
+
+Has Test Case\-: yes
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string to parse; should be N\-U\-L\-L after the initial call until all tokens are obtained \\
+\hline
+{\em delim} & The set of characters that delimit the tokens in input; i.\-e. \char`\"{}\textbackslash{}\textbackslash{}r\textbackslash{}\textbackslash{}n\char`\"{} will tokenize every instance of '\textbackslash{}r', then '\textbackslash{}n', etc. \\
+\hline
+{\em last} & Maintains context -\/ must point to a nullptr in the first call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the next token, or nullptr if there are no more. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!str\-\_\-trim@{str\-\_\-trim}}
+\index{str\-\_\-trim@{str\-\_\-trim}!utils.h@{utils.\-h}}
+\subsubsection[{str\-\_\-trim}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ str\-\_\-trim (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}\label{utils_8h_ae449a29602e667a885747f7f1f06c8dd}
+Removes any trailing and preceeding whitespace from {\itshape src}. A nul terminator is inserted at the final whitespace character when working in reverse.
+
+\char`\"{} This string has a tab and space at the end\textbackslash{}t \char`\"{} will be trimmed down to\-: \char`\"{}\-This string has a tab and space at the end\char`\"{}
+
+Has Test Case\-: no
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The string to be trimmed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns src at a non-\/leading whitespace offset 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!strlcat@{strlcat}}
+\index{strlcat@{strlcat}!utils.h@{utils.\-h}}
+\subsubsection[{strlcat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} strlcat (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src, }
+\item[{{\bf uint32\-\_\-t}}]{size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a2ff8cc269a34ae7e565ed7663dc2eb3a}
+A duplicate of Open\-B\-S\-D's strlcat.
+
+Appends {\itshape src} into the buffer specified by {\itshape dest}, up to a limit of {\itshape size} 
+\begin{DoxyItemize}
+\item 1. Nul termination is guaranteed if {\itshape size} is at least 1.
+\end{DoxyItemize}
+
+Unlike the Open\-B\-S\-D version of strlcat, if no nul is found in {\itshape dest}, it is inserted at the final position. This is a change for tiny safety sake.
+
+Has Test Case\-: yes
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination buffer \\
+\hline
+{\em src} & The string to append \\
+\hline
+{\em size} & The size of the destination buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string that was attempted to be created. So, strlen of {\itshape dest} + strlen of {\itshape src}. If this is greater than or equal to {\itshape size}, truncation has occurred, and should be handled by the caller. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!strlcpy@{strlcpy}}
+\index{strlcpy@{strlcpy}!utils.h@{utils.\-h}}
+\subsubsection[{strlcpy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} strlcpy (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src, }
+\item[{{\bf uint32\-\_\-t}}]{size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a63a72ee56ddf07d1f097f4425c1cb38b}
+A duplicate of Open\-B\-S\-D's strlcpy.
+
+Copies {\itshape src} into the buffer specified by {\itshape dest}, up to a limit of {\itshape size} 
+\begin{DoxyItemize}
+\item 1. Always starts copying {\itshape src} and overwrites anything previously there. nul termination is guaranteed if {\itshape size} is at least 1.
+\end{DoxyItemize}
+
+Has Test Case\-: yes
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & The destination buffer \\
+\hline
+{\em src} & The string to copy \\
+\hline
+{\em size} & The size of the destination buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the string that was attempted to be created. So, strlen of {\itshape src}. If this is greater than or equal to {\itshape size}, truncation has occurred, and should be handled by the caller. 
+\end{DoxyReturn}
+\index{utils.\-h@{utils.\-h}!time\-\_\-diff\-\_\-as\-\_\-string@{time\-\_\-diff\-\_\-as\-\_\-string}}
+\index{time\-\_\-diff\-\_\-as\-\_\-string@{time\-\_\-diff\-\_\-as\-\_\-string}!utils.h@{utils.\-h}}
+\subsubsection[{time\-\_\-diff\-\_\-as\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}bool time\-\_\-diff\-\_\-as\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{time\-\_\-t}]{start\-\_\-time, }
+\item[{time\-\_\-t}]{end\-\_\-time, }
+\item[{char $\ast$}]{dest, }
+\item[{{\bf uint32\-\_\-t}}]{dest\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_adb56a00005481d819a7e43b724b1d748}
+\index{utils.\-h@{utils.\-h}!U\-T\-F8\-To\-Mb@{U\-T\-F8\-To\-Mb}}
+\index{U\-T\-F8\-To\-Mb@{U\-T\-F8\-To\-Mb}!utils.h@{utils.\-h}}
+\subsubsection[{U\-T\-F8\-To\-Mb}]{\setlength{\rightskip}{0pt plus 5cm}bool U\-T\-F8\-To\-Mb (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buf, }
+\item[{const wchar\-\_\-t $\ast$}]{wchar, }
+\item[{{\bf uint32\-\_\-t}}]{buf\-\_\-size}
+\end{DoxyParamCaption}
+)}\label{utils_8h_a73d99db62cbee3295fa98c3489ac9471}
+Take heed of the security implications; see\-: \href{http://msdn.microsoft.com/en-us/library/dd374130(v=vs.85).aspx}{\tt http\-://msdn.\-microsoft.\-com/en-\/us/library/dd374130(v=vs.\-85).\-aspx}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buf} & The destination buffer \\
+\hline
+\mbox{\tt in}  & {\em wchar} & The wide-\/character string to convert \\
+\hline
+\mbox{\tt in}  & {\em buf\-\_\-size} & The size of the buffer pointed to by buf \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em false} & if the pointers are null, buf\-\_\-size is not at least 2, or if Multi\-Byte\-To\-Wide\-Char() fails \\
+\hline
+{\em true} & if the conversion succeeds \\
+\hline
+\end{DoxyRetVals}

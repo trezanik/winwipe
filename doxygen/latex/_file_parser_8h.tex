@@ -1,0 +1,61 @@
+\section{File\-Parser.\-h File Reference}
+\label{_file_parser_8h}\index{File\-Parser.\-h@{File\-Parser.\-h}}
+
+
+File parsing for generating wipe operations.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtext__cache}{text\-\_\-cache}
+\item 
+class \hyperlink{class_file_parser}{File\-Parser}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63}{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E} \{ \\*
+\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a2137ca10b7c5765dfe4adf5919d5d6de}{F\-T\-\_\-\-Files} = 0, 
+\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a26c73607981c477ed667e5e97753dc8b}{F\-T\-\_\-\-Registry}, 
+\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a71bd91e89fac047266959c7e3a9adc35}{F\-T\-\_\-\-Processes}, 
+\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a08f71df742337ae4c99b2c8c47934f44}{F\-T\-\_\-\-Services}, 
+\\*
+\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a77626961caf1dd7cc9e1a963a64319e6}{F\-T\-\_\-\-Uninstallers}, 
+\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63ad8135f2026b6a6b3120e9637901093df}{F\-T\-\_\-\-Commands}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File parsing for generating wipe operations. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+zlib; license.\-txt or \href{http://www.gzip.org/zlib/zlib_license.html}{\tt http\-://www.\-gzip.\-org/zlib/zlib\-\_\-license.\-html} 
+\end{DoxyCopyright}
+
+
+\subsection{Enumeration Type Documentation}
+\index{File\-Parser.\-h@{File\-Parser.\-h}!E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E@{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E}}
+\index{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E@{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E}!FileParser.h@{File\-Parser.\-h}}
+\subsubsection[{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E}}\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63}
+The type of input file to parse. Files have a different input method than the registry, processes, services, and so forth. One physical file is used to store the relevant type, and they are parsed separately. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\-T\-\_\-\-Files@{F\-T\-\_\-\-Files}!File\-Parser.\-h@{File\-Parser.\-h}}\index{File\-Parser.\-h@{File\-Parser.\-h}!F\-T\-\_\-\-Files@{F\-T\-\_\-\-Files}}\item[{\em 
+F\-T\-\_\-\-Files\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a2137ca10b7c5765dfe4adf5919d5d6de}
+}]\index{F\-T\-\_\-\-Registry@{F\-T\-\_\-\-Registry}!File\-Parser.\-h@{File\-Parser.\-h}}\index{File\-Parser.\-h@{File\-Parser.\-h}!F\-T\-\_\-\-Registry@{F\-T\-\_\-\-Registry}}\item[{\em 
+F\-T\-\_\-\-Registry\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a26c73607981c477ed667e5e97753dc8b}
+}]\index{F\-T\-\_\-\-Processes@{F\-T\-\_\-\-Processes}!File\-Parser.\-h@{File\-Parser.\-h}}\index{File\-Parser.\-h@{File\-Parser.\-h}!F\-T\-\_\-\-Processes@{F\-T\-\_\-\-Processes}}\item[{\em 
+F\-T\-\_\-\-Processes\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a71bd91e89fac047266959c7e3a9adc35}
+}]\index{F\-T\-\_\-\-Services@{F\-T\-\_\-\-Services}!File\-Parser.\-h@{File\-Parser.\-h}}\index{File\-Parser.\-h@{File\-Parser.\-h}!F\-T\-\_\-\-Services@{F\-T\-\_\-\-Services}}\item[{\em 
+F\-T\-\_\-\-Services\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a08f71df742337ae4c99b2c8c47934f44}
+}]\index{F\-T\-\_\-\-Uninstallers@{F\-T\-\_\-\-Uninstallers}!File\-Parser.\-h@{File\-Parser.\-h}}\index{File\-Parser.\-h@{File\-Parser.\-h}!F\-T\-\_\-\-Uninstallers@{F\-T\-\_\-\-Uninstallers}}\item[{\em 
+F\-T\-\_\-\-Uninstallers\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63a77626961caf1dd7cc9e1a963a64319e6}
+}]\index{F\-T\-\_\-\-Commands@{F\-T\-\_\-\-Commands}!File\-Parser.\-h@{File\-Parser.\-h}}\index{File\-Parser.\-h@{File\-Parser.\-h}!F\-T\-\_\-\-Commands@{F\-T\-\_\-\-Commands}}\item[{\em 
+F\-T\-\_\-\-Commands\label{_file_parser_8h_a77516d1e52649fa212cc16893769cf63ad8135f2026b6a6b3120e9637901093df}
+}]\end{description}
+\end{Desc}

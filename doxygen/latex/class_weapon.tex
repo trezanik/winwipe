@@ -1,0 +1,152 @@
+\section{Weapon Class Reference}
+\label{class_weapon}\index{Weapon@{Weapon}}
+
+
+{\ttfamily \#include $<$Weapon.\-h$>$}
+
+Inheritance diagram for Weapon\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_weapon}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_weapon_a42dbc46dd70319a24763992c4ebbd396}{Weapon} ()
+\item 
+\hyperlink{class_weapon_a420e7ba3d2017e6de3e93eb579cfd3fa}{$\sim$\-Weapon} ()
+\item 
+virtual void \hyperlink{class_weapon_a8502c88be7164dca0a53b5d7aec871c9}{Fire} ()=0
+\item 
+bool \hyperlink{class_weapon_a40cbe14e106cd00cbc95654f150c0447}{Is\-Attached} ()
+\item 
+virtual bool \hyperlink{class_weapon_ad3be4b01c0d7e8ef3a62596da34941f8}{Out\-Of\-Ammo} ()=0
+\item 
+virtual void \hyperlink{class_weapon_aab14a64ba9e3e06437ef6f274a33d49a}{Reload} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_weapon_a7b7c30447a03543f830c870bd1ec8a32}{\-\_\-left\-\_\-in\-\_\-clip}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_weapon_a316034dd390b487c61e4dfca16617983}{\-\_\-clip\-\_\-size}
+\item 
+\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} \hyperlink{class_weapon_ad71351329aa1373da91c0f773dad887b}{\-\_\-max\-\_\-clips}
+\item 
+\hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} \hyperlink{class_weapon_af2cfb95c5dc297747475435c2201d592}{\-\_\-num\-\_\-clips}
+\item 
+\hyperlink{class_entity}{Entity} $\ast$ \hyperlink{class_weapon_ab248a10c00a363413349dc58860fa1fa}{\-\_\-attached}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_weapon_abcc233e1be005fb91881ad6827114916}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_weapon}{Weapon})
+\item 
+void \hyperlink{class_weapon_a907bb9b6aebb5c14e75781ca5d7df619}{Attach} (\hyperlink{class_entity}{Entity} $\ast$owner)
+\item 
+void \hyperlink{class_weapon_adc86105b8ed497305897e87117c5e76d}{Detach} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_weapon_a3e1914489e4bed4f9f23cdeab34a43dc}{Engine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\subsubsection[{Weapon}]{\setlength{\rightskip}{0pt plus 5cm}Weapon\-::\-Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_weapon_a42dbc46dd70319a24763992c4ebbd396}
+\index{Weapon@{Weapon}!$\sim$\-Weapon@{$\sim$\-Weapon}}
+\index{$\sim$\-Weapon@{$\sim$\-Weapon}!Weapon@{Weapon}}
+\subsubsection[{$\sim$\-Weapon}]{\setlength{\rightskip}{0pt plus 5cm}Weapon\-::$\sim$\-Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_weapon_a420e7ba3d2017e6de3e93eb579cfd3fa}
+
+
+\subsection{Member Function Documentation}
+\index{Weapon@{Weapon}!Attach@{Attach}}
+\index{Attach@{Attach}!Weapon@{Weapon}}
+\subsubsection[{Attach}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\-::\-Attach (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_weapon_a907bb9b6aebb5c14e75781ca5d7df619}
+\index{Weapon@{Weapon}!Detach@{Detach}}
+\index{Detach@{Detach}!Weapon@{Weapon}}
+\subsubsection[{Detach}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\-::\-Detach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_weapon_adc86105b8ed497305897e87117c5e76d}
+\index{Weapon@{Weapon}!Fire@{Fire}}
+\index{Fire@{Fire}!Weapon@{Weapon}}
+\subsubsection[{Fire}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Weapon\-::\-Fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_weapon_a8502c88be7164dca0a53b5d7aec871c9}
+\index{Weapon@{Weapon}!Is\-Attached@{Is\-Attached}}
+\index{Is\-Attached@{Is\-Attached}!Weapon@{Weapon}}
+\subsubsection[{Is\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}bool Weapon\-::\-Is\-Attached (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_weapon_a40cbe14e106cd00cbc95654f150c0447}
+\index{Weapon@{Weapon}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Weapon@{Weapon}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Weapon\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_weapon_abcc233e1be005fb91881ad6827114916}
+\index{Weapon@{Weapon}!Out\-Of\-Ammo@{Out\-Of\-Ammo}}
+\index{Out\-Of\-Ammo@{Out\-Of\-Ammo}!Weapon@{Weapon}}
+\subsubsection[{Out\-Of\-Ammo}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Weapon\-::\-Out\-Of\-Ammo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_weapon_ad3be4b01c0d7e8ef3a62596da34941f8}
+\index{Weapon@{Weapon}!Reload@{Reload}}
+\index{Reload@{Reload}!Weapon@{Weapon}}
+\subsubsection[{Reload}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Weapon\-::\-Reload (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_weapon_aab14a64ba9e3e06437ef6f274a33d49a}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Weapon@{Weapon}!Engine@{Engine}}
+\index{Engine@{Engine}!Weapon@{Weapon}}
+\subsubsection[{Engine}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Engine}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_weapon_a3e1914489e4bed4f9f23cdeab34a43dc}
+
+
+Reimplemented from \hyperlink{class_entity_a3e1914489e4bed4f9f23cdeab34a43dc}{Entity}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Weapon@{Weapon}!\-\_\-attached@{\-\_\-attached}}
+\index{\-\_\-attached@{\-\_\-attached}!Weapon@{Weapon}}
+\subsubsection[{\-\_\-attached}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity}$\ast$ Weapon\-::\-\_\-attached\hspace{0.3cm}{\ttfamily [protected]}}\label{class_weapon_ab248a10c00a363413349dc58860fa1fa}
+entity this weapon is attached to, or Null \index{Weapon@{Weapon}!\-\_\-clip\-\_\-size@{\-\_\-clip\-\_\-size}}
+\index{\-\_\-clip\-\_\-size@{\-\_\-clip\-\_\-size}!Weapon@{Weapon}}
+\subsubsection[{\-\_\-clip\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Weapon\-::\-\_\-clip\-\_\-size\hspace{0.3cm}{\ttfamily [protected]}}\label{class_weapon_a316034dd390b487c61e4dfca16617983}
+amount of ammunition a clip can take \index{Weapon@{Weapon}!\-\_\-left\-\_\-in\-\_\-clip@{\-\_\-left\-\_\-in\-\_\-clip}}
+\index{\-\_\-left\-\_\-in\-\_\-clip@{\-\_\-left\-\_\-in\-\_\-clip}!Weapon@{Weapon}}
+\subsubsection[{\-\_\-left\-\_\-in\-\_\-clip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Weapon\-::\-\_\-left\-\_\-in\-\_\-clip\hspace{0.3cm}{\ttfamily [protected]}}\label{class_weapon_a7b7c30447a03543f830c870bd1ec8a32}
+ammunition left in current clip \index{Weapon@{Weapon}!\-\_\-max\-\_\-clips@{\-\_\-max\-\_\-clips}}
+\index{\-\_\-max\-\_\-clips@{\-\_\-max\-\_\-clips}!Weapon@{Weapon}}
+\subsubsection[{\-\_\-max\-\_\-clips}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32\-\_\-t} Weapon\-::\-\_\-max\-\_\-clips\hspace{0.3cm}{\ttfamily [protected]}}\label{class_weapon_ad71351329aa1373da91c0f773dad887b}
+maximum number of clips this can 'tag' along \index{Weapon@{Weapon}!\-\_\-num\-\_\-clips@{\-\_\-num\-\_\-clips}}
+\index{\-\_\-num\-\_\-clips@{\-\_\-num\-\_\-clips}!Weapon@{Weapon}}
+\subsubsection[{\-\_\-num\-\_\-clips}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\-\_\-t} Weapon\-::\-\_\-num\-\_\-clips\hspace{0.3cm}{\ttfamily [protected]}}\label{class_weapon_af2cfb95c5dc297747475435c2201d592}
+number of clips this weapon has (should be in an inventory) 

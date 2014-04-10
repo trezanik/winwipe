@@ -1,0 +1,667 @@
+\section{Wiper Class Reference}
+\label{class_wiper}\index{Wiper@{Wiper}}
+
+
+{\ttfamily \#include $<$Wiper.\-h$>$}
+
+Inheritance diagram for Wiper\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_wiper}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wiper_a8f519727066de24f8948fced9467828d}{$\sim$\-Wiper} ()
+\item 
+bool \hyperlink{class_wiper_ab31e385b7a8a16513ac995bf937e8173}{Execute} ()
+\item 
+bool \hyperlink{class_wiper_adfcbb29be7bfdd893531c2e7606b37da}{Executor\-Grant\-Debugging} ()
+\item 
+bool \hyperlink{class_wiper_ac13a2e4f20c178d3a1a4afd0822c672f}{Executor\-Has\-Admin\-Privileges} ()
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{class_wiper_a25078dc49a405fffc57d1ca3766e88cb}{Num\-Queued\-Operations} ()
+\item 
+bool \hyperlink{class_wiper_a7d360657abfe5645a3221cc5dd4090bb}{Queue\-New\-Operation} (\hyperlink{class_operation}{Operation} $\ast$operation)
+\item 
+bool \hyperlink{class_wiper_afc43101e07041defa89368dec173ca44}{Wipe\-Java\-App\-Data} ()
+\item 
+bool \hyperlink{class_wiper_aa792260d4c549fc60461f5aa67f372f8}{Wipe\-Folder\-Test} ()
+\item 
+bool \hyperlink{class_wiper_a9f0418d9f1f5cccd71844c802f5bef74}{Wipe\-Registry\-Test} ()
+\item 
+bool \hyperlink{class_wiper_aeb701101ab29c5e68d4ef9271d7dc4a9}{Wipe\-Process\-Test} ()
+\item 
+bool \hyperlink{class_wiper_a7f56c6e9652e7aec570d65c15ffb6bac}{Wipe\-Service\-Test} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wiper_a4a570cf481c82a00d519992c010daa0e}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_wiper}{Wiper})
+\item 
+\hyperlink{class_wiper_aa05d1e576306939d3fcfb4c8fe988045}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_wiper}{Wiper})
+\item 
+bool \hyperlink{class_wiper_a8feabbfdf53a0bb6821bd3da09b5daa9}{Delete\-Service} (const wchar\-\_\-t $\ast$name)
+\item 
+bool \hyperlink{class_wiper_a732f393537116eb2a9102163c881def3}{Eradicate\-File\-Object} (const char $\ast$path)
+\item 
+bool \hyperlink{class_wiper_aa239eff8b2fc602eaab7485d8811264c}{Eradicate\-File\-Object} (const wchar\-\_\-t $\ast$wpath)
+\item 
+bool \hyperlink{class_wiper_aceb0ca9e9719019ab8cdbb3ddef0d99b}{Eradicate\-Registry\-Object} (H\-K\-E\-Y key\-\_\-root, const char $\ast$subkey)
+\item 
+bool \hyperlink{class_wiper_ad767320b068b1f9efafa8b3d93261c05}{Eradicate\-Registry\-Object} (H\-K\-E\-Y key\-\_\-root, const wchar\-\_\-t $\ast$subkey)
+\item 
+bool \hyperlink{class_wiper_a941b479e63b6eb1cce4f57af58d78519}{Eradicate\-Registry\-Object} (H\-K\-E\-Y key\-\_\-root, const wchar\-\_\-t $\ast$subkey, const wchar\-\_\-t $\ast$value)
+\item 
+bool \hyperlink{class_wiper_acda9ac18709324e127adcef37b6a7830}{Execute\-Command} (const char $\ast$command)
+\item 
+bool \hyperlink{class_wiper_af2fe7a6b2c95e2950047053bdb906a99}{Execute\-Command} (const wchar\-\_\-t $\ast$command)
+\item 
+bool \hyperlink{class_wiper_a18e0f72f856a2ad20425c318b2e9f65c}{Kill\-Process} (const wchar\-\_\-t $\ast$by\-\_\-name)
+\item 
+bool \hyperlink{class_wiper_adf6fc63d905429212ad9148cf0e40bfa}{Kill\-Process} (\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} by\-\_\-pid)
+\item 
+void \hyperlink{class_wiper_a47aae300aa571e057fa9b05442a9cc17}{New\-Operation} ()
+\item 
+void \hyperlink{class_wiper_a00e8df6a911cf4a6680a382e19b44396}{Pop\-Previous\-Operation} (bool notify=true)
+\item 
+bool \hyperlink{class_wiper_adda0b8c48ff6a104deacd17ae11ecd81}{Replace\-Permissions\-Of\-File} (const wchar\-\_\-t $\ast$path)
+\item 
+bool \hyperlink{class_wiper_a96dff12b4ab8a075098e08e7f21e4357}{Replace\-Permissions\-Of\-Key} (H\-K\-E\-Y key\-\_\-root, const wchar\-\_\-t $\ast$subkey)
+\item 
+bool \hyperlink{class_wiper_a6dcb5ad961fe3403cde2783a75460172}{Stop\-Service} (const wchar\-\_\-t $\ast$name)
+\item 
+bool \hyperlink{class_wiper_a044fdff304d6e27ecd8643c89e99f234}{Take\-Ownership\-Of\-File} (const wchar\-\_\-t $\ast$path)
+\item 
+bool \hyperlink{class_wiper_aa6d779022f6b2b4d06734f089a82e46e}{Take\-Ownership\-Of\-Key} (H\-K\-E\-Y key\-\_\-root, const char $\ast$subkey)
+\item 
+bool \hyperlink{class_wiper_a27e7a3905abc6414d2d1f180e8f3844b}{Take\-Ownership\-Of\-Key} (H\-K\-E\-Y key\-\_\-root, const wchar\-\_\-t $\ast$subkey)
+\item 
+\hyperlink{class_wiper_a99987a7b4100b4781fb825f238facf17}{Wiper} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\-C\-\_\-\-H\-A\-N\-D\-L\-E \hyperlink{class_wiper_aa14de868e468e980872140bd970eb3e5}{\-\_\-scm}
+\item 
+std\-::queue$<$ \hyperlink{class_operation}{Operation} $\ast$ $>$ \hyperlink{class_wiper_a2ac92738b2626a47eecff22843e1ccd3}{\-\_\-operations}
+\item 
+std\-::stack$<$ \hyperlink{class_operation}{Operation} $\ast$ $>$ \hyperlink{class_wiper_a98e266ae56c41c58c0d21ce30064d684}{\-\_\-operations\-\_\-stack}
+\item 
+\hyperlink{class_operation}{Operation} $\ast$ \hyperlink{class_wiper_a98c5b4449bd30c40d0ead348c57f0f7f}{\-\_\-current\-\_\-operation}
+\item 
+char \hyperlink{class_wiper_a112d278ddc1fdca0a552bab45568a965}{mb} \mbox{[}1024\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_wiper_af3d14e26ba8af9e6cc5a32aad8446de7}{Runtime}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The main processing class of the application; once the operations queue is populated from parsing the input files, this will execute all the required functionality to process the relevant operation, and is the point at which environment variables are expanded. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Wiper@{Wiper}!Wiper@{Wiper}}
+\index{Wiper@{Wiper}!Wiper@{Wiper}}
+\subsubsection[{Wiper}]{\setlength{\rightskip}{0pt plus 5cm}Wiper\-::\-Wiper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a99987a7b4100b4781fb825f238facf17}
+\index{Wiper@{Wiper}!$\sim$\-Wiper@{$\sim$\-Wiper}}
+\index{$\sim$\-Wiper@{$\sim$\-Wiper}!Wiper@{Wiper}}
+\subsubsection[{$\sim$\-Wiper}]{\setlength{\rightskip}{0pt plus 5cm}Wiper\-::$\sim$\-Wiper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_a8f519727066de24f8948fced9467828d}
+
+
+\subsection{Member Function Documentation}
+\index{Wiper@{Wiper}!Delete\-Service@{Delete\-Service}}
+\index{Delete\-Service@{Delete\-Service}!Wiper@{Wiper}}
+\subsubsection[{Delete\-Service}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Delete\-Service (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a8feabbfdf53a0bb6821bd3da09b5daa9}
+Deletes the service specified by name.
+
+If the service is running, it will N\-O\-T be stopped; call Stop\-Service manually beforehand if this is desired.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The wide-\/character name of the service to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the service is deleted, or does not exist at all 
+
+false if access is denied, or deletion failed 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Eradicate\-File\-Object@{Eradicate\-File\-Object}}
+\index{Eradicate\-File\-Object@{Eradicate\-File\-Object}!Wiper@{Wiper}}
+\subsubsection[{Eradicate\-File\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Eradicate\-File\-Object (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a732f393537116eb2a9102163c881def3}
+Calls the wide-\/character version after conversion to U\-T\-F-\/8.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The multi-\/byte path to eradicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the wchar\-\_\-t \hyperlink{class_wiper_a732f393537116eb2a9102163c881def3}{Eradicate\-File\-Object()} 
+
+false if path is a nullptr 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Eradicate\-File\-Object@{Eradicate\-File\-Object}}
+\index{Eradicate\-File\-Object@{Eradicate\-File\-Object}!Wiper@{Wiper}}
+\subsubsection[{Eradicate\-File\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Eradicate\-File\-Object (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{wpath}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_aa239eff8b2fc602eaab7485d8811264c}
+Wipes out a file or folder specified by wpath. The application config determines whether permissions or change of ownership is to be performed if a deletion fails.
+
+For folders with subdirectories, this will call itself recursively for every file and folder within it, generating new operations for each one found on the fly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em wpath} & The wide-\/character path to eradicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file/folder is deleted 
+
+false if the file/folder is not deleted, or wpath is a nullptr 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Eradicate\-Registry\-Object@{Eradicate\-Registry\-Object}}
+\index{Eradicate\-Registry\-Object@{Eradicate\-Registry\-Object}!Wiper@{Wiper}}
+\subsubsection[{Eradicate\-Registry\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Eradicate\-Registry\-Object (
+\begin{DoxyParamCaption}
+\item[{H\-K\-E\-Y}]{key\-\_\-root, }
+\item[{const char $\ast$}]{subkey}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_aceb0ca9e9719019ab8cdbb3ddef0d99b}
+Calls the wide-\/character version after conversion to U\-T\-F-\/8.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\-\_\-root} & The H\-K\-E\-Y\-\_\-xxx to open \\
+\hline
+\mbox{\tt in}  & {\em subkey} & The multi-\/byte subkey name to eradicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the wchar\-\_\-t \hyperlink{class_wiper_aceb0ca9e9719019ab8cdbb3ddef0d99b}{Eradicate\-Registry\-Object()} 
+
+false if subkey is a nullptr, or the key\-\_\-root is unknown 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Eradicate\-Registry\-Object@{Eradicate\-Registry\-Object}}
+\index{Eradicate\-Registry\-Object@{Eradicate\-Registry\-Object}!Wiper@{Wiper}}
+\subsubsection[{Eradicate\-Registry\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Eradicate\-Registry\-Object (
+\begin{DoxyParamCaption}
+\item[{H\-K\-E\-Y}]{key\-\_\-root, }
+\item[{const wchar\-\_\-t $\ast$}]{subkey}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_ad767320b068b1f9efafa8b3d93261c05}
+Deletes the registry key supplied under the key\-\_\-root set.
+
+The key root is one of\-:
+\begin{DoxyItemize}
+\item H\-K\-E\-Y\-\_\-\-L\-O\-C\-A\-L\-\_\-\-M\-A\-C\-H\-I\-N\-E
+\item H\-K\-E\-Y\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-U\-S\-E\-R
+\item H\-K\-E\-Y\-\_\-\-U\-S\-E\-R\-S
+\item H\-K\-E\-Y\-\_\-\-C\-L\-A\-S\-S\-E\-S\-\_\-\-R\-O\-O\-T
+\end{DoxyItemize}
+
+This will be output in textual format in the shorthand (to try and fit as much data in the output window as possible, without needing to scroll). As such, the above will be output as\-:
+\begin{DoxyItemize}
+\item H\-K\-L\-M
+\item H\-K\-C\-U
+\item H\-K\-U
+\item H\-K\-C\-R
+\end{DoxyItemize}
+
+If access is denied when attempting deletion, the function will optionally try to take ownership + change the permissions to enable deletion (as the minimum; we always aim for least privilege). This setting is controlled through the runtime configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\-\_\-root} & The H\-K\-E\-Y\-\_\-xxx to open \\
+\hline
+\mbox{\tt in}  & {\em subkey} & The wide-\/character subkey name to eradicate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the wchar\-\_\-t \hyperlink{class_wiper_aceb0ca9e9719019ab8cdbb3ddef0d99b}{Eradicate\-Registry\-Object()} 
+
+false if subkey is a nullptr, or the key\-\_\-root is unknown 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Eradicate\-Registry\-Object@{Eradicate\-Registry\-Object}}
+\index{Eradicate\-Registry\-Object@{Eradicate\-Registry\-Object}!Wiper@{Wiper}}
+\subsubsection[{Eradicate\-Registry\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Eradicate\-Registry\-Object (
+\begin{DoxyParamCaption}
+\item[{H\-K\-E\-Y}]{key\-\_\-root, }
+\item[{const wchar\-\_\-t $\ast$}]{subkey, }
+\item[{const wchar\-\_\-t $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a941b479e63b6eb1cce4f57af58d78519}
+Identical to \hyperlink{class_wiper_aceb0ca9e9719019ab8cdbb3ddef0d99b}{Eradicate\-Registry\-Object()}, only instead of deleting a key, it deletes a value instead, input as an extra parameter.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\-\_\-root} & The H\-K\-E\-Y\-\_\-xxx to open \\
+\hline
+\mbox{\tt in}  & {\em subkey} & The wide-\/character subkey name the values resides in \\
+\hline
+\mbox{\tt in}  & {\em value} & The wide-\/character name of the value to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the wchar\-\_\-t \hyperlink{class_wiper_aceb0ca9e9719019ab8cdbb3ddef0d99b}{Eradicate\-Registry\-Object()} 
+
+false if subkey is a nullptr, or the key\-\_\-root is unknown 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]\-: infinite recursion (resulting in stack overflow) if access denied, so long as take\-\_\-ownership or replace\-\_\-permissions succeeds, without fixing the reason for the failing access \end{DoxyRefDesc}
+\index{Wiper@{Wiper}!Execute@{Execute}}
+\index{Execute@{Execute}!Wiper@{Wiper}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_ab31e385b7a8a16513ac995bf937e8173}
+Begins the execution run of all the queued operations.
+
+\begin{DoxyReturn}{Returns}
+true if no operations encountered an error (including if there are no operations to do) 
+
+false if any operation fails; the queue is paused at the entry currently being processed 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Execute\-Command@{Execute\-Command}}
+\index{Execute\-Command@{Execute\-Command}!Wiper@{Wiper}}
+\subsubsection[{Execute\-Command}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Execute\-Command (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_acda9ac18709324e127adcef37b6a7830}
+Calls the wide-\/character version after conversion to U\-T\-F-\/8.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The multi-\/byte command to run \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the wchar\-\_\-t \hyperlink{class_wiper_acda9ac18709324e127adcef37b6a7830}{Execute\-Command()} 
+
+false if command is a nullptr 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Execute\-Command@{Execute\-Command}}
+\index{Execute\-Command@{Execute\-Command}!Wiper@{Wiper}}
+\subsubsection[{Execute\-Command}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Execute\-Command (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_af2fe7a6b2c95e2950047053bdb906a99}
+Executes the specified program/script/installer. The action to perform is determined by the file extension (we don't use the shell mechanism for it -\/ we hardcode it ourselves. Unlikely to ever change so shouldn't ever be an issue).
+
+\begin{DoxyWarning}{Warning}
+If you're doing anything beyond running an exe (with no params) or similar, A\-L\-W\-A\-Y\-S double-\/quote the application name. This enables the code to correctly identify what executable is being executed in situations where you need to use dots, etc., in the command. Best example\-: \begin{DoxyVerb}taskkill /F /IM taskmgr.exe
+\end{DoxyVerb}
+ If not quoted, this will believe everything before the . is the binary/script to run, and can cause the operation to fail. There's also no extension directly provided, and so this code will fall back to a default operation (which happens to be running a .exe). Best instead\-: \begin{DoxyVerb}"taskkill.exe" /F /IM taskmgr.exe
+\end{DoxyVerb}
+
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The path to the item to run, including any command line options suffixed. The extension will be determined up to the first space character, unless enclosed in single or double quotes, where the closing character is then the end. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the process exit code is 0, or the msi installer returns a success code but needing a reboot. An actual failure will make this return false. 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Executor\-Grant\-Debugging@{Executor\-Grant\-Debugging}}
+\index{Executor\-Grant\-Debugging@{Executor\-Grant\-Debugging}!Wiper@{Wiper}}
+\subsubsection[{Executor\-Grant\-Debugging}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Executor\-Grant\-Debugging (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_adfcbb29be7bfdd893531c2e7606b37da}
+Grants the Se\-Debug\-Privilege to this process' token. Having this enables greater access when doing things like process termination, where this privilege means Open\-Process() will always succeed.
+
+\begin{DoxyReturn}{Returns}
+true if the permission is enabled or has turned on 
+
+false if the permission could not be acquired 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Executor\-Has\-Admin\-Privileges@{Executor\-Has\-Admin\-Privileges}}
+\index{Executor\-Has\-Admin\-Privileges@{Executor\-Has\-Admin\-Privileges}!Wiper@{Wiper}}
+\subsubsection[{Executor\-Has\-Admin\-Privileges}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Executor\-Has\-Admin\-Privileges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_ac13a2e4f20c178d3a1a4afd0822c672f}
+Checks if the user account executing this application has admin rights on the machine.
+
+Run on application initialization to prevent a plethora of errors when run by a non-\/admin. Will enable the menu option to execute if this passes in the message loop callback (\hyperlink{app_8cc}{app.\-cc}).
+
+\begin{DoxyReturn}{Returns}
+true if the user account is a member of Administrators 
+
+false if the user account is not a member of Administrators, or a function fails when attempting to check 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Kill\-Process@{Kill\-Process}}
+\index{Kill\-Process@{Kill\-Process}!Wiper@{Wiper}}
+\subsubsection[{Kill\-Process}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Kill\-Process (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{by\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a18e0f72f856a2ad20425c318b2e9f65c}
+Kills the process identified by name. This will only kill the first instance of the name found, as returned by Nt\-Query\-System\-Information.
+
+Use the utility function \hyperlink{utils_8cc_af1f4e916381d9c267c7c8d8997ed48dd}{process\-\_\-exists()} after each function call to determine if a loop should continue if killing the process by its name, otherwise use \hyperlink{class_wiper_a18e0f72f856a2ad20425c318b2e9f65c}{Kill\-Process()} supplying the process id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em by\-\_\-name} & The wide-\/character name of the process to kill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the process was terminated or not found 
+
+false if the process exists and could not be terminated 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}]add method 4c; dll injection \end{DoxyRefDesc}
+\index{Wiper@{Wiper}!Kill\-Process@{Kill\-Process}}
+\index{Kill\-Process@{Kill\-Process}!Wiper@{Wiper}}
+\subsubsection[{Kill\-Process}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Kill\-Process (
+\begin{DoxyParamCaption}
+\item[{{\bf uint32\-\_\-t}}]{by\-\_\-pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_adf6fc63d905429212ad9148cf0e40bfa}
+Kills the process identified by its Process I\-D.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em by\-\_\-pid} & The process identifier of the process to kill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the process was terminated or not found 
+
+false if the process exists and could not be terminated 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!New\-Operation@{New\-Operation}}
+\index{New\-Operation@{New\-Operation}!Wiper@{Wiper}}
+\subsubsection[{New\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}void Wiper\-::\-New\-Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a47aae300aa571e057fa9b05442a9cc17}
+Internally, artificially adds another operation to process at runtime, in response to a pending operation -\/ 99\% of the time it is due to a recursive delete, finding other things to remove. \index{Wiper@{Wiper}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Wiper@{Wiper}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Wiper\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Wiper}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a4a570cf481c82a00d519992c010daa0e}
+\index{Wiper@{Wiper}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Wiper@{Wiper}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Wiper\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Wiper}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_aa05d1e576306939d3fcfb4c8fe988045}
+\index{Wiper@{Wiper}!Num\-Queued\-Operations@{Num\-Queued\-Operations}}
+\index{Num\-Queued\-Operations@{Num\-Queued\-Operations}!Wiper@{Wiper}}
+\subsubsection[{Num\-Queued\-Operations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} Wiper\-::\-Num\-Queued\-Operations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_a25078dc49a405fffc57d1ca3766e88cb}
+Retrieves the number of operations currently sitting in the queue. \index{Wiper@{Wiper}!Pop\-Previous\-Operation@{Pop\-Previous\-Operation}}
+\index{Pop\-Previous\-Operation@{Pop\-Previous\-Operation}!Wiper@{Wiper}}
+\subsubsection[{Pop\-Previous\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}void Wiper\-::\-Pop\-Previous\-Operation (
+\begin{DoxyParamCaption}
+\item[{bool}]{notify = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a00e8df6a911cf4a6680a382e19b44396}
+Pops an operation off the stack to return to the originally running \hyperlink{class_operation}{Operation}. Valid only if \hyperlink{class_wiper_a47aae300aa571e057fa9b05442a9cc17}{New\-Operation()} has been called while another operation was still running (primarily recursive functions).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em notify} & Defaulted true, set to false if you don't want the operation text output again. Used when making more than one change before returning to the original operation (like changing permissions of a file, then taking ownership). \\
+\hline
+\end{DoxyParams}
+\index{Wiper@{Wiper}!Queue\-New\-Operation@{Queue\-New\-Operation}}
+\index{Queue\-New\-Operation@{Queue\-New\-Operation}!Wiper@{Wiper}}
+\subsubsection[{Queue\-New\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Queue\-New\-Operation (
+\begin{DoxyParamCaption}
+\item[{{\bf Operation} $\ast$}]{operation}
+\end{DoxyParamCaption}
+)}\label{class_wiper_a7d360657abfe5645a3221cc5dd4090bb}
+Adds a new \hyperlink{class_operation}{Operation} to the internal queue, ready for processing.
+
+Identical operations can be added multiple times (so long as it is not the same object) -\/ this is in case an uninstaller or automated procedure recreates a file already deleted, and it's desired to delete it before and after.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em operation} & The operation to queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation is added to the queue 
+
+false if the operation is invalid, or could not be added 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Replace\-Permissions\-Of\-File@{Replace\-Permissions\-Of\-File}}
+\index{Replace\-Permissions\-Of\-File@{Replace\-Permissions\-Of\-File}!Wiper@{Wiper}}
+\subsubsection[{Replace\-Permissions\-Of\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Replace\-Permissions\-Of\-File (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_adda0b8c48ff6a104deacd17ae11ecd81}
+Replaces the permissions of the file/folder.
+
+Only executed if, when trying to delete a file/folder, access is denied, and modifying permissions is enabled in the runtime configuration.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]further elaboration of changes made\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The full path of the file/folder to modify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the permissions are modified such that deletion, if attempted, will work 
+
+false if the permissions fail to get modified, or the changes would still prevent deletion 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Replace\-Permissions\-Of\-Key@{Replace\-Permissions\-Of\-Key}}
+\index{Replace\-Permissions\-Of\-Key@{Replace\-Permissions\-Of\-Key}!Wiper@{Wiper}}
+\subsubsection[{Replace\-Permissions\-Of\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Replace\-Permissions\-Of\-Key (
+\begin{DoxyParamCaption}
+\item[{H\-K\-E\-Y}]{key\-\_\-root, }
+\item[{const wchar\-\_\-t $\ast$}]{subkey}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a96dff12b4ab8a075098e08e7f21e4357}
+Replaces the permissions of the registry key specified.
+
+Only executed if, when trying to delete a registry key/value, access is denied, and modifying permissions is enabled in the runtime configuration.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]further elaboration of changes made\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\-\_\-root} & The H\-K\-E\-Y\-\_\-\-Xxx the subkey resides within \\
+\hline
+\mbox{\tt in}  & {\em subkey} & The wide-\/character subkey name to modify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the permissions are modified such that deletion, if attempted, will work 
+
+false if the permissions fail to get modified, or the changes would still prevent deletion 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Stop\-Service@{Stop\-Service}}
+\index{Stop\-Service@{Stop\-Service}!Wiper@{Wiper}}
+\subsubsection[{Stop\-Service}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Stop\-Service (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a6dcb5ad961fe3403cde2783a75460172}
+Stops the service as supplied by name.
+
+This function will not return until the service has stopped, timed out (using the service specified wait hint), or the service control manager has reported a failure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The wide-\/character service name to stop \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the service does not exist, or has been stopped 
+
+false if permissions are denied or the service failed to stop 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Take\-Ownership\-Of\-File@{Take\-Ownership\-Of\-File}}
+\index{Take\-Ownership\-Of\-File@{Take\-Ownership\-Of\-File}!Wiper@{Wiper}}
+\subsubsection[{Take\-Ownership\-Of\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Take\-Ownership\-Of\-File (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a044fdff304d6e27ecd8643c89e99f234}
+Replaces the owner of the file with the user account currently being used to execute the application.
+
+Only executed if, when trying to delete a registry key/value, access is denied, and modifying permissions is enabled in the runtime configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The path to the file/folder to take over \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the executing account has ownership of the file/folder 
+
+false if the path was invalid, or access was denied when attempting to take over 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Take\-Ownership\-Of\-Key@{Take\-Ownership\-Of\-Key}}
+\index{Take\-Ownership\-Of\-Key@{Take\-Ownership\-Of\-Key}!Wiper@{Wiper}}
+\subsubsection[{Take\-Ownership\-Of\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Take\-Ownership\-Of\-Key (
+\begin{DoxyParamCaption}
+\item[{H\-K\-E\-Y}]{key\-\_\-root, }
+\item[{const char $\ast$}]{subkey}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_aa6d779022f6b2b4d06734f089a82e46e}
+Calls the wide-\/character version after conversion to U\-T\-F-\/8.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\-\_\-root} & The H\-K\-E\-Y\-\_\-\-Xxx to open \\
+\hline
+\mbox{\tt in}  & {\em subkey} & The multi-\/byte subkey name to take over \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the executing account has ownership of the key 
+
+false if subkey is a nullptr, the key\-\_\-root is unknown, or access was denied when attempting to take over 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Take\-Ownership\-Of\-Key@{Take\-Ownership\-Of\-Key}}
+\index{Take\-Ownership\-Of\-Key@{Take\-Ownership\-Of\-Key}!Wiper@{Wiper}}
+\subsubsection[{Take\-Ownership\-Of\-Key}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Take\-Ownership\-Of\-Key (
+\begin{DoxyParamCaption}
+\item[{H\-K\-E\-Y}]{key\-\_\-root, }
+\item[{const wchar\-\_\-t $\ast$}]{subkey}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a27e7a3905abc6414d2d1f180e8f3844b}
+Replaces the owner of the registry key with the user account currently being used to execute the application.
+
+Only executed if, when trying to delete a registry key/value, access is denied, and modifying permissions is enabled in the runtime configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key\-\_\-root} & The H\-K\-E\-Y\-\_\-\-Xxx to open \\
+\hline
+\mbox{\tt in}  & {\em subkey} & The wide-\/character subkey name to take over \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the executing account has ownership of the file/folder 
+
+false if subkey is a nullptr, the key\-\_\-root is unknownw, or access was denied when attempting to take over 
+\end{DoxyReturn}
+\index{Wiper@{Wiper}!Wipe\-Folder\-Test@{Wipe\-Folder\-Test}}
+\index{Wipe\-Folder\-Test@{Wipe\-Folder\-Test}!Wiper@{Wiper}}
+\subsubsection[{Wipe\-Folder\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Wipe\-Folder\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_aa792260d4c549fc60461f5aa67f372f8}
+\index{Wiper@{Wiper}!Wipe\-Java\-App\-Data@{Wipe\-Java\-App\-Data}}
+\index{Wipe\-Java\-App\-Data@{Wipe\-Java\-App\-Data}!Wiper@{Wiper}}
+\subsubsection[{Wipe\-Java\-App\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Wipe\-Java\-App\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_afc43101e07041defa89368dec173ca44}
+\index{Wiper@{Wiper}!Wipe\-Process\-Test@{Wipe\-Process\-Test}}
+\index{Wipe\-Process\-Test@{Wipe\-Process\-Test}!Wiper@{Wiper}}
+\subsubsection[{Wipe\-Process\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Wipe\-Process\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_aeb701101ab29c5e68d4ef9271d7dc4a9}
+\index{Wiper@{Wiper}!Wipe\-Registry\-Test@{Wipe\-Registry\-Test}}
+\index{Wipe\-Registry\-Test@{Wipe\-Registry\-Test}!Wiper@{Wiper}}
+\subsubsection[{Wipe\-Registry\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Wipe\-Registry\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_a9f0418d9f1f5cccd71844c802f5bef74}
+\index{Wiper@{Wiper}!Wipe\-Service\-Test@{Wipe\-Service\-Test}}
+\index{Wipe\-Service\-Test@{Wipe\-Service\-Test}!Wiper@{Wiper}}
+\subsubsection[{Wipe\-Service\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool Wiper\-::\-Wipe\-Service\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wiper_a7f56c6e9652e7aec570d65c15ffb6bac}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Wiper@{Wiper}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!Wiper@{Wiper}}
+\subsubsection[{Runtime}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Runtime}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_wiper_af3d14e26ba8af9e6cc5a32aad8446de7}
+
+
+\subsection{Member Data Documentation}
+\index{Wiper@{Wiper}!\-\_\-current\-\_\-operation@{\-\_\-current\-\_\-operation}}
+\index{\-\_\-current\-\_\-operation@{\-\_\-current\-\_\-operation}!Wiper@{Wiper}}
+\subsubsection[{\-\_\-current\-\_\-operation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation}$\ast$ Wiper\-::\-\_\-current\-\_\-operation\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a98c5b4449bd30c40d0ead348c57f0f7f}
+The current operation being worked on \index{Wiper@{Wiper}!\-\_\-operations@{\-\_\-operations}}
+\index{\-\_\-operations@{\-\_\-operations}!Wiper@{Wiper}}
+\subsubsection[{\-\_\-operations}]{\setlength{\rightskip}{0pt plus 5cm}std\-::queue$<${\bf Operation}$\ast$$>$ Wiper\-::\-\_\-operations\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a2ac92738b2626a47eecff22843e1ccd3}
+Pending operations, added by parsing the input files \index{Wiper@{Wiper}!\-\_\-operations\-\_\-stack@{\-\_\-operations\-\_\-stack}}
+\index{\-\_\-operations\-\_\-stack@{\-\_\-operations\-\_\-stack}!Wiper@{Wiper}}
+\subsubsection[{\-\_\-operations\-\_\-stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::stack$<${\bf Operation}$\ast$$>$ Wiper\-::\-\_\-operations\-\_\-stack\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a98e266ae56c41c58c0d21ce30064d684}
+Pending operations, required as part of the operation currently running from the queue, in the event more operations are needed dynamically to complete the first -\/ such as deleting a folder that is not empty, generates extra operations for each file/folder. \index{Wiper@{Wiper}!\-\_\-scm@{\-\_\-scm}}
+\index{\-\_\-scm@{\-\_\-scm}!Wiper@{Wiper}}
+\subsubsection[{\-\_\-scm}]{\setlength{\rightskip}{0pt plus 5cm}S\-C\-\_\-\-H\-A\-N\-D\-L\-E Wiper\-::\-\_\-scm\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_aa14de868e468e980872140bd970eb3e5}
+Handle to the service control manager; never acquired unless a service to work on is supplied in the wiping input \index{Wiper@{Wiper}!mb@{mb}}
+\index{mb@{mb}!Wiper@{Wiper}}
+\subsubsection[{mb}]{\setlength{\rightskip}{0pt plus 5cm}char Wiper\-::mb\mbox{[}1024\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{class_wiper_a112d278ddc1fdca0a552bab45568a965}
+conversion local to the class; within the eradicate functions the recursion can consume quite a bit of memory needlessly; we only ever need one conversion buffer, we're single threaded. 

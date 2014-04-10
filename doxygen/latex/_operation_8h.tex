@@ -1,0 +1,127 @@
+\section{Operation.\-h File Reference}
+\label{_operation_8h}\index{Operation.\-h@{Operation.\-h}}
+
+
+Holds the current state and data for an action to perform.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Subject.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structextra__data}{extra\-\_\-data}
+\item 
+class \hyperlink{class_operation}{Operation}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589}{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N} \{ \\*
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a2b1d3365980bfcb95e564304dc0e431b}{O\-P\-\_\-\-Dummy} = 0, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a1b47b197db983b13fc107ff46375a825}{O\-P\-\_\-\-Delete\-File}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a246d215083e05ffc245fae8a36da0d16}{O\-P\-\_\-\-Delete\-Directory}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a68ccc1e6b72c4ab78596b87142ae6ccd}{O\-P\-\_\-\-Delete\-Reg\-Value}, 
+\\*
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a1581382d330c9f986d243225db0c0291}{O\-P\-\_\-\-Delete\-Reg\-Key}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a0c3fd6655dc397ab153fb10506c3cf5d}{O\-P\-\_\-\-Delete\-Service}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589ae16f19086ae6baceb18397bddf9c9214}{O\-P\-\_\-\-Kill\-Process}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a65ef6ab955a80a08adb00eb9c20d6026}{O\-P\-\_\-\-Kill\-Thread}, 
+\\*
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a434d740e98eba2e054b9f9cc62bb6892}{O\-P\-\_\-\-Stop\-Service}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589aeca131c0c7fcbf186379c2148bc51d06}{O\-P\-\_\-\-Open\-File}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a66465fe731fc8f2ba92ea8daec272a21}{O\-P\-\_\-\-Open\-Reg\-Key}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589aef114e4a91f2916dd1a88b847c8cd2fa}{O\-P\-\_\-\-Change\-Rights}, 
+\\*
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a9ad1299f690445c6902fb140d1ffd85b}{O\-P\-\_\-\-Change\-Permissions\-File}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589ad967c5198b34c14331e15b48e27681aa}{O\-P\-\_\-\-Change\-Owner\-File}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a5dcb3c264e8e0030292b5852d1f68802}{O\-P\-\_\-\-Change\-Permissions\-Key}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589aefcdd292b9f392b0b3d235ae2a49ca9d}{O\-P\-\_\-\-Change\-Owner\-Key}, 
+\\*
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a88386499a6ffb813d3d2c9ccbd49e3f6}{O\-P\-\_\-\-Execute}, 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589a5c270cf3e25cfa83f27b787be93b99f9}{O\-P\-\_\-\-M\-A\-X}
+ \}
+\item 
+enum \hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601f}{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E} \{ \\*
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa3cc3ca28d6dcb189d3e8ca980b98bba8}{O\-S\-\_\-\-Unprepared} = 0, 
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa3235cb67cc5fcb5cd4c1896c0cbb0ed5}{O\-S\-\_\-\-Prepared}, 
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fadaa7a63a2815034acf71b0eec28d8d8f}{O\-S\-\_\-\-Paused}, 
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fabddec909ae1b6efec396721fbb374ae6}{O\-S\-\_\-\-Succeeded}, 
+\\*
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa8746c61c4f80d56290eb03087db8d512}{O\-S\-\_\-\-Not\-Needed}, 
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa76b112a68b6c56383c6f04327844ed1f}{O\-S\-\_\-\-Failed}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds the current state and data for an action to perform. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Operation.\-h@{Operation.\-h}!E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N@{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}}
+\index{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N@{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}!Operation.h@{Operation.\-h}}
+\subsubsection[{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}}\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\-P\-\_\-\-Dummy@{O\-P\-\_\-\-Dummy}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Dummy@{O\-P\-\_\-\-Dummy}}\item[{\em 
+O\-P\-\_\-\-Dummy\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a2b1d3365980bfcb95e564304dc0e431b}
+}]\index{O\-P\-\_\-\-Delete\-File@{O\-P\-\_\-\-Delete\-File}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Delete\-File@{O\-P\-\_\-\-Delete\-File}}\item[{\em 
+O\-P\-\_\-\-Delete\-File\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a1b47b197db983b13fc107ff46375a825}
+}]\index{O\-P\-\_\-\-Delete\-Directory@{O\-P\-\_\-\-Delete\-Directory}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Delete\-Directory@{O\-P\-\_\-\-Delete\-Directory}}\item[{\em 
+O\-P\-\_\-\-Delete\-Directory\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a246d215083e05ffc245fae8a36da0d16}
+}]\index{O\-P\-\_\-\-Delete\-Reg\-Value@{O\-P\-\_\-\-Delete\-Reg\-Value}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Delete\-Reg\-Value@{O\-P\-\_\-\-Delete\-Reg\-Value}}\item[{\em 
+O\-P\-\_\-\-Delete\-Reg\-Value\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a68ccc1e6b72c4ab78596b87142ae6ccd}
+}]\index{O\-P\-\_\-\-Delete\-Reg\-Key@{O\-P\-\_\-\-Delete\-Reg\-Key}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Delete\-Reg\-Key@{O\-P\-\_\-\-Delete\-Reg\-Key}}\item[{\em 
+O\-P\-\_\-\-Delete\-Reg\-Key\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a1581382d330c9f986d243225db0c0291}
+}]\index{O\-P\-\_\-\-Delete\-Service@{O\-P\-\_\-\-Delete\-Service}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Delete\-Service@{O\-P\-\_\-\-Delete\-Service}}\item[{\em 
+O\-P\-\_\-\-Delete\-Service\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a0c3fd6655dc397ab153fb10506c3cf5d}
+}]\index{O\-P\-\_\-\-Kill\-Process@{O\-P\-\_\-\-Kill\-Process}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Kill\-Process@{O\-P\-\_\-\-Kill\-Process}}\item[{\em 
+O\-P\-\_\-\-Kill\-Process\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589ae16f19086ae6baceb18397bddf9c9214}
+}]\index{O\-P\-\_\-\-Kill\-Thread@{O\-P\-\_\-\-Kill\-Thread}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Kill\-Thread@{O\-P\-\_\-\-Kill\-Thread}}\item[{\em 
+O\-P\-\_\-\-Kill\-Thread\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a65ef6ab955a80a08adb00eb9c20d6026}
+}]\index{O\-P\-\_\-\-Stop\-Service@{O\-P\-\_\-\-Stop\-Service}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Stop\-Service@{O\-P\-\_\-\-Stop\-Service}}\item[{\em 
+O\-P\-\_\-\-Stop\-Service\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a434d740e98eba2e054b9f9cc62bb6892}
+}]\index{O\-P\-\_\-\-Open\-File@{O\-P\-\_\-\-Open\-File}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Open\-File@{O\-P\-\_\-\-Open\-File}}\item[{\em 
+O\-P\-\_\-\-Open\-File\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589aeca131c0c7fcbf186379c2148bc51d06}
+}]\index{O\-P\-\_\-\-Open\-Reg\-Key@{O\-P\-\_\-\-Open\-Reg\-Key}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Open\-Reg\-Key@{O\-P\-\_\-\-Open\-Reg\-Key}}\item[{\em 
+O\-P\-\_\-\-Open\-Reg\-Key\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a66465fe731fc8f2ba92ea8daec272a21}
+}]\index{O\-P\-\_\-\-Change\-Rights@{O\-P\-\_\-\-Change\-Rights}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Change\-Rights@{O\-P\-\_\-\-Change\-Rights}}\item[{\em 
+O\-P\-\_\-\-Change\-Rights\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589aef114e4a91f2916dd1a88b847c8cd2fa}
+}]\index{O\-P\-\_\-\-Change\-Permissions\-File@{O\-P\-\_\-\-Change\-Permissions\-File}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Change\-Permissions\-File@{O\-P\-\_\-\-Change\-Permissions\-File}}\item[{\em 
+O\-P\-\_\-\-Change\-Permissions\-File\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a9ad1299f690445c6902fb140d1ffd85b}
+}]\index{O\-P\-\_\-\-Change\-Owner\-File@{O\-P\-\_\-\-Change\-Owner\-File}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Change\-Owner\-File@{O\-P\-\_\-\-Change\-Owner\-File}}\item[{\em 
+O\-P\-\_\-\-Change\-Owner\-File\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589ad967c5198b34c14331e15b48e27681aa}
+}]\index{O\-P\-\_\-\-Change\-Permissions\-Key@{O\-P\-\_\-\-Change\-Permissions\-Key}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Change\-Permissions\-Key@{O\-P\-\_\-\-Change\-Permissions\-Key}}\item[{\em 
+O\-P\-\_\-\-Change\-Permissions\-Key\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a5dcb3c264e8e0030292b5852d1f68802}
+}]\index{O\-P\-\_\-\-Change\-Owner\-Key@{O\-P\-\_\-\-Change\-Owner\-Key}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Change\-Owner\-Key@{O\-P\-\_\-\-Change\-Owner\-Key}}\item[{\em 
+O\-P\-\_\-\-Change\-Owner\-Key\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589aefcdd292b9f392b0b3d235ae2a49ca9d}
+}]\index{O\-P\-\_\-\-Execute@{O\-P\-\_\-\-Execute}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-Execute@{O\-P\-\_\-\-Execute}}\item[{\em 
+O\-P\-\_\-\-Execute\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a88386499a6ffb813d3d2c9ccbd49e3f6}
+}]\index{O\-P\-\_\-\-M\-A\-X@{O\-P\-\_\-\-M\-A\-X}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-P\-\_\-\-M\-A\-X@{O\-P\-\_\-\-M\-A\-X}}\item[{\em 
+O\-P\-\_\-\-M\-A\-X\label{_operation_8h_a29c331c24eda38b81f1e27a40391a589a5c270cf3e25cfa83f27b787be93b99f9}
+}]\end{description}
+\end{Desc}
+\index{Operation.\-h@{Operation.\-h}!E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E@{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E}}
+\index{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E@{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E}!Operation.h@{Operation.\-h}}
+\subsubsection[{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E}}\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\-S\-\_\-\-Unprepared@{O\-S\-\_\-\-Unprepared}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-S\-\_\-\-Unprepared@{O\-S\-\_\-\-Unprepared}}\item[{\em 
+O\-S\-\_\-\-Unprepared\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa3cc3ca28d6dcb189d3e8ca980b98bba8}
+}]\index{O\-S\-\_\-\-Prepared@{O\-S\-\_\-\-Prepared}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-S\-\_\-\-Prepared@{O\-S\-\_\-\-Prepared}}\item[{\em 
+O\-S\-\_\-\-Prepared\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa3235cb67cc5fcb5cd4c1896c0cbb0ed5}
+}]\index{O\-S\-\_\-\-Paused@{O\-S\-\_\-\-Paused}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-S\-\_\-\-Paused@{O\-S\-\_\-\-Paused}}\item[{\em 
+O\-S\-\_\-\-Paused\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fadaa7a63a2815034acf71b0eec28d8d8f}
+}]\index{O\-S\-\_\-\-Succeeded@{O\-S\-\_\-\-Succeeded}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-S\-\_\-\-Succeeded@{O\-S\-\_\-\-Succeeded}}\item[{\em 
+O\-S\-\_\-\-Succeeded\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fabddec909ae1b6efec396721fbb374ae6}
+}]\index{O\-S\-\_\-\-Not\-Needed@{O\-S\-\_\-\-Not\-Needed}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-S\-\_\-\-Not\-Needed@{O\-S\-\_\-\-Not\-Needed}}\item[{\em 
+O\-S\-\_\-\-Not\-Needed\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa8746c61c4f80d56290eb03087db8d512}
+}]\index{O\-S\-\_\-\-Failed@{O\-S\-\_\-\-Failed}!Operation.\-h@{Operation.\-h}}\index{Operation.\-h@{Operation.\-h}!O\-S\-\_\-\-Failed@{O\-S\-\_\-\-Failed}}\item[{\em 
+O\-S\-\_\-\-Failed\label{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601fa76b112a68b6c56383c6f04327844ed1f}
+}]\end{description}
+\end{Desc}

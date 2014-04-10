@@ -1,0 +1,255 @@
+\section{app.\-h File Reference}
+\label{app_8h}\index{app.\-h@{app.\-h}}
+
+
+Core definitions and functions for the application.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$Windows.\-h$>$}\\*
+{\ttfamily \#include $<$L\-M.\-h$>$}\\*
+{\ttfamily \#include $<$sddl.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{app_8h_a9a71ce23c815392fc662b65767c37cf2}{W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T}~(W\-M\-\_\-\-U\-S\-E\-R + 1)
+\item 
+\#define \hyperlink{app_8h_afde94533df99e3f82043b1f8030c7785}{I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W}~4242
+\item 
+\#define \hyperlink{app_8h_a21becbf09a62fc591312279ef298b95e}{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D}~R\-G\-B(  0,  0,  0)
+\item 
+\#define \hyperlink{app_8h_a40e60352eb0f3cc3d18ab76509fc5d9d}{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}~R\-G\-B(255,255,255)
+\item 
+\#define \hyperlink{app_8h_a625f9f9a3dfaf97497a05989e4eeb155}{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R}~R\-G\-B(255,  0,  0)
+\item 
+\#define \hyperlink{app_8h_a597cccd07493d0c8d75029a3684c1150}{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}~R\-G\-B(  0,255,  0)
+\item 
+\#define \hyperlink{app_8h_a254f94b8bf44bed5d099696e513073a5}{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O}~R\-G\-B(  0,255,255)
+\item 
+\#define \hyperlink{app_8h_a4d01656d06379bbcf57b9ec415fced45}{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G}~R\-G\-B(255,255,  0)
+\item 
+\#define \hyperlink{app_8h_a120fea815d6c695bab2c5c8fd691a31b}{W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P}~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N\-X\-P
+\item 
+\#define \hyperlink{app_8h_a852804c56e4e7e31111fbee71a209656}{W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A}~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-V\-I\-S\-T\-A
+\item 
+\#define \hyperlink{app_8h_a51504726b7304059d5ffdb2e0284c90b}{W\-I\-N\-D\-O\-W\-S\-\_\-7}~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N7
+\item 
+\#define \hyperlink{app_8h_a98e0d1150640e23a502e70c0e4c1d0c1}{W\-I\-N\-D\-O\-W\-S\-\_\-8}~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N8
+\item 
+\#define \hyperlink{app_8h_a8d9dead09caf7611026ddf7581773239}{W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E}~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-B\-L\-U\-E
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{app_8h_a6259e72a343cd6012e8ceb017bac8556}{app\-\_\-exec} ()
+\item 
+void \hyperlink{app_8h_a7ab0624f9c8aeab843f91432c75638ee}{app\-\_\-init} (\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{app_8h_ae49ddc9faf2e3e1d4bf833014d18e56e}{app\-\_\-stop} ()
+\item 
+bool \hyperlink{app_8h_acd734b41204e59d424b59f760b6a79ee}{get\-\_\-debugging\-\_\-privileges} ()
+\item 
+bool \hyperlink{app_8h_a4e45ac0d06680adf5c65acb7b597617c}{is\-\_\-windows\-\_\-version\-\_\-gte} (W\-O\-R\-D os\-\_\-version)
+\item 
+wchar\-\_\-t $\ast$ \hyperlink{app_8h_a09f9e8a59f8f89622daca67693af69b2}{get\-\_\-user\-\_\-appdata\-\_\-path} ()
+\item 
+\hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} \hyperlink{app_8h_abe3867af78ff34eac78fc7057e9c9be8}{get\-\_\-user\-\_\-path\-\_\-offset} ()
+\item 
+void \hyperlink{app_8h_aa7477f60c345b2e0a751f0d6d38defe6}{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix} (wchar\-\_\-t $\ast$path, bool $\ast$skip)
+\item 
+void \hyperlink{app_8h_a363d6654bd8c19abf1c65abdc89877bf}{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile} (wchar\-\_\-t $\ast$path, bool $\ast$skip)
+\item 
+B\-O\-O\-L W\-I\-N\-A\-P\-I \hyperlink{app_8h_a09b121e8dcd0287e71d2366987b2f251}{sig\-\_\-handler} (D\-W\-O\-R\-D signal)
+\item 
+L\-R\-E\-S\-U\-L\-T C\-A\-L\-L\-B\-A\-C\-K \hyperlink{app_8h_ac3dcc43265dd8ae5f74529e8ac05dc67}{main\-\_\-callback} (H\-W\-N\-D h\-Wnd, U\-I\-N\-T msg, W\-P\-A\-R\-A\-M w\-Param, L\-P\-A\-R\-A\-M l\-Param)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Core definitions and functions for the application. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{app.\-h@{app.\-h}!I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W@{I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W}}
+\index{I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W@{I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W}!app.h@{app.\-h}}
+\subsubsection[{I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-D\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-W\-I\-N\-D\-O\-W~4242}\label{app_8h_afde94533df99e3f82043b1f8030c7785}
+\index{app.\-h@{app.\-h}!O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D}}
+\index{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D}!app.h@{app.\-h}}
+\subsubsection[{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-B\-A\-C\-K\-G\-R\-O\-U\-N\-D~R\-G\-B(  0,  0,  0)}\label{app_8h_a21becbf09a62fc591312279ef298b95e}
+\index{app.\-h@{app.\-h}!O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R}}
+\index{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R}!app.h@{app.\-h}}
+\subsubsection[{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-E\-R\-R\-O\-R~R\-G\-B(255,  0,  0)}\label{app_8h_a625f9f9a3dfaf97497a05989e4eeb155}
+\index{app.\-h@{app.\-h}!O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O}}
+\index{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O}!app.h@{app.\-h}}
+\subsubsection[{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-I\-N\-F\-O~R\-G\-B(  0,255,255)}\label{app_8h_a254f94b8bf44bed5d099696e513073a5}
+\index{app.\-h@{app.\-h}!O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}}
+\index{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}!app.h@{app.\-h}}
+\subsubsection[{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L~R\-G\-B(255,255,255)}\label{app_8h_a40e60352eb0f3cc3d18ab76509fc5d9d}
+\index{app.\-h@{app.\-h}!O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}}
+\index{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}!app.h@{app.\-h}}
+\subsubsection[{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S~R\-G\-B(  0,255,  0)}\label{app_8h_a597cccd07493d0c8d75029a3684c1150}
+\index{app.\-h@{app.\-h}!O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G}}
+\index{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G@{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G}!app.h@{app.\-h}}
+\subsubsection[{O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T\-C\-O\-L\-O\-R\-\_\-\-W\-A\-R\-N\-I\-N\-G~R\-G\-B(255,255,  0)}\label{app_8h_a4d01656d06379bbcf57b9ec415fced45}
+\index{app.\-h@{app.\-h}!W\-I\-N\-D\-O\-W\-S\-\_\-7@{W\-I\-N\-D\-O\-W\-S\-\_\-7}}
+\index{W\-I\-N\-D\-O\-W\-S\-\_\-7@{W\-I\-N\-D\-O\-W\-S\-\_\-7}!app.h@{app.\-h}}
+\subsubsection[{W\-I\-N\-D\-O\-W\-S\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N\-D\-O\-W\-S\-\_\-7~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N7}\label{app_8h_a51504726b7304059d5ffdb2e0284c90b}
+\index{app.\-h@{app.\-h}!W\-I\-N\-D\-O\-W\-S\-\_\-8@{W\-I\-N\-D\-O\-W\-S\-\_\-8}}
+\index{W\-I\-N\-D\-O\-W\-S\-\_\-8@{W\-I\-N\-D\-O\-W\-S\-\_\-8}!app.h@{app.\-h}}
+\subsubsection[{W\-I\-N\-D\-O\-W\-S\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N\-D\-O\-W\-S\-\_\-8~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N8}\label{app_8h_a98e0d1150640e23a502e70c0e4c1d0c1}
+\index{app.\-h@{app.\-h}!W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E@{W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E}}
+\index{W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E@{W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E}!app.h@{app.\-h}}
+\subsubsection[{W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N\-D\-O\-W\-S\-\_\-\-B\-L\-U\-E~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-B\-L\-U\-E}\label{app_8h_a8d9dead09caf7611026ddf7581773239}
+\index{app.\-h@{app.\-h}!W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A@{W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A}}
+\index{W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A@{W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A}!app.h@{app.\-h}}
+\subsubsection[{W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N\-D\-O\-W\-S\-\_\-\-V\-I\-S\-T\-A~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-V\-I\-S\-T\-A}\label{app_8h_a852804c56e4e7e31111fbee71a209656}
+\index{app.\-h@{app.\-h}!W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P@{W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P}}
+\index{W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P@{W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P}!app.h@{app.\-h}}
+\subsubsection[{W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N\-D\-O\-W\-S\-\_\-\-X\-P~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N\-X\-P}\label{app_8h_a120fea815d6c695bab2c5c8fd691a31b}
+\index{app.\-h@{app.\-h}!W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T@{W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T}}
+\index{W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T@{W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T}!app.h@{app.\-h}}
+\subsubsection[{W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-M\-\_\-\-W\-I\-N\-W\-I\-P\-E\-\_\-\-A\-P\-P\-I\-N\-I\-T~(W\-M\-\_\-\-U\-S\-E\-R + 1)}\label{app_8h_a9a71ce23c815392fc662b65767c37cf2}
+
+
+\subsection{Function Documentation}
+\index{app.\-h@{app.\-h}!app\-\_\-exec@{app\-\_\-exec}}
+\index{app\-\_\-exec@{app\-\_\-exec}!app.h@{app.\-h}}
+\subsubsection[{app\-\_\-exec}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-exec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{app_8h_a6259e72a343cd6012e8ceb017bac8556}
+Win32 message loop if graphical, otherwise a cli-\/output \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]full implementation of cli \end{DoxyRefDesc}
+\index{app.\-h@{app.\-h}!app\-\_\-init@{app\-\_\-init}}
+\index{app\-\_\-init@{app\-\_\-init}!app.h@{app.\-h}}
+\subsubsection[{app\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf int32\-\_\-t}}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{app_8h_a7ab0624f9c8aeab843f91432c75638ee}
+Initializes the application; loads the configuration, handles the creation and movement of the windows, and prepares the windows if using a graphical configuration.
+
+The static classes in \hyperlink{class_runtime}{Runtime} can be called safely once this function has completed, not before.
+
+Receives the argc and argv passed in from \hyperlink{main_8cc_af19ddca125f05a2090dd132045573ee4}{main()} directly; if using the G\-U\-I, argc \& argv are acquired by a Visual Studio specific ability -\/ \-\_\-\-\_\-argc and \-\_\-\-\_\-argv. They contain the same data in the same way.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & The number of command-\/line arguments supplied \\
+\hline
+\mbox{\tt in}  & {\em argv} & A pointer to an array of command-\/line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Add W\-S\-\_\-\-M\-A\-X\-I\-M\-I\-Z\-E\-B\-O\-X$|$\-W\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E\-B\-O\-X$|$ and support a resizing window. Not critical to add at the current time. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Add W\-S\-\_\-\-M\-A\-X\-I\-M\-I\-Z\-E\-B\-O\-X$|$\-W\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E\-B\-O\-X$|$ and support a resizing window. Not critical to add at the current time. \end{DoxyRefDesc}
+\index{app.\-h@{app.\-h}!app\-\_\-stop@{app\-\_\-stop}}
+\index{app\-\_\-stop@{app\-\_\-stop}!app.h@{app.\-h}}
+\subsubsection[{app\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{app_8h_ae49ddc9faf2e3e1d4bf833014d18e56e}
+Shuts down any resources used by the application, preparing for termination. \index{app.\-h@{app.\-h}!get\-\_\-debugging\-\_\-privileges@{get\-\_\-debugging\-\_\-privileges}}
+\index{get\-\_\-debugging\-\_\-privileges@{get\-\_\-debugging\-\_\-privileges}!app.h@{app.\-h}}
+\subsubsection[{get\-\_\-debugging\-\_\-privileges}]{\setlength{\rightskip}{0pt plus 5cm}bool get\-\_\-debugging\-\_\-privileges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{app_8h_acd734b41204e59d424b59f760b6a79ee}
+\index{app.\-h@{app.\-h}!get\-\_\-user\-\_\-appdata\-\_\-path@{get\-\_\-user\-\_\-appdata\-\_\-path}}
+\index{get\-\_\-user\-\_\-appdata\-\_\-path@{get\-\_\-user\-\_\-appdata\-\_\-path}!app.h@{app.\-h}}
+\subsubsection[{get\-\_\-user\-\_\-appdata\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t$\ast$ get\-\_\-user\-\_\-appdata\-\_\-path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{app_8h_a09f9e8a59f8f89622daca67693af69b2}
+Obtains the profiles directory for the system.
+
+The pointer returned is to a static buffer within the functions, so it does not and must not be freed. \index{app.\-h@{app.\-h}!get\-\_\-user\-\_\-path\-\_\-offset@{get\-\_\-user\-\_\-path\-\_\-offset}}
+\index{get\-\_\-user\-\_\-path\-\_\-offset@{get\-\_\-user\-\_\-path\-\_\-offset}!app.h@{app.\-h}}
+\subsubsection[{get\-\_\-user\-\_\-path\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} get\-\_\-user\-\_\-path\-\_\-offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{app_8h_abe3867af78ff34eac78fc7057e9c9be8}
+\index{app.\-h@{app.\-h}!is\-\_\-windows\-\_\-version\-\_\-gte@{is\-\_\-windows\-\_\-version\-\_\-gte}}
+\index{is\-\_\-windows\-\_\-version\-\_\-gte@{is\-\_\-windows\-\_\-version\-\_\-gte}!app.h@{app.\-h}}
+\subsubsection[{is\-\_\-windows\-\_\-version\-\_\-gte}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-\_\-windows\-\_\-version\-\_\-gte (
+\begin{DoxyParamCaption}
+\item[{W\-O\-R\-D}]{os\-\_\-version}
+\end{DoxyParamCaption}
+)}\label{app_8h_a4e45ac0d06680adf5c65acb7b597617c}
+\index{app.\-h@{app.\-h}!main\-\_\-callback@{main\-\_\-callback}}
+\index{main\-\_\-callback@{main\-\_\-callback}!app.h@{app.\-h}}
+\subsubsection[{main\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}L\-R\-E\-S\-U\-L\-T C\-A\-L\-L\-B\-A\-C\-K main\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{H\-W\-N\-D}]{h\-Wnd, }
+\item[{U\-I\-N\-T}]{msg, }
+\item[{W\-P\-A\-R\-A\-M}]{w\-Param, }
+\item[{L\-P\-A\-R\-A\-M}]{l\-Param}
+\end{DoxyParamCaption}
+)}\label{app_8h_ac3dcc43265dd8ae5f74529e8ac05dc67}
+Main window callback for the Windows native gui.
+
+Refer to the plentiful documentation on msdn for the vast expanse of variations the parameters can be. \href{http://www.functionx.com/win32/Lesson05.htm}{\tt http\-://www.\-functionx.\-com/win32/\-Lesson05.\-htm} \index{app.\-h@{app.\-h}!sig\-\_\-handler@{sig\-\_\-handler}}
+\index{sig\-\_\-handler@{sig\-\_\-handler}!app.h@{app.\-h}}
+\subsubsection[{sig\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}B\-O\-O\-L W\-I\-N\-A\-P\-I sig\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{D\-W\-O\-R\-D}]{signal}
+\end{DoxyParamCaption}
+)}\label{app_8h_a09b121e8dcd0287e71d2366987b2f251}
+Intercepts signals sent to the console; allows us to terminate child threads and handles cleanly if, for example, Ctrl+\-C is sent.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em signal} & The signal received by the command prmopt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns T\-R\-U\-E 
+\end{DoxyReturn}
+\index{app.\-h@{app.\-h}!skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile@{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile}}
+\index{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile@{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile}!app.h@{app.\-h}}
+\subsubsection[{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile}]{\setlength{\rightskip}{0pt plus 5cm}void skip\-\_\-if\-\_\-path\-\_\-is\-\_\-default\-\_\-profile (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{path, }
+\item[{bool $\ast$}]{skip}
+\end{DoxyParamCaption}
+)}\label{app_8h_a363d6654bd8c19abf1c65abdc89877bf}
+Checks the specified path against known common profile names in Windows, e.\-g. C\-:\textbackslash{}Users\textbackslash{}Public If it matches, skip is set to true, otherwise it remains untouched.
+
+\begin{DoxyWarning}{Warning}
+Does not handle situations where a duplicate profile name is found, and Windows creates a suffixed .W\-I\-N\-D\-O\-W\-S, or .N\-T\-A\-U\-T\-H\-O\-R\-I\-T\-Y, etc.
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The folder path to check \\
+\hline
+\mbox{\tt in}  & {\em skip} & The boolean to toggle if the path matches \\
+\hline
+\end{DoxyParams}
+\index{app.\-h@{app.\-h}!skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix@{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix}}
+\index{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix@{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix}!app.h@{app.\-h}}
+\subsubsection[{skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix}]{\setlength{\rightskip}{0pt plus 5cm}void skip\-\_\-if\-\_\-path\-\_\-is\-\_\-posix (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{path, }
+\item[{bool $\ast$}]{skip}
+\end{DoxyParamCaption}
+)}\label{app_8h_aa7477f60c345b2e0a751f0d6d38defe6}
+Checks the specified path against the P\-O\-S\-I\-X current \& up directory path names ('.', and '..' respectively). If it matches, skip is set to true, otherwise it remains untouched.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em path} & The folder path to check \\
+\hline
+\mbox{\tt in}  & {\em skip} & The boolean to toggle if the path matches \\
+\hline
+\end{DoxyParams}

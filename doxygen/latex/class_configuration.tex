@@ -1,0 +1,280 @@
+\section{Configuration Class Reference}
+\label{class_configuration}\index{Configuration@{Configuration}}
+
+
+{\ttfamily \#include $<$Configuration.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_configuration_1_1proxy}{proxy}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map$<$ char, \\*
+std\-::string $>$ \hyperlink{class_configuration_a70a439c19649766a6bb0f02656d1b7ce}{opts\-\_\-map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_configuration_a0dd0fa189e239f4c9a036303f641441e}{$\sim$\-Configuration} ()
+\item 
+void \hyperlink{class_configuration_a140c4da69923cd29865636f696df6ed4}{Dump} () const 
+\item 
+void \hyperlink{class_configuration_a02d4eee5b4b35f788d1ccf78b471f152}{Load} (const char $\ast$override\-\_\-path)
+\item 
+bool \hyperlink{class_configuration_a95bdf92ada17c215b8fe65413c74e41d}{Loaded} () const 
+\item 
+void \hyperlink{class_configuration_aa898df0f55c531db1d80b3fb557225a4}{Load\-Defaults} ()
+\item 
+const char $\ast$ \hyperlink{class_configuration_ab6b05eab22cf6afb48d10609428b5774}{Config\-Path} () const 
+\item 
+const char $\ast$ \hyperlink{class_configuration_ab9ee5418161fb930e5bc6146cc7f043f}{Purging\-Path} (\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63}{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E} ft) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_ae0dac8e1f3bc2060e62d0d3831ff8fd2}{graphical}\\
+\} \hyperlink{class_configuration_a773fe8c81358ff346925ed7e761eb06f}{ui}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a72f67f71506f13323e16d2b55306cf53}{log}\\
+\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ \hyperlink{class_configuration_a70a439c19649766a6bb0f02656d1b7ce}{opts\_map} $>$ \hyperlink{class_configuration_a5007bea08dd20541536e2945d1d41d8f}{cmdline\_opts}\\
+\} \hyperlink{class_configuration_a711d1d1f496fb0c1362c8922522a4fd6}{general}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a3aaa756f0c12aa741275eec9e11e5396}{use\_undocumented}\\
+\>struct \{\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a31ff8f557d83af8aba563518bd2cd946}{change\_permissions}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a1e196e7aa1b3290b9db4ad56f25eb2bc}{take\_ownership}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}{no\_proc}\\
+\>\} \hyperlink{class_configuration_a6253b80aeaa5de4eecdfa0989b924519}{file}\\
+\>struct \{\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a31ff8f557d83af8aba563518bd2cd946}{change\_permissions}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a1e196e7aa1b3290b9db4ad56f25eb2bc}{take\_ownership}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}{no\_proc}\\
+\>\} \hyperlink{class_configuration_aa583c3e1be2ba8ac945ecc5b8277ceb3}{registry}\\
+\>struct \{\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}{no\_proc}\\
+\>\} \hyperlink{class_configuration_a32cc3bce5634709d4e715d3e3bdce2f8}{service}\\
+\>struct \{\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_ad5b3264a2ff25f35f3b8b613de3afebb}{advanced\_methods}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}{no\_proc}\\
+\>\} \hyperlink{class_configuration_ac08617fdea40a061a02cf031d4f5ef83}{process}\\
+\>struct \{\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}{no\_proc}\\
+\>\} \hyperlink{class_configuration_ace1bd383aba01e8720f40859bcefcb35}{command}\\
+\>struct \{\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ std::string $>$ \hyperlink{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}{path}\\
+\>\>\hyperlink{class_configuration_1_1proxy}{proxy}$<$ bool $>$ \hyperlink{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}{no\_proc}\\
+\>\} \hyperlink{class_configuration_a3df7bf4e745ba524e2b19ee390ca1847}{uninstaller}\\
+\} \hyperlink{class_configuration_a2110685ec9c2617514b1f1de96b5bf0a}{purging}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_configuration_a85e9394e6aa827ff48737aa7d5264bbf}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_configuration}{Configuration})
+\item 
+\hyperlink{class_configuration_a3b21747afa5ce76cfc6908c4f815a5d9}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_configuration}{Configuration})
+\item 
+\hyperlink{class_configuration_a779947337bf652f0e773cb29f37f14ba}{Configuration} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_configuration_ad1188017dffdee79cee71bd3eddf8d96}{\-\_\-is\-\_\-loaded}
+\item 
+wchar\-\_\-t \hyperlink{class_configuration_adc160577cbe5851fbdf3e1bef18d288e}{\-\_\-file\-\_\-path} \mbox{[}M\-A\-X\-\_\-\-L\-E\-N\-\_\-\-G\-E\-N\-E\-R\-I\-C\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_configuration_af3d14e26ba8af9e6cc5a32aad8446de7}{Runtime}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds all of the configuration variables for the application, and provides the ability to load from file, or retain the defaults. 
+
+\subsection{Member Typedef Documentation}
+\index{Configuration@{Configuration}!opts\-\_\-map@{opts\-\_\-map}}
+\index{opts\-\_\-map@{opts\-\_\-map}!Configuration@{Configuration}}
+\subsubsection[{opts\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$char,std\-::string$>$ {\bf Configuration\-::opts\-\_\-map}}\label{class_configuration_a70a439c19649766a6bb0f02656d1b7ce}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Configuration@{Configuration}!Configuration@{Configuration}}
+\index{Configuration@{Configuration}!Configuration@{Configuration}}
+\subsubsection[{Configuration}]{\setlength{\rightskip}{0pt plus 5cm}Configuration\-::\-Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_configuration_a779947337bf652f0e773cb29f37f14ba}
+\index{Configuration@{Configuration}!$\sim$\-Configuration@{$\sim$\-Configuration}}
+\index{$\sim$\-Configuration@{$\sim$\-Configuration}!Configuration@{Configuration}}
+\subsubsection[{$\sim$\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}Configuration\-::$\sim$\-Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_configuration_a0dd0fa189e239f4c9a036303f641441e}
+
+
+\subsection{Member Function Documentation}
+\index{Configuration@{Configuration}!Config\-Path@{Config\-Path}}
+\index{Config\-Path@{Config\-Path}!Configuration@{Configuration}}
+\subsubsection[{Config\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Configuration\-::\-Config\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_configuration_ab6b05eab22cf6afb48d10609428b5774}
+The returned pointer is valid only as long as the configuration class exists -\/ which, as it resides in the runtime, means anything within main can use this safely. \index{Configuration@{Configuration}!Dump@{Dump}}
+\index{Dump@{Dump}!Configuration@{Configuration}}
+\subsubsection[{Dump}]{\setlength{\rightskip}{0pt plus 5cm}void Configuration\-::\-Dump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_configuration_a140c4da69923cd29865636f696df6ed4}
+Dumps the entire configuration, as-\/is, to the application log file. L\-L\-\_\-\-Debug does not need to be set, as it will be output directly, not checking the level. \index{Configuration@{Configuration}!Load@{Load}}
+\index{Load@{Load}!Configuration@{Configuration}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}void Configuration\-::\-Load (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{override\-\_\-path}
+\end{DoxyParamCaption}
+)}\label{class_configuration_a02d4eee5b4b35f788d1ccf78b471f152}
+\index{Configuration@{Configuration}!Load\-Defaults@{Load\-Defaults}}
+\index{Load\-Defaults@{Load\-Defaults}!Configuration@{Configuration}}
+\subsubsection[{Load\-Defaults}]{\setlength{\rightskip}{0pt plus 5cm}void Configuration\-::\-Load\-Defaults (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_configuration_aa898df0f55c531db1d80b3fb557225a4}
+Loads the default configuration options. Should be called first, before \hyperlink{class_configuration_a02d4eee5b4b35f788d1ccf78b471f152}{Load()}.
+
+The settings set here must constrast with those processed in the \hyperlink{_configuration_8cc_a77d8ecb3e2084eecf8db1cf62276bcf0}{parse\-\_\-commandline()} function, as they are designed to override anything set here. \index{Configuration@{Configuration}!Loaded@{Loaded}}
+\index{Loaded@{Loaded}!Configuration@{Configuration}}
+\subsubsection[{Loaded}]{\setlength{\rightskip}{0pt plus 5cm}bool Configuration\-::\-Loaded (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_configuration_a95bdf92ada17c215b8fe65413c74e41d}
+Retreives if the configuration has been loaded
+
+\begin{DoxyReturn}{Returns}
+true if \hyperlink{class_configuration_a02d4eee5b4b35f788d1ccf78b471f152}{Load()} has executed successfully 
+
+false if \hyperlink{class_configuration_a02d4eee5b4b35f788d1ccf78b471f152}{Load()} has not executed, or failed 
+\end{DoxyReturn}
+\index{Configuration@{Configuration}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Configuration@{Configuration}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Configuration\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_configuration_a85e9394e6aa827ff48737aa7d5264bbf}
+\index{Configuration@{Configuration}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Configuration@{Configuration}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Configuration\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Configuration}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_configuration_a3b21747afa5ce76cfc6908c4f815a5d9}
+\index{Configuration@{Configuration}!Purging\-Path@{Purging\-Path}}
+\index{Purging\-Path@{Purging\-Path}!Configuration@{Configuration}}
+\subsubsection[{Purging\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Configuration\-::\-Purging\-Path (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E}}]{ft}
+\end{DoxyParamCaption}
+) const}\label{class_configuration_ab9ee5418161fb930e5bc6146cc7f043f}
+The returned pointer is valid only as long as the configuration class exists -\/ which, as it resides in the runtime, means anything within main can use this safely.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ft} & The file type to return the path for \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Configuration@{Configuration}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!Configuration@{Configuration}}
+\subsubsection[{Runtime}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Runtime}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_configuration_af3d14e26ba8af9e6cc5a32aad8446de7}
+
+
+\subsection{Member Data Documentation}
+\index{Configuration@{Configuration}!\-\_\-file\-\_\-path@{\-\_\-file\-\_\-path}}
+\index{\-\_\-file\-\_\-path@{\-\_\-file\-\_\-path}!Configuration@{Configuration}}
+\subsubsection[{\-\_\-file\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t Configuration\-::\-\_\-file\-\_\-path\mbox{[}M\-A\-X\-\_\-\-L\-E\-N\-\_\-\-G\-E\-N\-E\-R\-I\-C\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{class_configuration_adc160577cbe5851fbdf3e1bef18d288e}
+Path, absolute, to the config file \index{Configuration@{Configuration}!\-\_\-is\-\_\-loaded@{\-\_\-is\-\_\-loaded}}
+\index{\-\_\-is\-\_\-loaded@{\-\_\-is\-\_\-loaded}!Configuration@{Configuration}}
+\subsubsection[{\-\_\-is\-\_\-loaded}]{\setlength{\rightskip}{0pt plus 5cm}bool Configuration\-::\-\_\-is\-\_\-loaded\hspace{0.3cm}{\ttfamily [private]}}\label{class_configuration_ad1188017dffdee79cee71bd3eddf8d96}
+Flag for whether the config has been loaded \index{Configuration@{Configuration}!advanced\-\_\-methods@{advanced\-\_\-methods}}
+\index{advanced\-\_\-methods@{advanced\-\_\-methods}!Configuration@{Configuration}}
+\subsubsection[{advanced\-\_\-methods}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::advanced\-\_\-methods}\label{class_configuration_ad5b3264a2ff25f35f3b8b613de3afebb}
+\index{Configuration@{Configuration}!change\-\_\-permissions@{change\-\_\-permissions}}
+\index{change\-\_\-permissions@{change\-\_\-permissions}!Configuration@{Configuration}}
+\subsubsection[{change\-\_\-permissions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::change\-\_\-permissions}\label{class_configuration_a31ff8f557d83af8aba563518bd2cd946}
+\index{Configuration@{Configuration}!cmdline\-\_\-opts@{cmdline\-\_\-opts}}
+\index{cmdline\-\_\-opts@{cmdline\-\_\-opts}!Configuration@{Configuration}}
+\subsubsection[{cmdline\-\_\-opts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<${\bf opts\-\_\-map}$>$ Configuration\-::cmdline\-\_\-opts}\label{class_configuration_a5007bea08dd20541536e2945d1d41d8f}
+\index{Configuration@{Configuration}!command@{command}}
+\index{command@{command}!Configuration@{Configuration}}
+\subsubsection[{command}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::command}\label{class_configuration_ace1bd383aba01e8720f40859bcefcb35}
+\index{Configuration@{Configuration}!file@{file}}
+\index{file@{file}!Configuration@{Configuration}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::file}\label{class_configuration_a6253b80aeaa5de4eecdfa0989b924519}
+\index{Configuration@{Configuration}!general@{general}}
+\index{general@{general}!Configuration@{Configuration}}
+\subsubsection[{general}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::general}\label{class_configuration_a711d1d1f496fb0c1362c8922522a4fd6}
+\index{Configuration@{Configuration}!graphical@{graphical}}
+\index{graphical@{graphical}!Configuration@{Configuration}}
+\subsubsection[{graphical}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::graphical}\label{class_configuration_ae0dac8e1f3bc2060e62d0d3831ff8fd2}
+\index{Configuration@{Configuration}!log@{log}}
+\index{log@{log}!Configuration@{Configuration}}
+\subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::log}\label{class_configuration_a72f67f71506f13323e16d2b55306cf53}
+\index{Configuration@{Configuration}!no\-\_\-proc@{no\-\_\-proc}}
+\index{no\-\_\-proc@{no\-\_\-proc}!Configuration@{Configuration}}
+\subsubsection[{no\-\_\-proc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::no\-\_\-proc}\label{class_configuration_a2576d3337ca3f4c08a45553fea1b7e9c}
+\index{Configuration@{Configuration}!path@{path}}
+\index{path@{path}!Configuration@{Configuration}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$std\-::string$>$ Configuration\-::path}\label{class_configuration_ae06f5de56549c051253ffb15b61fc9e1}
+\index{Configuration@{Configuration}!process@{process}}
+\index{process@{process}!Configuration@{Configuration}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::process}\label{class_configuration_ac08617fdea40a061a02cf031d4f5ef83}
+\index{Configuration@{Configuration}!purging@{purging}}
+\index{purging@{purging}!Configuration@{Configuration}}
+\subsubsection[{purging}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::purging}\label{class_configuration_a2110685ec9c2617514b1f1de96b5bf0a}
+\index{Configuration@{Configuration}!registry@{registry}}
+\index{registry@{registry}!Configuration@{Configuration}}
+\subsubsection[{registry}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::registry}\label{class_configuration_aa583c3e1be2ba8ac945ecc5b8277ceb3}
+\index{Configuration@{Configuration}!service@{service}}
+\index{service@{service}!Configuration@{Configuration}}
+\subsubsection[{service}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::service}\label{class_configuration_a32cc3bce5634709d4e715d3e3bdce2f8}
+\index{Configuration@{Configuration}!take\-\_\-ownership@{take\-\_\-ownership}}
+\index{take\-\_\-ownership@{take\-\_\-ownership}!Configuration@{Configuration}}
+\subsubsection[{take\-\_\-ownership}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::take\-\_\-ownership}\label{class_configuration_a1e196e7aa1b3290b9db4ad56f25eb2bc}
+\index{Configuration@{Configuration}!ui@{ui}}
+\index{ui@{ui}!Configuration@{Configuration}}
+\subsubsection[{ui}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::ui}\label{class_configuration_a773fe8c81358ff346925ed7e761eb06f}
+\index{Configuration@{Configuration}!uninstaller@{uninstaller}}
+\index{uninstaller@{uninstaller}!Configuration@{Configuration}}
+\subsubsection[{uninstaller}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Configuration\-::uninstaller}\label{class_configuration_a3df7bf4e745ba524e2b19ee390ca1847}
+\index{Configuration@{Configuration}!use\-\_\-undocumented@{use\-\_\-undocumented}}
+\index{use\-\_\-undocumented@{use\-\_\-undocumented}!Configuration@{Configuration}}
+\subsubsection[{use\-\_\-undocumented}]{\setlength{\rightskip}{0pt plus 5cm}{\bf proxy}$<$bool$>$ Configuration\-::use\-\_\-undocumented}\label{class_configuration_a3aaa756f0c12aa741275eec9e11e5396}

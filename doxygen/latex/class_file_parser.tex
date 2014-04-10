@@ -1,0 +1,343 @@
+\section{File\-Parser Class Reference}
+\label{class_file_parser}\index{File\-Parser@{File\-Parser}}
+
+
+{\ttfamily \#include $<$File\-Parser.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_file_parser_a8b41aca52b30e9f357f50e76f3c9cc9d}{$\sim$\-File\-Parser} ()
+\item 
+bool \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File} (\hyperlink{_file_parser_8h_a77516d1e52649fa212cc16893769cf63}{E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E} filetype, const char $\ast$filepath)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_file_parser_a24e4c684b9ae137492fdcb5d1e14b277}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_file_parser}{File\-Parser})
+\item 
+\hyperlink{class_file_parser_aa22508ba901abdc8352b6ddb5465d389}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_file_parser}{File\-Parser})
+\item 
+bool \hyperlink{class_file_parser_afd60d90d19a0b845b78e6a97a4cc8a19}{Parse\-Commands} (F\-I\-L\-E $\ast$fstream)
+\item 
+bool \hyperlink{class_file_parser_ae5bcd49264484904f60df92e655893a6}{Parse\-File\-Folders} (F\-I\-L\-E $\ast$fstream)
+\item 
+bool \hyperlink{class_file_parser_a5fadcdd2bc121bf2f9d82bf97b595e9f}{Parse\-Processes} (F\-I\-L\-E $\ast$fstream)
+\item 
+bool \hyperlink{class_file_parser_a814684f4ded5f14659bdd4f2b6e86f6a}{Parse\-Registry} (F\-I\-L\-E $\ast$fstream)
+\item 
+bool \hyperlink{class_file_parser_a851ba6368db27ae7637261c63f309636}{Parse\-Services} (F\-I\-L\-E $\ast$fstream)
+\item 
+bool \hyperlink{class_file_parser_a17791774c8d7a3be3f82b9cea4b3be62}{Parse\-Uninstallers} (F\-I\-L\-E $\ast$fstream)
+\item 
+wchar\-\_\-t $\ast$ \hyperlink{class_file_parser_a3efe5270b0bd6bc32b6110f2d785b3f2}{Read\-Line} (F\-I\-L\-E $\ast$fstream, wchar\-\_\-t $\ast$buffer, \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} buffer\-\_\-size)
+\item 
+bool \hyperlink{class_file_parser_ae7d9d085e1f36606ca35091fdc85129d}{Recursive\-Expand} (const wchar\-\_\-t $\ast$const source, wchar\-\_\-t $\ast$dest, const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} dest\-\_\-size, const \hyperlink{stdint_8h_a435d1572bf3f880d55459d9805097f62}{uint32\-\_\-t} line)
+\item 
+wchar\-\_\-t $\ast$ \hyperlink{class_file_parser_a097fc2243080762abcb86243dbff4645}{Trim} (wchar\-\_\-t $\ast$str)
+\item 
+\hyperlink{class_file_parser_acb58172b4650cd8015d5e8cad7d29647}{File\-Parser} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{class_file_parser_a01a48fb6719f33f2dce2dd6adb71198f}{mb} \mbox{[}1024\mbox{]}
+\item 
+H\-A\-N\-D\-L\-E \hyperlink{class_file_parser_abb6d21bebba226019e13530b08a57137}{\-\_\-token}
+\item 
+wchar\-\_\-t \hyperlink{class_file_parser_aaf1c4178ca8624865e2640da03b05c53}{\-\_\-user\-\_\-path} \mbox{[}M\-A\-X\-\_\-\-P\-A\-T\-H\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_file_parser_af3d14e26ba8af9e6cc5a32aad8446de7}{Runtime}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+All the normal Windows environment variables are also supported automatically (such as \%T\-M\-P\%, \%P\-U\-B\-L\-I\-C\%, \%L\-O\-G\-O\-N\-S\-E\-R\-V\-E\-R\%, etc.). In addition to these, we also support the following variables within files\-: \begin{TabularC}{3}
+\hline
+{\bfseries Variable}&{\bfseries Description}&{\bfseries Example} \\\cline{1-3}
+\%S\-I\-D\%&The current users S\-I\-D (executing the binary)&S-\/1-\/5-\/21-\/1336347285-\/13732138-\/2673565989-\/1002  \\\cline{1-3}
+\%A\-L\-L\-U\-S\-E\-R\-S\%&All user folders (i.\-e. not the 'All Users' folder, but for every actual user profile); excludes the system ones -\/ 'Default\-User', 'Network\-Service', 'Local\-Service'...&C\-:\textbackslash{}Users\textbackslash{}Profile\-Name \newline
+ C\-:\textbackslash{}Users\textbackslash{}Other\-Profile\-Name  \\\cline{1-3}
+\%U\-S\-E\-R\-A\-P\-P\-D\-A\-T\-A\%&The path to a users Application Data folder&App\-Data\textbackslash{}Roaming (Windows Vista+) \newline
+ Application Data (Windows 2000, X\-P)  \\\cline{1-3}
+&&\\\cline{1-3}
+\end{TabularC}
+
+
+Remember that all U\-I output here is done without Operations (we're in the process of populating them) -\/ this means the output is done manually, using the same format. Errors are therefore output like\-: 
+\begin{DoxyCode}
+\textcolor{stringliteral}{"failed\(\backslash\)n\(\backslash\)t<message>\(\backslash\)n"}
+\end{DoxyCode}
+ And success is simply\-: 
+\begin{DoxyCode}
+\textcolor{stringliteral}{"ok!\(\backslash\)n"}
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{File\-Parser@{File\-Parser}!File\-Parser@{File\-Parser}}
+\index{File\-Parser@{File\-Parser}!FileParser@{File\-Parser}}
+\subsubsection[{File\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}File\-Parser\-::\-File\-Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_acb58172b4650cd8015d5e8cad7d29647}
+\index{File\-Parser@{File\-Parser}!$\sim$\-File\-Parser@{$\sim$\-File\-Parser}}
+\index{$\sim$\-File\-Parser@{$\sim$\-File\-Parser}!FileParser@{File\-Parser}}
+\subsubsection[{$\sim$\-File\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}File\-Parser\-::$\sim$\-File\-Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_file_parser_a8b41aca52b30e9f357f50e76f3c9cc9d}
+
+
+\subsection{Member Function Documentation}
+\index{File\-Parser@{File\-Parser}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!FileParser@{File\-Parser}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}File\-Parser\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf File\-Parser}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a24e4c684b9ae137492fdcb5d1e14b277}
+\index{File\-Parser@{File\-Parser}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!FileParser@{File\-Parser}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}File\-Parser\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf File\-Parser}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_aa22508ba901abdc8352b6ddb5465d389}
+\index{File\-Parser@{File\-Parser}!Parse\-Commands@{Parse\-Commands}}
+\index{Parse\-Commands@{Parse\-Commands}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-Commands}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-Commands (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_afd60d90d19a0b845b78e6a97a4cc8a19}
+Parses the input file stream and extracts commands to execute. This is used for pre + post installer commands, as well as the actual installers to run too. The caller will be executing these at the appropriate time.
+
+Errors can be output on the fly, as and when needed, as there is no associated \hyperlink{class_operation}{Operation}. A custom failure message is required, if the parsing fails (it will silently jump straight to the application end error otherwise).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstream} & A F\-I\-L\-E stream acquired from \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all file contents were parsed and their created operations queued 
+
+false if a syntax error is found, or the attempt to queue a new operation for an item fails 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Parse\-File\-Folders@{Parse\-File\-Folders}}
+\index{Parse\-File\-Folders@{Parse\-File\-Folders}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-File\-Folders}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-File\-Folders (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_ae5bcd49264484904f60df92e655893a6}
+Parses the input file stream and extracts file + folder paths.
+
+Errors can be output on the fly, as and when needed, as there is no associated \hyperlink{class_operation}{Operation}. A custom failure message is required, if the parsing fails (it will silently jump straight to the application end error otherwise).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstream} & A F\-I\-L\-E stream acquired from \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all file contents were parsed and their created operations queued 
+
+false if a syntax error is found, or the attempt to queue a new operation for an item fails 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Parse\-Input\-File@{Parse\-Input\-File}}
+\index{Parse\-Input\-File@{Parse\-Input\-File}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-Input\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-Input\-File (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-F\-I\-L\-E\-\_\-\-T\-Y\-P\-E}}]{filetype, }
+\item[{const char $\ast$}]{filepath}
+\end{DoxyParamCaption}
+)}\label{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}
+Calls the handler for the filetype provided, ready to generate operations for each line of content in the input file.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filetype} & The type of content within the input file to parse \\
+\hline
+\mbox{\tt in}  & {\em filepath} & The relative or full path to the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the file is parsed successfully (or has no content) 
+
+false if the filetype is invalid, the filepath is not found, or a syntax error prevents the file from being fully parsed. 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Parse\-Processes@{Parse\-Processes}}
+\index{Parse\-Processes@{Parse\-Processes}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-Processes}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-Processes (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a5fadcdd2bc121bf2f9d82bf97b595e9f}
+Parses the input file stream and extracts process names.
+
+Errors can be output on the fly, as and when needed, as there is no associated \hyperlink{class_operation}{Operation}. A custom failure message is required, if the parsing fails (it will silently jump straight to the application end error otherwise).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstream} & A F\-I\-L\-E stream acquired from \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all file contents were parsed and their created operations queued 
+
+false if a syntax error is found, or the attempt to queue a new operation for an item fails 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Parse\-Registry@{Parse\-Registry}}
+\index{Parse\-Registry@{Parse\-Registry}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-Registry (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a814684f4ded5f14659bdd4f2b6e86f6a}
+Parses the input file stream and extracts registry keys + values.
+
+Errors can be output on the fly, as and when needed, as there is no associated \hyperlink{class_operation}{Operation}. A custom failure message is required, if the parsing fails (it will silently jump straight to the application end error otherwise).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstream} & A F\-I\-L\-E stream acquired from \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all file contents were parsed and their created operations queued 
+
+false if a syntax error is found, or the attempt to queue a new operation for an item fails 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Parse\-Services@{Parse\-Services}}
+\index{Parse\-Services@{Parse\-Services}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-Services}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-Services (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a851ba6368db27ae7637261c63f309636}
+Parses the input file stream and extracts service names.
+
+Errors can be output on the fly, as and when needed, as there is no associated \hyperlink{class_operation}{Operation}. A custom failure message is required, if the parsing fails (it will silently jump straight to the application end error otherwise).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstream} & A F\-I\-L\-E stream acquired from \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all file contents were parsed and their created operations queued 
+
+false if a syntax error is found, or the attempt to queue a new operation for an item fails 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Parse\-Uninstallers@{Parse\-Uninstallers}}
+\index{Parse\-Uninstallers@{Parse\-Uninstallers}!FileParser@{File\-Parser}}
+\subsubsection[{Parse\-Uninstallers}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Parse\-Uninstallers (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a17791774c8d7a3be3f82b9cea4b3be62}
+Parses the input file stream and extracts uninstallers to execute.
+
+Errors can be output on the fly, as and when needed, as there is no associated \hyperlink{class_operation}{Operation}. A custom failure message is required, if the parsing fails (it will silently jump straight to the application end error otherwise).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em fstream} & A F\-I\-L\-E stream acquired from \hyperlink{class_file_parser_a5e9afb1f972834a822ee7f24d34281a3}{Parse\-Input\-File()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all file contents were parsed and their created operations queued 
+
+false if a syntax error is found, or the attempt to queue a new operation for an item fails 
+\end{DoxyReturn}
+\index{File\-Parser@{File\-Parser}!Read\-Line@{Read\-Line}}
+\index{Read\-Line@{Read\-Line}!FileParser@{File\-Parser}}
+\subsubsection[{Read\-Line}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t $\ast$ File\-Parser\-::\-Read\-Line (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fstream, }
+\item[{wchar\-\_\-t $\ast$}]{buffer, }
+\item[{{\bf uint32\-\_\-t}}]{buffer\-\_\-size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a3efe5270b0bd6bc32b6110f2d785b3f2}
+Reads the next line from the file stream.
+
+Is simply a wrapper around fgetws. \index{File\-Parser@{File\-Parser}!Recursive\-Expand@{Recursive\-Expand}}
+\index{Recursive\-Expand@{Recursive\-Expand}!FileParser@{File\-Parser}}
+\subsubsection[{Recursive\-Expand}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Parser\-::\-Recursive\-Expand (
+\begin{DoxyParamCaption}
+\item[{const wchar\-\_\-t $\ast$const}]{source, }
+\item[{wchar\-\_\-t $\ast$}]{dest, }
+\item[{const {\bf uint32\-\_\-t}}]{dest\-\_\-size, }
+\item[{const {\bf uint32\-\_\-t}}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_ae7d9d085e1f36606ca35091fdc85129d}
+Fully expands the source buffer, using both our internal, and the system environment variables.
+
+Used for \hyperlink{class_file_parser_ae5bcd49264484904f60df92e655893a6}{Parse\-File\-Folders()} -\/ not designed for the others.
+
+Operations will be generated on the fly when no additional custom expansion has been performed (so nothing left to process).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em source} & A nul-\/terminated string to expand \\
+\hline
+\mbox{\tt in}  & {\em dest} & The destination buffer to put the stored result in \\
+\hline
+\mbox{\tt in}  & {\em dest\-\_\-size} & The size of the destination buffer \\
+\hline
+\mbox{\tt in}  & {\em line} & The line of the file; used for error reporting \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & If expansion fully succeeds \\
+\hline
+{\em false} & If any function fails; the dest buffer will be in an indeterminate state, depending upon the point of failure. \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyWarning}{Warning}
+If the user has customized their profile to use non defaults (or your executing account has), then this path will be totally invalid and unusable. We wouldn't be able to find the 'real' paths without loading the profile, its hive, and querying the relevant registry value. Way too much work for a rarity.
+\end{DoxyWarning}
+\index{File\-Parser@{File\-Parser}!Trim@{Trim}}
+\index{Trim@{Trim}!FileParser@{File\-Parser}}
+\subsubsection[{Trim}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t $\ast$ File\-Parser\-::\-Trim (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a097fc2243080762abcb86243dbff4645}
+str\-\_\-trim, using wchar\-\_\-t. Only needed for this class, so not in utils (which was written for ansi/linux sources). We also want to keep trailing spaces, which makes this totally different -\/ this only strips newlines.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The string to trim whitespace (but not spaces) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the original pointer with the inserted nuls, if any newlines are found trailing. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{File\-Parser@{File\-Parser}!Runtime@{Runtime}}
+\index{Runtime@{Runtime}!FileParser@{File\-Parser}}
+\subsubsection[{Runtime}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Runtime}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_file_parser_af3d14e26ba8af9e6cc5a32aad8446de7}
+
+
+\subsection{Member Data Documentation}
+\index{File\-Parser@{File\-Parser}!\-\_\-token@{\-\_\-token}}
+\index{\-\_\-token@{\-\_\-token}!FileParser@{File\-Parser}}
+\subsubsection[{\-\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}H\-A\-N\-D\-L\-E File\-Parser\-::\-\_\-token\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_abb6d21bebba226019e13530b08a57137}
+Handle to the current user token needed when expanding environment strings for the current user. Maintaining it for the class and not the function means we need to worry less about tracking whether or not we've released it. N\-U\-L\-L and acquired in the constructor, release in the destructor if needed. \index{File\-Parser@{File\-Parser}!\-\_\-user\-\_\-path@{\-\_\-user\-\_\-path}}
+\index{\-\_\-user\-\_\-path@{\-\_\-user\-\_\-path}!FileParser@{File\-Parser}}
+\subsubsection[{\-\_\-user\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}wchar\-\_\-t File\-Parser\-::\-\_\-user\-\_\-path\mbox{[}M\-A\-X\-\_\-\-P\-A\-T\-H\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_aaf1c4178ca8624865e2640da03b05c53}
+Like the \-\_\-token, this is an acquire-\/once-\/and-\/forget; holds the current users profile directory, for use in variable expansion \index{File\-Parser@{File\-Parser}!mb@{mb}}
+\index{mb@{mb}!FileParser@{File\-Parser}}
+\subsubsection[{mb}]{\setlength{\rightskip}{0pt plus 5cm}char File\-Parser\-::mb\mbox{[}1024\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\label{class_file_parser_a01a48fb6719f33f2dce2dd6adb71198f}
+conversion local to the class; operations are prepared using char$\ast$ strings (since we're not a totally Windows-\/centric build, most of the sources have come from cross-\/platform projects) 

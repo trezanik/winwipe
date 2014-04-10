@@ -1,0 +1,126 @@
+\section{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \#include $<$Engine.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}{Engine} ()
+\item 
+\hyperlink{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}{$\sim$\-Engine} ()
+\item 
+std\-::shared\-\_\-ptr$<$ \hyperlink{class_object}{Object} $>$ \hyperlink{class_engine_aa613f98a07dcb2fb9de92d8797b1af12}{New\-Object} (\hyperlink{_engine_8h_ab1adc9d93c99be93f3e5394277110aa9}{E\-\_\-\-C\-L\-A\-S\-S} class\-\_\-name)
+\item 
+void \hyperlink{class_engine_ad6469358103aef60e7f27354c134308f}{Start\-Game} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_engine_ab0d1aa8f4b87400b7bbcc96d3f3c17fd}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_engine}{Engine})
+\item 
+\hyperlink{class_engine_a63470071f13af89c46a43febd819e3dc}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_engine}{Engine})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_object}{Object} $>$ $>$ \hyperlink{class_engine_a5c65cb06c180f149b18e81c1beb2f945}{\-\_\-objects}
+\item 
+std\-::vector$<$ std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_entity}{Entity} $>$ $>$ \hyperlink{class_engine_a90ecd2e19f67f9996f1aec37d5705db4}{\-\_\-entities}
+\item 
+std\-::unique\-\_\-ptr$<$ \hyperlink{class_level}{Level} $>$ \hyperlink{class_engine_a5bb30d48525cf6b261baaa2b89d84934}{\-\_\-level}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_engine_a1403d1314bafa072ebbdb057833ed608}{app\-\_\-init} (\hyperlink{types_8h_aeeae8d6781b7e821dd3e743202314d66}{s32\-\_\-t} argc, \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Resides within the application runtime, and is the main bulk processing of the application. All game objects are stored here, where they can then be manipulated.
+
+All classes inheriting from \hyperlink{class_object}{Object} are to be accessible from this \hyperlink{class_engine}{Engine} class -\/ if not, it is something that needs fixing. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\subsubsection[{Engine}]{\setlength{\rightskip}{0pt plus 5cm}Engine\-::\-Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}
+\index{Engine@{Engine}!$\sim$\-Engine@{$\sim$\-Engine}}
+\index{$\sim$\-Engine@{$\sim$\-Engine}!Engine@{Engine}}
+\subsubsection[{$\sim$\-Engine}]{\setlength{\rightskip}{0pt plus 5cm}Engine\-::$\sim$\-Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}
+
+
+\subsection{Member Function Documentation}
+\index{Engine@{Engine}!New\-Object@{New\-Object}}
+\index{New\-Object@{New\-Object}!Engine@{Engine}}
+\subsubsection[{New\-Object}]{\setlength{\rightskip}{0pt plus 5cm}std\-::shared\-\_\-ptr$<$ {\bf Object} $>$ Engine\-::\-New\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-C\-L\-A\-S\-S}}]{class\-\_\-name}
+\end{DoxyParamCaption}
+)}\label{class_engine_aa613f98a07dcb2fb9de92d8797b1af12}
+Creates a new instance of an object specified via class\-\_\-name. There is no Delete\-Object, as they're shared\-\_\-ptr's and so releasing a final reference will initiate destruction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\-\_\-name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{Engine@{Engine}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Engine@{Engine}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Engine\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Engine}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_engine_ab0d1aa8f4b87400b7bbcc96d3f3c17fd}
+\index{Engine@{Engine}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Engine@{Engine}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Engine\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Engine}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_engine_a63470071f13af89c46a43febd819e3dc}
+\index{Engine@{Engine}!Start\-Game@{Start\-Game}}
+\index{Start\-Game@{Start\-Game}!Engine@{Engine}}
+\subsubsection[{Start\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void Engine\-::\-Start\-Game (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_engine_ad6469358103aef60e7f27354c134308f}
+Creates a level and gets the graphics engine to begin rendering it. 
+
+\subsection{Friends And Related Function Documentation}
+\index{Engine@{Engine}!app\-\_\-init@{app\-\_\-init}}
+\index{app\-\_\-init@{app\-\_\-init}!Engine@{Engine}}
+\subsubsection[{app\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf s32\-\_\-t}}]{argc, }
+\item[{{\bf c8\-\_\-t} $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_engine_a1403d1314bafa072ebbdb057833ed608}
+
+
+\subsection{Member Data Documentation}
+\index{Engine@{Engine}!\-\_\-entities@{\-\_\-entities}}
+\index{\-\_\-entities@{\-\_\-entities}!Engine@{Engine}}
+\subsubsection[{\-\_\-entities}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::shared\-\_\-ptr$<${\bf Entity}$>$ $>$ Engine\-::\-\_\-entities\hspace{0.3cm}{\ttfamily [private]}}\label{class_engine_a90ecd2e19f67f9996f1aec37d5705db4}
+\index{Engine@{Engine}!\-\_\-level@{\-\_\-level}}
+\index{\-\_\-level@{\-\_\-level}!Engine@{Engine}}
+\subsubsection[{\-\_\-level}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf Level}$>$ Engine\-::\-\_\-level\hspace{0.3cm}{\ttfamily [private]}}\label{class_engine_a5bb30d48525cf6b261baaa2b89d84934}
+\index{Engine@{Engine}!\-\_\-objects@{\-\_\-objects}}
+\index{\-\_\-objects@{\-\_\-objects}!Engine@{Engine}}
+\subsubsection[{\-\_\-objects}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::shared\-\_\-ptr$<${\bf Object}$>$ $>$ Engine\-::\-\_\-objects\hspace{0.3cm}{\ttfamily [private]}}\label{class_engine_a5c65cb06c180f149b18e81c1beb2f945}

@@ -1,0 +1,73 @@
+\section{Log.\-h File Reference}
+\label{_log_8h}\index{Log.\-h@{Log.\-h}}
+
+
+\hyperlink{class_log}{Log} file writing for the application.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}Runtime.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_log}{Log}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_log_8h_a0b7fe247d21ea2cda560075ca24c2ba0}{L\-O\-G}(Log\-Level)~runtime.\-Logger()-\/$>$Log\-With\-Level(Log\-Level, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25d}{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L} \{ \\*
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da9968c8ca2578aff4f85fc87f9b3fdac8}{L\-L\-\_\-\-None} = 0, 
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da5d825934ff43b673c8a03cbedbddadeb}{L\-L\-\_\-\-Error}, 
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da53c2123edba118e488fbe628cf5e44ec}{L\-L\-\_\-\-Warn}, 
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25dac0cb3567fd08a04b91a9c302fe2b02fe}{L\-L\-\_\-\-Info}, 
+\\*
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da8d3821f8f9c2f7caed5f6ff930bef2fb}{L\-L\-\_\-\-Debug}, 
+\hyperlink{_log_8h_a1ffd9698eb630ed3e706a67e39aea25daf3f8f1cde9f6cc7728d8f271da2a8da7}{L\-L\-\_\-\-Force}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_log}{Log} file writing for the application. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{Log.\-h@{Log.\-h}!L\-O\-G@{L\-O\-G}}
+\index{L\-O\-G@{L\-O\-G}!Log.h@{Log.\-h}}
+\subsubsection[{L\-O\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G(
+\begin{DoxyParamCaption}
+\item[{}]{Log\-Level}
+\end{DoxyParamCaption}
+)~runtime.\-Logger()-\/$>$Log\-With\-Level(Log\-Level, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-)}\label{_log_8h_a0b7fe247d21ea2cda560075ca24c2ba0}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Log.\-h@{Log.\-h}!E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L@{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L}}
+\index{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L@{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L}!Log.h@{Log.\-h}}
+\subsubsection[{E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf E\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L}}\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\-L\-\_\-\-None@{L\-L\-\_\-\-None}!Log.\-h@{Log.\-h}}\index{Log.\-h@{Log.\-h}!L\-L\-\_\-\-None@{L\-L\-\_\-\-None}}\item[{\em 
+L\-L\-\_\-\-None\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da9968c8ca2578aff4f85fc87f9b3fdac8}
+}]no logging at all \index{L\-L\-\_\-\-Error@{L\-L\-\_\-\-Error}!Log.\-h@{Log.\-h}}\index{Log.\-h@{Log.\-h}!L\-L\-\_\-\-Error@{L\-L\-\_\-\-Error}}\item[{\em 
+L\-L\-\_\-\-Error\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da5d825934ff43b673c8a03cbedbddadeb}
+}]logging errors \index{L\-L\-\_\-\-Warn@{L\-L\-\_\-\-Warn}!Log.\-h@{Log.\-h}}\index{Log.\-h@{Log.\-h}!L\-L\-\_\-\-Warn@{L\-L\-\_\-\-Warn}}\item[{\em 
+L\-L\-\_\-\-Warn\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da53c2123edba118e488fbe628cf5e44ec}
+}]logging warnings + above \index{L\-L\-\_\-\-Info@{L\-L\-\_\-\-Info}!Log.\-h@{Log.\-h}}\index{Log.\-h@{Log.\-h}!L\-L\-\_\-\-Info@{L\-L\-\_\-\-Info}}\item[{\em 
+L\-L\-\_\-\-Info\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25dac0cb3567fd08a04b91a9c302fe2b02fe}
+}]logging info + above \index{L\-L\-\_\-\-Debug@{L\-L\-\_\-\-Debug}!Log.\-h@{Log.\-h}}\index{Log.\-h@{Log.\-h}!L\-L\-\_\-\-Debug@{L\-L\-\_\-\-Debug}}\item[{\em 
+L\-L\-\_\-\-Debug\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25da8d3821f8f9c2f7caed5f6ff930bef2fb}
+}]logging debug (all) \index{L\-L\-\_\-\-Force@{L\-L\-\_\-\-Force}!Log.\-h@{Log.\-h}}\index{Log.\-h@{Log.\-h}!L\-L\-\_\-\-Force@{L\-L\-\_\-\-Force}}\item[{\em 
+L\-L\-\_\-\-Force\label{_log_8h_a1ffd9698eb630ed3e706a67e39aea25daf3f8f1cde9f6cc7728d8f271da2a8da7}
+}]logging forced; statement W\-I\-L\-L be logged \end{description}
+\end{Desc}

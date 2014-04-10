@@ -1,0 +1,47 @@
+\section{build.\-h File Reference}
+\label{build_8h}\index{build.\-h@{build.\-h}}
+
+
+Mandatory build-\/time requirements \& settings for the project.  
+
+
+{\ttfamily \#include \char`\"{}compiler.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}types.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{build_8h_ad2c5126c96c0ab7848935db389dca345}{D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S}
+\item 
+\#define \hyperlink{build_8h_aa629308f4e18ecde3423ec692fe0eadc}{U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S}
+\item 
+\#define \hyperlink{build_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}{W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N}
+\item 
+\#define \hyperlink{build_8h_a65cd3615ddc670f8e929a0d6a2976ea4}{M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T}~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N\-X\-P
+\item 
+\#define \hyperlink{build_8h_ac50762666aa00bd3a4308158510f1748}{\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T}~\hyperlink{build_8h_a65cd3615ddc670f8e929a0d6a2976ea4}{M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Mandatory build-\/time requirements \& settings for the project. \begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{build.\-h@{build.\-h}!\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T@{\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T}}
+\index{\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T@{\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T}!build.h@{build.\-h}}
+\subsubsection[{\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T~{\bf M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T}}\label{build_8h_ac50762666aa00bd3a4308158510f1748}
+\index{build.\-h@{build.\-h}!D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S@{D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S}}
+\index{D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S@{D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S}!build.h@{build.\-h}}
+\subsubsection[{D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-A\-B\-L\-E\-\_\-\-I\-G\-N\-O\-R\-A\-B\-L\-E\-\_\-\-W\-A\-R\-N\-I\-N\-G\-S}\label{build_8h_ad2c5126c96c0ab7848935db389dca345}
+Disables warnings when they are handled internally -\/ use with care, A\-F\-T\-E\-R checking they are handled correctly; best example is list.\-h -\/$>$ disabling conditional expression is constant; the do \{\} while(0) loop is intentional, and therefore we can ignore it, assuming nothing else causes a match elsewhere in source. \index{build.\-h@{build.\-h}!M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T@{M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T}}
+\index{M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T@{M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T}!build.h@{build.\-h}}
+\subsubsection[{M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-I\-M\-U\-M\-\_\-\-T\-A\-R\-G\-E\-T~\-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T\-\_\-\-W\-I\-N\-X\-P}\label{build_8h_a65cd3615ddc670f8e929a0d6a2976ea4}
+Bind to the current version of the C\-R\-T Specifies the minimum version of Windows our application targets to run on. Unsupported A\-P\-Is will not be used if not available. This can be commented out to free the way for \-\_\-\-W\-I\-N32\-\_\-\-W\-I\-N\-N\-T to be manually/automatically defined. \index{build.\-h@{build.\-h}!U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S@{U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S}}
+\index{U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S@{U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S}!build.h@{build.\-h}}
+\subsubsection[{U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-I\-N\-G\-\_\-\-N\-T\-D\-L\-L\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S}\label{build_8h_aa629308f4e18ecde3423ec692fe0eadc}
+Use the ntdll functionality for some calls for accuracy/performance/features \index{build.\-h@{build.\-h}!W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N@{W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N}}
+\index{W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N@{W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N}!build.h@{build.\-h}}
+\subsubsection[{W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-I\-N32\-\_\-\-L\-E\-A\-N\-\_\-\-A\-N\-D\-\_\-\-M\-E\-A\-N}\label{build_8h_ac7bef5d85e3dcd73eef56ad39ffc84a9}
+'Optimize' Windows 

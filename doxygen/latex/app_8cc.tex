@@ -1,0 +1,68 @@
+\section{app.\-cc File Reference}
+\label{app_8cc}\index{app.\-cc@{app.\-cc}}
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{app_8cc_a6259e72a343cd6012e8ceb017bac8556}{app\-\_\-exec} ()
+\item 
+void \hyperlink{app_8cc_a7ab0624f9c8aeab843f91432c75638ee}{app\-\_\-init} (\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_runtime}{Runtime} \& \hyperlink{app_8cc_af1705ecc1d279440da4c3de49513a725}{runtime} = \hyperlink{class_runtime_a1146c295df34dff8c1935ec0436edd7d}{Runtime\-::\-Instance}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+James Warren, 2013-\/2014 
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License\-:}
+Zlib (see license.\-txt or \href{http://opensource.org/licenses/Zlib}{\tt http\-://opensource.\-org/licenses/\-Zlib}) 
+\end{DoxyParagraph}
+
+
+\subsection{Function Documentation}
+\index{app.\-cc@{app.\-cc}!app\-\_\-exec@{app\-\_\-exec}}
+\index{app\-\_\-exec@{app\-\_\-exec}!app.cc@{app.\-cc}}
+\subsubsection[{app\-\_\-exec}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-exec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{app_8cc_a6259e72a343cd6012e8ceb017bac8556}
+Win32 message loop if graphical, otherwise a cli-\/output \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]full implementation of cli \end{DoxyRefDesc}
+\index{app.\-cc@{app.\-cc}!app\-\_\-init@{app\-\_\-init}}
+\index{app\-\_\-init@{app\-\_\-init}!app.cc@{app.\-cc}}
+\subsubsection[{app\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void app\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf int32\-\_\-t}}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{app_8cc_a7ab0624f9c8aeab843f91432c75638ee}
+Initializes the application; loads the configuration, handles the creation and movement of the windows, and prepares the windows if using a graphical configuration.
+
+The static classes in \hyperlink{class_runtime}{Runtime} can be called safely once this function has completed, not before.
+
+Receives the argc and argv passed in from \hyperlink{main_8cc_af19ddca125f05a2090dd132045573ee4}{main()} directly; if using the G\-U\-I, argc \& argv are acquired by a Visual Studio specific ability -\/ \-\_\-\-\_\-argc and \-\_\-\-\_\-argv. They contain the same data in the same way.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & The number of command-\/line arguments supplied \\
+\hline
+\mbox{\tt in}  & {\em argv} & A pointer to an array of command-\/line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Add W\-S\-\_\-\-M\-A\-X\-I\-M\-I\-Z\-E\-B\-O\-X$|$\-W\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E\-B\-O\-X$|$ and support a resizing window. Not critical to add at the current time. \end{DoxyRefDesc}
+
+
+\subsection{Variable Documentation}
+\index{app.\-cc@{app.\-cc}!runtime@{runtime}}
+\index{runtime@{runtime}!app.cc@{app.\-cc}}
+\subsubsection[{runtime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Runtime}\& runtime = {\bf Runtime\-::\-Instance}()}\label{app_8cc_af1705ecc1d279440da4c3de49513a725}

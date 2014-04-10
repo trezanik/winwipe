@@ -1,0 +1,279 @@
+\section{Operation Class Reference}
+\label{class_operation}\index{Operation@{Operation}}
+
+
+{\ttfamily \#include $<$Operation.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_operation_a55f76bcb8990f4dba577990af0c8399e}{Operation} ()
+\item 
+\hyperlink{class_operation_a14089623bd8a73e73375353c3d8a4b6e}{$\sim$\-Operation} ()
+\item 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589}{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N} \hyperlink{class_operation_ac848512e0fc5b66f1911bf2bfc17b56d}{Get\-Operation} () const 
+\item 
+std\-::string \hyperlink{class_operation_ace4ea581702ce225b0e2a89608100312}{Get\-Data} () const 
+\item 
+\hyperlink{structextra__data}{extra\-\_\-data} $\ast$ \hyperlink{class_operation_ae19cf9a5663925c03a897ae6177a43b4}{Get\-Extra\-Data} ()
+\item 
+D\-W\-O\-R\-D \hyperlink{class_operation_a75e5df9dbc5985f4b82bab9193378e6b}{Get\-Error\-Code} () const 
+\item 
+std\-::string \hyperlink{class_operation_aef57319b4837807d1d4c30c6ed53f814}{Get\-Error\-Msg} () const 
+\item 
+bool \hyperlink{class_operation_afca1d8978bb74555f0a6012d0984c90e}{Get\-Success} () const 
+\item 
+bool \hyperlink{class_operation_afbca526e90ce2af4bbc71817add9867d}{Has\-Executed} () const 
+\item 
+bool \hyperlink{class_operation_ab956c9ec646f7236607b21208e80a93c}{Is\-Prepared} () const 
+\item 
+bool \hyperlink{class_operation_abbe71fc5a2f6ef31a8ffd75685c2bc9e}{Is\-Paused} () const 
+\item 
+bool \hyperlink{class_operation_a0a609b1874688da41197d24ead40b5b6}{Was\-Needed} () const 
+\item 
+\hyperlink{class_operation}{Operation} $\ast$ \hyperlink{class_operation_a7704d1a6eb8321f2784551bb09f8daff}{Finished} (bool was\-\_\-needed=true)
+\item 
+\hyperlink{class_operation}{Operation} $\ast$ \hyperlink{class_operation_adbb06f3fb4fba2213530e1d544731165}{Had\-Error} (D\-W\-O\-R\-D err\-\_\-code, std\-::string err\-\_\-msg)
+\item 
+\hyperlink{class_operation}{Operation} $\ast$ \hyperlink{class_operation_ad72a4baf1246a151c3a96ee50f7ea4f7}{Pause} ()
+\item 
+\hyperlink{class_operation}{Operation} $\ast$ \hyperlink{class_operation_a9cf09be1677eb47538ace38ceb8d3fcb}{Prepare} (\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589}{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N} operation, char $\ast$data\-\_\-format,...)
+\item 
+\hyperlink{class_operation}{Operation} $\ast$ \hyperlink{class_operation_ab8c5e5b425314aacb2c9ff4bbc4aead3}{Resume} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_operation_a944923ea5cc5043cb6223da880d7bfcc}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T} (\hyperlink{class_operation}{Operation})
+\item 
+\hyperlink{class_operation_a3628710ccd25dcc0fbd628d5234bd874}{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y} (\hyperlink{class_operation}{Operation})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_operation_8h_a29c331c24eda38b81f1e27a40391a589}{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N} \hyperlink{class_operation_ad78d85f09c55913fe1f82a0f77a0dc8c}{\-\_\-operation}
+\item 
+std\-::string \hyperlink{class_operation_a383d54b86fa3d166b491bcc82d1ce266}{\-\_\-data}
+\item 
+\hyperlink{structextra__data}{extra\-\_\-data} \hyperlink{class_operation_a1e970bd91884353e9bcb147ca27ecfa0}{\-\_\-extra\-\_\-data}
+\item 
+D\-W\-O\-R\-D \hyperlink{class_operation_a64908392b807de489bf0913eab33f859}{\-\_\-err\-\_\-code}
+\item 
+std\-::string \hyperlink{class_operation_aa1233375b7028c9870788468b8adf749}{\-\_\-err\-\_\-msg}
+\item 
+\hyperlink{_operation_8h_ac3f77f49db5f357de93e5a22bc2f601f}{E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E} \hyperlink{class_operation_afcd7896bcf67fa412e1af85cbb6d6b6b}{\-\_\-op\-\_\-state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The functions return a pointer to the operation itself, so it can be used as a one-\/liner in a call to Notify(). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Operation@{Operation}!Operation@{Operation}}
+\index{Operation@{Operation}!Operation@{Operation}}
+\subsubsection[{Operation}]{\setlength{\rightskip}{0pt plus 5cm}Operation\-::\-Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_a55f76bcb8990f4dba577990af0c8399e}
+\index{Operation@{Operation}!$\sim$\-Operation@{$\sim$\-Operation}}
+\index{$\sim$\-Operation@{$\sim$\-Operation}!Operation@{Operation}}
+\subsubsection[{$\sim$\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}Operation\-::$\sim$\-Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_a14089623bd8a73e73375353c3d8a4b6e}
+
+
+\subsection{Member Function Documentation}
+\index{Operation@{Operation}!Finished@{Finished}}
+\index{Finished@{Finished}!Operation@{Operation}}
+\subsubsection[{Finished}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation} $\ast$ Operation\-::\-Finished (
+\begin{DoxyParamCaption}
+\item[{bool}]{was\-\_\-needed = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_operation_a7704d1a6eb8321f2784551bb09f8daff}
+Completes the operation successfully.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em was\-\_\-needed} & Flag if the operation was actually required; if a file doesn't exist for example, this is set to false, as it was marked to do, but was never found. Can be expanded to incorporate passing it to the notification, so it doesn't output to the U\-I. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the pointer to the operation 
+\end{DoxyReturn}
+\index{Operation@{Operation}!Get\-Data@{Get\-Data}}
+\index{Get\-Data@{Get\-Data}!Operation@{Operation}}
+\subsubsection[{Get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Operation\-::\-Get\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_ace4ea581702ce225b0e2a89608100312}
+\index{Operation@{Operation}!Get\-Error\-Code@{Get\-Error\-Code}}
+\index{Get\-Error\-Code@{Get\-Error\-Code}!Operation@{Operation}}
+\subsubsection[{Get\-Error\-Code}]{\setlength{\rightskip}{0pt plus 5cm}D\-W\-O\-R\-D Operation\-::\-Get\-Error\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_a75e5df9dbc5985f4b82bab9193378e6b}
+\index{Operation@{Operation}!Get\-Error\-Msg@{Get\-Error\-Msg}}
+\index{Get\-Error\-Msg@{Get\-Error\-Msg}!Operation@{Operation}}
+\subsubsection[{Get\-Error\-Msg}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Operation\-::\-Get\-Error\-Msg (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_aef57319b4837807d1d4c30c6ed53f814}
+\index{Operation@{Operation}!Get\-Extra\-Data@{Get\-Extra\-Data}}
+\index{Get\-Extra\-Data@{Get\-Extra\-Data}!Operation@{Operation}}
+\subsubsection[{Get\-Extra\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf extra\-\_\-data}$\ast$ Operation\-::\-Get\-Extra\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_ae19cf9a5663925c03a897ae6177a43b4}
+\index{Operation@{Operation}!Get\-Operation@{Get\-Operation}}
+\index{Get\-Operation@{Get\-Operation}!Operation@{Operation}}
+\subsubsection[{Get\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N} Operation\-::\-Get\-Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_ac848512e0fc5b66f1911bf2bfc17b56d}
+\index{Operation@{Operation}!Get\-Success@{Get\-Success}}
+\index{Get\-Success@{Get\-Success}!Operation@{Operation}}
+\subsubsection[{Get\-Success}]{\setlength{\rightskip}{0pt plus 5cm}bool Operation\-::\-Get\-Success (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_afca1d8978bb74555f0a6012d0984c90e}
+\index{Operation@{Operation}!Had\-Error@{Had\-Error}}
+\index{Had\-Error@{Had\-Error}!Operation@{Operation}}
+\subsubsection[{Had\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation} $\ast$ Operation\-::\-Had\-Error (
+\begin{DoxyParamCaption}
+\item[{D\-W\-O\-R\-D}]{err\-\_\-code, }
+\item[{std\-::string}]{err\-\_\-msg}
+\end{DoxyParamCaption}
+)}\label{class_operation_adbb06f3fb4fba2213530e1d544731165}
+Completes the operation, marking it as failed in execution.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em err\-\_\-code} & The error code \\
+\hline
+\mbox{\tt in}  & {\em err\-\_\-msg} & The error message for the code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the pointer to the operation 
+\end{DoxyReturn}
+\index{Operation@{Operation}!Has\-Executed@{Has\-Executed}}
+\index{Has\-Executed@{Has\-Executed}!Operation@{Operation}}
+\subsubsection[{Has\-Executed}]{\setlength{\rightskip}{0pt plus 5cm}bool Operation\-::\-Has\-Executed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_afbca526e90ce2af4bbc71817add9867d}
+\index{Operation@{Operation}!Is\-Paused@{Is\-Paused}}
+\index{Is\-Paused@{Is\-Paused}!Operation@{Operation}}
+\subsubsection[{Is\-Paused}]{\setlength{\rightskip}{0pt plus 5cm}bool Operation\-::\-Is\-Paused (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_abbe71fc5a2f6ef31a8ffd75685c2bc9e}
+\index{Operation@{Operation}!Is\-Prepared@{Is\-Prepared}}
+\index{Is\-Prepared@{Is\-Prepared}!Operation@{Operation}}
+\subsubsection[{Is\-Prepared}]{\setlength{\rightskip}{0pt plus 5cm}bool Operation\-::\-Is\-Prepared (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_ab956c9ec646f7236607b21208e80a93c}
+\index{Operation@{Operation}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}!Operation@{Operation}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}Operation\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-A\-S\-S\-I\-G\-N\-M\-E\-N\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf Operation}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_a944923ea5cc5043cb6223da880d7bfcc}
+\index{Operation@{Operation}!N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}}
+\index{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y@{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}!Operation@{Operation}}
+\subsubsection[{N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}Operation\-::\-N\-O\-\_\-\-C\-L\-A\-S\-S\-\_\-\-C\-O\-P\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf Operation}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_a3628710ccd25dcc0fbd628d5234bd874}
+\index{Operation@{Operation}!Pause@{Pause}}
+\index{Pause@{Pause}!Operation@{Operation}}
+\subsubsection[{Pause}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation} $\ast$ Operation\-::\-Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_operation_ad72a4baf1246a151c3a96ee50f7ea4f7}
+Pauses the operation, usually when another operation is required in order for this one to succeed (usually in recursive folder deletes).
+
+This is needed for the U\-I to be notified, so that it can drop down to a new line (as this one can't report completion or failure yet).
+
+\begin{DoxyReturn}{Returns}
+the pointer to the operation 
+\end{DoxyReturn}
+\index{Operation@{Operation}!Prepare@{Prepare}}
+\index{Prepare@{Prepare}!Operation@{Operation}}
+\subsubsection[{Prepare}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation} $\ast$ Operation\-::\-Prepare (
+\begin{DoxyParamCaption}
+\item[{{\bf E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N}}]{operation, }
+\item[{char $\ast$}]{data\-\_\-format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{class_operation_a9cf09be1677eb47538ace38ceb8d3fcb}
+Generates the textual output to put to the screen, and also depending on the operation, sets the data for it (i.\-e. the data format will be the path to a file if the operation is O\-P\-\_\-\-Delete\-File, and so on).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em operation} & The type of operation to perform \\
+\hline
+\mbox{\tt in}  & {\em data\-\_\-format} & The format-\/string of the parameters to use as the input data \\
+\hline
+\mbox{\tt in}  & {\em ...} & The rest of the parameters as required by the format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the pointer to the operation 
+\end{DoxyReturn}
+\index{Operation@{Operation}!Resume@{Resume}}
+\index{Resume@{Resume}!Operation@{Operation}}
+\subsubsection[{Resume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Operation} $\ast$ Operation\-::\-Resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_operation_ab8c5e5b425314aacb2c9ff4bbc4aead3}
+Resumes the operation after a prior \hyperlink{class_operation_ad72a4baf1246a151c3a96ee50f7ea4f7}{Pause()}.
+
+\begin{DoxyReturn}{Returns}
+the pointer to the operation 
+\end{DoxyReturn}
+\index{Operation@{Operation}!Was\-Needed@{Was\-Needed}}
+\index{Was\-Needed@{Was\-Needed}!Operation@{Operation}}
+\subsubsection[{Was\-Needed}]{\setlength{\rightskip}{0pt plus 5cm}bool Operation\-::\-Was\-Needed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_operation_a0a609b1874688da41197d24ead40b5b6}
+
+
+\subsection{Member Data Documentation}
+\index{Operation@{Operation}!\-\_\-data@{\-\_\-data}}
+\index{\-\_\-data@{\-\_\-data}!Operation@{Operation}}
+\subsubsection[{\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Operation\-::\-\_\-data\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_a383d54b86fa3d166b491bcc82d1ce266}
+\index{Operation@{Operation}!\-\_\-err\-\_\-code@{\-\_\-err\-\_\-code}}
+\index{\-\_\-err\-\_\-code@{\-\_\-err\-\_\-code}!Operation@{Operation}}
+\subsubsection[{\-\_\-err\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}D\-W\-O\-R\-D Operation\-::\-\_\-err\-\_\-code\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_a64908392b807de489bf0913eab33f859}
+\index{Operation@{Operation}!\-\_\-err\-\_\-msg@{\-\_\-err\-\_\-msg}}
+\index{\-\_\-err\-\_\-msg@{\-\_\-err\-\_\-msg}!Operation@{Operation}}
+\subsubsection[{\-\_\-err\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Operation\-::\-\_\-err\-\_\-msg\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_aa1233375b7028c9870788468b8adf749}
+\index{Operation@{Operation}!\-\_\-extra\-\_\-data@{\-\_\-extra\-\_\-data}}
+\index{\-\_\-extra\-\_\-data@{\-\_\-extra\-\_\-data}!Operation@{Operation}}
+\subsubsection[{\-\_\-extra\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf extra\-\_\-data} Operation\-::\-\_\-extra\-\_\-data\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_a1e970bd91884353e9bcb147ca27ecfa0}
+\index{Operation@{Operation}!\-\_\-op\-\_\-state@{\-\_\-op\-\_\-state}}
+\index{\-\_\-op\-\_\-state@{\-\_\-op\-\_\-state}!Operation@{Operation}}
+\subsubsection[{\-\_\-op\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N\-\_\-\-S\-T\-A\-T\-E} Operation\-::\-\_\-op\-\_\-state\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_afcd7896bcf67fa412e1af85cbb6d6b6b}
+\index{Operation@{Operation}!\-\_\-operation@{\-\_\-operation}}
+\index{\-\_\-operation@{\-\_\-operation}!Operation@{Operation}}
+\subsubsection[{\-\_\-operation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\-\_\-\-O\-P\-E\-R\-A\-T\-I\-O\-N} Operation\-::\-\_\-operation\hspace{0.3cm}{\ttfamily [private]}}\label{class_operation_ad78d85f09c55913fe1f82a0f77a0dc8c}

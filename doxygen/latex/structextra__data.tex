@@ -1,0 +1,64 @@
+\section{extra\-\_\-data Struct Reference}
+\label{structextra__data}\index{extra\-\_\-data@{extra\-\_\-data}}
+
+
+{\ttfamily \#include $<$Operation.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structextra__data_a7268a468de6d93f22dcf442369ffd677}{extra\-\_\-data} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{structextra__data_aa88b067ee0b747f759ad58640844bcef}{vparam1}
+\item 
+void $\ast$ \hyperlink{structextra__data_adb05046c11bd9c7764e44228bedf70ff}{vparam2}
+\item 
+void $\ast$ \hyperlink{structextra__data_ac1707ed14198c9d3a4427ac604adb22e}{vparam3}
+\item 
+std\-::string \hyperlink{structextra__data_a820375f50557b0cb69d0428bbd5cc814}{sparam1}
+\item 
+std\-::string \hyperlink{structextra__data_afbf03110827f675cc011556a8f739d2e}{sparam2}
+\item 
+std\-::string \hyperlink{structextra__data_a5474fb70e903b28215022700f0c252e1}{sparam3}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Extra data required for an operation, that can't be supplied with a single std\-::string. In fairness, we could delimit the string, but that would mean modifying and extracting from a path, which will get messy. As such, we use this struct as an additional data parameter, which will contain anything!
+
+We use it for example, in case of a registry value deletion. The main data parameter is the path to the subkey; an extra parameter \#1 will be the H\-K\-E\-Y root this subkey is in, and the extra parameter \#2 is the value name itself.
+
+We use only 1 of each parameter in this case (which is the worst that we can currently get), and I envisage no more than 3 with any future advancements; Even if it isn't enough, nothing will break by adding additionals. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{extra\-\_\-data@{extra\-\_\-data}!extra\-\_\-data@{extra\-\_\-data}}
+\index{extra\-\_\-data@{extra\-\_\-data}!extra_data@{extra\-\_\-data}}
+\subsubsection[{extra\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}extra\-\_\-data\-::extra\-\_\-data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structextra__data_a7268a468de6d93f22dcf442369ffd677}
+
+
+\subsection{Member Data Documentation}
+\index{extra\-\_\-data@{extra\-\_\-data}!sparam1@{sparam1}}
+\index{sparam1@{sparam1}!extra_data@{extra\-\_\-data}}
+\subsubsection[{sparam1}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string extra\-\_\-data\-::sparam1}\label{structextra__data_a820375f50557b0cb69d0428bbd5cc814}
+\index{extra\-\_\-data@{extra\-\_\-data}!sparam2@{sparam2}}
+\index{sparam2@{sparam2}!extra_data@{extra\-\_\-data}}
+\subsubsection[{sparam2}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string extra\-\_\-data\-::sparam2}\label{structextra__data_afbf03110827f675cc011556a8f739d2e}
+\index{extra\-\_\-data@{extra\-\_\-data}!sparam3@{sparam3}}
+\index{sparam3@{sparam3}!extra_data@{extra\-\_\-data}}
+\subsubsection[{sparam3}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string extra\-\_\-data\-::sparam3}\label{structextra__data_a5474fb70e903b28215022700f0c252e1}
+\index{extra\-\_\-data@{extra\-\_\-data}!vparam1@{vparam1}}
+\index{vparam1@{vparam1}!extra_data@{extra\-\_\-data}}
+\subsubsection[{vparam1}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ extra\-\_\-data\-::vparam1}\label{structextra__data_aa88b067ee0b747f759ad58640844bcef}
+\index{extra\-\_\-data@{extra\-\_\-data}!vparam2@{vparam2}}
+\index{vparam2@{vparam2}!extra_data@{extra\-\_\-data}}
+\subsubsection[{vparam2}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ extra\-\_\-data\-::vparam2}\label{structextra__data_adb05046c11bd9c7764e44228bedf70ff}
+\index{extra\-\_\-data@{extra\-\_\-data}!vparam3@{vparam3}}
+\index{vparam3@{vparam3}!extra_data@{extra\-\_\-data}}
+\subsubsection[{vparam3}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ extra\-\_\-data\-::vparam3}\label{structextra__data_ac1707ed14198c9d3a4427ac604adb22e}

@@ -1,0 +1,137 @@
+\section{Allocator.\-cc File Reference}
+\label{_allocator_8cc}\index{Allocator.\-cc@{Allocator.\-cc}}
+
+
+Memory Allocation tracking for the application.  
+
+
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Allocator.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_allocator_8cc_aa1f641399ffe977d4d86824c2d1da2fb}{P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C}~/$\ast$ needed for Allocator.\-h $\ast$/
+\item 
+\#define \hyperlink{_allocator_8cc_a2db6c9af5aa02be13a49f706da54385c}{M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C}~0x\-C\-A\-F\-E\-F\-A\-C\-E
+\item 
+\#define \hyperlink{_allocator_8cc_adb9b241eeb9083c288e77112c7e7b0a5}{M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C}~0x\-D\-E\-A\-D\-B\-E\-E\-F
+\item 
+\#define \hyperlink{_allocator_8cc_ada833569779d8c8a9b8415e8112c1fad}{M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T}~0x0\-F
+\item 
+\#define \hyperlink{_allocator_8cc_ab4cd30097b76edd986e9f0db035b6279}{M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E}~0x\-F\-F
+\item 
+\#define \hyperlink{_allocator_8cc_a4535345fe0fa840b2b74ce4eaf6dd004}{block\-\_\-offset\-\_\-header}(real\-\_\-mem)~(\hyperlink{structmemblock__header}{memblock\-\_\-header}$\ast$)((\hyperlink{types_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\-\_\-t}$\ast$)real\-\_\-mem -\/ sizeof(\hyperlink{structmemblock__header}{memblock\-\_\-header}))
+\item 
+\#define \hyperlink{_allocator_8cc_ad4ec1862e1c0007f85c0d0eb6b75ff91}{block\-\_\-offset\-\_\-realmem}(memblock)~(void$\ast$)((\hyperlink{types_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\-\_\-t}$\ast$)memblock + sizeof(\hyperlink{structmemblock__header}{memblock\-\_\-header}))
+\item 
+\#define \hyperlink{_allocator_8cc_aff46be828cb143ee0ffde154ac547a46}{block\-\_\-offset\-\_\-footer}(memblock, num\-\_\-bytes)~(\hyperlink{structmemblock__footer}{memblock\-\_\-footer}$\ast$)((\hyperlink{types_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\-\_\-t}$\ast$)memblock + (sizeof(\hyperlink{structmemblock__header}{memblock\-\_\-header}) + num\-\_\-bytes))
+\item 
+\#define \hyperlink{_allocator_8cc_a23fcee323662954abeea9a2b0d3d7bdf}{H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E}~(sizeof(\hyperlink{structmemblock__header}{memblock\-\_\-header}) + sizeof(\hyperlink{structmemblock__footer}{memblock\-\_\-footer}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{_allocator_8cc_a205ed048fdf5259c2e8e0cb60ee8f719}{operator new} (size\-\_\-t size)
+\item 
+void $\ast$ \hyperlink{_allocator_8cc_a63f35182ff333566e66717b5af850733}{operator new} (size\-\_\-t size, \hyperlink{class_allocator}{Allocator} $\ast$allocator, \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$file, \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$function, \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} line)
+\item 
+void \hyperlink{_allocator_8cc_a1525b45390e2b112a1796d6eef1202d6}{operator delete} (void $\ast$p, \hyperlink{class_allocator}{Allocator} $\ast$allocator, \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$file, \hyperlink{types_8h_a93d4fa6fb79d31926edb1d51e2f502d2}{c8\-\_\-t} $\ast$function, \hyperlink{types_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\-\_\-t} line)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned \hyperlink{_allocator_8cc_ac870dbfc709df78d9ee713843f55e894}{mem\-\_\-header\-\_\-magic} = \hyperlink{_allocator_8cc_a2db6c9af5aa02be13a49f706da54385c}{M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C}
+\item 
+const unsigned \hyperlink{_allocator_8cc_a89ab5016ef388d7a5691e4d77208cc32}{mem\-\_\-footer\-\_\-magic} = \hyperlink{_allocator_8cc_adb9b241eeb9083c288e77112c7e7b0a5}{M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Memory Allocation tracking for the application. \begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\index{Allocator.\-cc@{Allocator.\-cc}!block\-\_\-offset\-\_\-footer@{block\-\_\-offset\-\_\-footer}}
+\index{block\-\_\-offset\-\_\-footer@{block\-\_\-offset\-\_\-footer}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{block\-\_\-offset\-\_\-footer}]{\setlength{\rightskip}{0pt plus 5cm}\#define block\-\_\-offset\-\_\-footer(
+\begin{DoxyParamCaption}
+\item[{}]{memblock, }
+\item[{}]{num\-\_\-bytes}
+\end{DoxyParamCaption}
+)~({\bf memblock\-\_\-footer}$\ast$)(({\bf u8\-\_\-t}$\ast$)memblock + (sizeof({\bf memblock\-\_\-header}) + num\-\_\-bytes))}\label{_allocator_8cc_aff46be828cb143ee0ffde154ac547a46}
+\index{Allocator.\-cc@{Allocator.\-cc}!block\-\_\-offset\-\_\-header@{block\-\_\-offset\-\_\-header}}
+\index{block\-\_\-offset\-\_\-header@{block\-\_\-offset\-\_\-header}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{block\-\_\-offset\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}\#define block\-\_\-offset\-\_\-header(
+\begin{DoxyParamCaption}
+\item[{}]{real\-\_\-mem}
+\end{DoxyParamCaption}
+)~({\bf memblock\-\_\-header}$\ast$)(({\bf u8\-\_\-t}$\ast$)real\-\_\-mem -\/ sizeof({\bf memblock\-\_\-header}))}\label{_allocator_8cc_a4535345fe0fa840b2b74ce4eaf6dd004}
+\index{Allocator.\-cc@{Allocator.\-cc}!block\-\_\-offset\-\_\-realmem@{block\-\_\-offset\-\_\-realmem}}
+\index{block\-\_\-offset\-\_\-realmem@{block\-\_\-offset\-\_\-realmem}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{block\-\_\-offset\-\_\-realmem}]{\setlength{\rightskip}{0pt plus 5cm}\#define block\-\_\-offset\-\_\-realmem(
+\begin{DoxyParamCaption}
+\item[{}]{memblock}
+\end{DoxyParamCaption}
+)~(void$\ast$)(({\bf u8\-\_\-t}$\ast$)memblock + sizeof({\bf memblock\-\_\-header}))}\label{_allocator_8cc_ad4ec1862e1c0007f85c0d0eb6b75ff91}
+\index{Allocator.\-cc@{Allocator.\-cc}!H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E@{H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E@{H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-E\-A\-D\-E\-R\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-S\-I\-Z\-E~(sizeof({\bf memblock\-\_\-header}) + sizeof({\bf memblock\-\_\-footer}))}\label{_allocator_8cc_a23fcee323662954abeea9a2b0d3d7bdf}
+\index{Allocator.\-cc@{Allocator.\-cc}!M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E@{M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E}}
+\index{M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E@{M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-M\-\_\-\-A\-F\-T\-E\-R\-\_\-\-F\-R\-E\-E~0x\-F\-F}\label{_allocator_8cc_ab4cd30097b76edd986e9f0db035b6279}
+\index{Allocator.\-cc@{Allocator.\-cc}!M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C@{M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C}}
+\index{M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C@{M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C~0x\-D\-E\-A\-D\-B\-E\-E\-F}\label{_allocator_8cc_adb9b241eeb9083c288e77112c7e7b0a5}
+\index{Allocator.\-cc@{Allocator.\-cc}!M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C@{M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C}}
+\index{M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C@{M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C~0x\-C\-A\-F\-E\-F\-A\-C\-E}\label{_allocator_8cc_a2db6c9af5aa02be13a49f706da54385c}
+\index{Allocator.\-cc@{Allocator.\-cc}!M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T@{M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T}}
+\index{M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T@{M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-M\-\_\-\-O\-N\-\_\-\-I\-N\-I\-T~0x0\-F}\label{_allocator_8cc_ada833569779d8c8a9b8415e8112c1fad}
+\index{Allocator.\-cc@{Allocator.\-cc}!P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C@{P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C}}
+\index{P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C@{P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-E\-A\-S\-E\-\_\-\-L\-E\-T\-\_\-\-M\-E\-\_\-\-K\-E\-E\-P\-\_\-\-M\-A\-L\-L\-O\-C~/$\ast$ needed for Allocator.\-h $\ast$/}\label{_allocator_8cc_aa1f641399ffe977d4d86824c2d1da2fb}
+
+
+\subsection{Function Documentation}
+\index{Allocator.\-cc@{Allocator.\-cc}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{operator delete}]{\setlength{\rightskip}{0pt plus 5cm}void operator delete (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p, }
+\item[{{\bf Allocator} $\ast$}]{allocator, }
+\item[{{\bf c8\-\_\-t} $\ast$}]{file, }
+\item[{{\bf c8\-\_\-t} $\ast$}]{function, }
+\item[{{\bf u32\-\_\-t}}]{line}
+\end{DoxyParamCaption}
+)}\label{_allocator_8cc_a1525b45390e2b112a1796d6eef1202d6}
+\index{Allocator.\-cc@{Allocator.\-cc}!operator new@{operator new}}
+\index{operator new@{operator new}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{operator new}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ operator new (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}\label{_allocator_8cc_a205ed048fdf5259c2e8e0cb60ee8f719}
+\index{Allocator.\-cc@{Allocator.\-cc}!operator new@{operator new}}
+\index{operator new@{operator new}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{operator new}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ operator new (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{size, }
+\item[{{\bf Allocator} $\ast$}]{allocator, }
+\item[{{\bf c8\-\_\-t} $\ast$}]{file, }
+\item[{{\bf c8\-\_\-t} $\ast$}]{function, }
+\item[{{\bf u32\-\_\-t}}]{line}
+\end{DoxyParamCaption}
+)}\label{_allocator_8cc_a63f35182ff333566e66717b5af850733}
+
+
+\subsection{Variable Documentation}
+\index{Allocator.\-cc@{Allocator.\-cc}!mem\-\_\-footer\-\_\-magic@{mem\-\_\-footer\-\_\-magic}}
+\index{mem\-\_\-footer\-\_\-magic@{mem\-\_\-footer\-\_\-magic}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{mem\-\_\-footer\-\_\-magic}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned mem\-\_\-footer\-\_\-magic = {\bf M\-E\-M\-\_\-\-F\-O\-O\-T\-E\-R\-\_\-\-M\-A\-G\-I\-C}}\label{_allocator_8cc_a89ab5016ef388d7a5691e4d77208cc32}
+\index{Allocator.\-cc@{Allocator.\-cc}!mem\-\_\-header\-\_\-magic@{mem\-\_\-header\-\_\-magic}}
+\index{mem\-\_\-header\-\_\-magic@{mem\-\_\-header\-\_\-magic}!Allocator.cc@{Allocator.\-cc}}
+\subsubsection[{mem\-\_\-header\-\_\-magic}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned mem\-\_\-header\-\_\-magic = {\bf M\-E\-M\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-M\-A\-G\-I\-C}}\label{_allocator_8cc_ac870dbfc709df78d9ee713843f55e894}

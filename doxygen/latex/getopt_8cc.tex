@@ -1,0 +1,66 @@
+\section{getopt.\-cc File Reference}
+\label{getopt_8cc}\index{getopt.\-cc@{getopt.\-cc}}
+{\ttfamily \#include \char`\"{}build.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}getopt.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{getopt_8cc_a17d46866b2fe080e431fc418fb0a2856}{getopt} (\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} argc, char $\ast$$\ast$argv, char $\ast$opt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{getopt_8cc_a84940a9c99ac9a62c8053ea9a813d701}{getopt\-\_\-arg}
+\item 
+\hyperlink{stdint_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{getopt_8cc_abda8f035f8a0a81f898a7c10eaca6903}{getopt\-\_\-ind} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Warren 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+James Warren, 2013-\/2014 
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License\-:}
+Zlib (see license.\-txt or \href{http://opensource.org/licenses/Zlib}{\tt http\-://opensource.\-org/licenses/\-Zlib}) 
+\end{DoxyParagraph}
+
+
+\subsection{Function Documentation}
+\index{getopt.\-cc@{getopt.\-cc}!getopt@{getopt}}
+\index{getopt@{getopt}!getopt.cc@{getopt.\-cc}}
+\subsubsection[{getopt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} getopt (
+\begin{DoxyParamCaption}
+\item[{{\bf int32\-\_\-t}}]{argc, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{char $\ast$}]{opt}
+\end{DoxyParamCaption}
+)}\label{getopt_8cc_a17d46866b2fe080e431fc418fb0a2856}
+Near-\/identical in functionality to the normal getopt utility function. As this does not exist on Windows, this is a custom built-\/one designed to do the same as on a $\ast$nix build.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & \\
+\hline
+\mbox{\tt in}  & {\em argv} & \\
+\hline
+\mbox{\tt in,out}  & {\em opt} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{getopt.\-cc@{getopt.\-cc}!getopt\-\_\-arg@{getopt\-\_\-arg}}
+\index{getopt\-\_\-arg@{getopt\-\_\-arg}!getopt.cc@{getopt.\-cc}}
+\subsubsection[{getopt\-\_\-arg}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ getopt\-\_\-arg}\label{getopt_8cc_a84940a9c99ac9a62c8053ea9a813d701}
+argument pointer \index{getopt.\-cc@{getopt.\-cc}!getopt\-\_\-ind@{getopt\-\_\-ind}}
+\index{getopt\-\_\-ind@{getopt\-\_\-ind}!getopt.cc@{getopt.\-cc}}
+\subsubsection[{getopt\-\_\-ind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} getopt\-\_\-ind = 0}\label{getopt_8cc_abda8f035f8a0a81f898a7c10eaca6903}
+argv index 
